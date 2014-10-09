@@ -18,4 +18,4 @@ $(function(){
 });
 
 
-$("#myModal").modal({"backdrop": "static"});
+$("#myModal").modal({'toggle'});
