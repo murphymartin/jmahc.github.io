@@ -1,2 +1,1 @@
 
-$("#myModal").modal({"backdrop":"static"});
