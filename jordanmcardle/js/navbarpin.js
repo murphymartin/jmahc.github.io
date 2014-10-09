@@ -16,3 +16,6 @@ $(function(){
     }
   });
 });
+
+
+$("#yourModal").modal({"backdrop": "static"});
