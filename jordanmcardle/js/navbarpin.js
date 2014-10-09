@@ -18,4 +18,4 @@ $(function(){
 });
 
 
-$("#yourModal").modal({"backdrop": "static"});
+$("#myModal").modal({"backdrop": "static"});
