@@ -1,115 +1,107 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jordan McArdle">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>Work in Progress</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 
-
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="shortcut icon" href="../jordanmcardle/img/favicon.ico">
-
-  <title>Work in Progress</title>
-
-  <!-- Bootstrap core CSS -->
-
-  <link rel="stylesheet" href="../jordanmcardle/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../jordanmcardle/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="../jordanmcardle/bootstrap/css/bootstrap-theme.css">
-  <link rel="stylesheet" href="../jordanmcardle/bootstrap/css/bootstrap-theme.min.css">
-
-  <!-- Custom styles for this template -->
-  <link href="../jordanmcardle/css/cover.css" rel="stylesheet">
-
-
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-
-    <div class="site-wrapper">
-      <div class="navbar">
-      </div>
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <!--This is a top left title, but we don't need it.<h3 class="masthead-brand">Cover</h3>-->
-              <ul class="nav masthead-nav">
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-envelope"></span></a></li>
-                <!--<li><a href="#">Contact</a></li>-->
-              </ul>
-            </div>
-          </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading">Jordan McArdle.</h1>
-            <!--<p class="lead">View/download my resume or contact me.</p>-->
-            <p class="lead">
-              <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Resume</button>
-            </p>
-            <!-- Button trigger modal -->
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Jordan McArdle's Resume</h4>
-                  </div>
-                  <div class="modal-body">
-                    Education
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-cloud-download"></span></button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
-                  </div>
+<body class="home-page">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <div class="profile-pic"></div>
+                    <div class="profile">
+                        <i class="fa fa-user"></i>Jordan McArdle
+                    </div>
                 </div>
-              </div>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p><a href="http://www.facebook.com/jmaccc"><span class="glyphicon glyphicon-thumbs-up"></span></a></p>
-            </div>
-          </div>
-
         </div>
-
-      </div>
-
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="email-logo" href="mailto:jordanmcardle@gmail.com" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x email"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x"></i>
+                        </span>
+                    </a>
+                    <a class="linkedin-logo" href="https://www.linkedin.com/in/jtmcardle" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x linkedin"></i>
+                            <i class="fa fa-linkedin fa-stack-1x"></i>
+                        </span>
+                    </a>
+                    <a class="github-logo" href="https://github.com/jmahc" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x github"></i>
+                            <i class="fa fa-github-alt fa-stack-1x"></i>
+                        </span>
+                    </a>
+                    <a class="google-plus-logo" href="https://plus.google.com/104716789379686556900" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x google-plus"></i>
+                            <i class="fa fa-google-plus fa-stack-1x"></i>
+                        </span>
+                    </a>
+                    <a class="facebook-logo" href="https://www.facebook.com/jmaccc" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x facebook"></i>
+                            <i class="fa fa-facebook fa-stack-1x"></i>
+                        </span>
+                    </a>
+                    <a class="twitter-logo" href="https://twitter.com/fjord_an" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x twitter"></i>
+                            <i class="fa fa-twitter fa-stack-1x"></i>
+                        </span>
+                    </a>
+                    <a class="instagram-logo" href="https://instagram.com/jmahc/" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x instagram"></i>
+                            <i class="fa fa-instagram fa-stack-1x"></i>
+                        </span>
+                    </a>
+                    <a class="steam-logo" href="http://steamcommunity.com/id/jmahc/" target="_blank">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x steam"></i>
+                            <i class="fa fa-steam fa-stack-1x"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <p>
+            Hello!
+        </p>
     </div>
-</body>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <footer></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!--<script src="../jordanmcardle/bootstrap/js/bootstrap.js">    <script src="../jordanmcardle/js/docs.min.js"></script></script>-->
-    <script src="../jordanmcardle/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../jordanmcardle/js/navbarpin.js"></script>
-   <!-- <script>
-      $("#myModal").modal({"toggle"});
-    </script>-->
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../jordanmcardle/js/ie10-viewport-bug-workaround.js"></script>
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-55577313-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
 </html>
