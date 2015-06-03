@@ -154,6 +154,7 @@ body, html {
                     display: inline-block;
                     padding: 12px 0 0 10px;
                     text-shadow: 1px 3px rgba(0,0,0,0.7);
+                    cursor: default;
 
                     @media @desk {
                         position: absolute;
@@ -220,19 +221,19 @@ body, html {
                         color: white;
 
                         &.email-logo {
-                            color: #000;
+                            color: #fff;
 
                             .email {
-                                color: #FCFF6C;
+                                color: #9649CB;
                                 transition: 0.7s;
                             }
 
                             &:hover {
-                                color: #FCFF6C;
+                                color: #9649CB;
                                 transition: 0.7s;
 
                                 .email {
-                                    color: #000;
+                                    color: #fff;
                                     transition: 0.7s;
                                 }
                             }
@@ -376,21 +377,19 @@ body, html {
     .container {
         width: 100%;
         height: 100%;
-        min-height: 100%;
         color: white;
         margin-top: 75px;
         padding: 0;
 
+
         @media @desk {
             margin-top: 0;
             background: rgba(221, 75, 57, 1);
-            position: fixed;
-            left: 500px;
+            position: absolute;
+            right: 0;
             height: 100%;
             padding: 0;
-            overflow-x: hidden;
         }
-
 
         .hsContainer {
             display: table;
@@ -399,8 +398,9 @@ body, html {
             height: 100%;
             overflow: hidden;
             position: relative;
-            opacity: 0;
+            opacity: 1;
         }
+
         .hsContent {
             max-width: 450px;
             margin: -150px auto 0 auto;
@@ -408,8 +408,15 @@ body, html {
             vertical-align: middle;
             color: #ebebeb;
             padding: 0 8%;
-            text-align: center
+            text-align: center;
+
+            h2 {
+                text-transform: uppercase;
+            text-shadow: 2px 2px rgba(0,0,0,1);
+
+            }
         }
+
         .bcg {
             background-position: center center;
             background-repeat: no-repeat;
@@ -419,34 +426,65 @@ body, html {
             width: 100%;
         }
 
+        .tech-stack, .tools-used {
+            font-size: 50px;
+            text-shadow: 2px 2px rgba(0,0,0,1);
+            ul {
+                position: absolute;
+                right: 50px;
+                li {
+                    display: inline-block;
+                    a {
+                        display: inline-block;
+                        color: white;
+                        text-decoration: none;
+
+                        .devicons-github {
+                            &:hover {
+                                color: #999999;
+                                transition: 0.3s;
+                            }
+                        }
+
+                        .fa-steam {
+                            &:hover {
+                                color: #000;
+                                transition: 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         #slide-1 .bcg {
-            height: 500px;
-            background-image: url('../images/kitteh1.jpg');
+            height: 750px;
+            background-image: url('../images/cosmos.jpg');
         }
 
         #slide-2 .bcg {
             background: none;
             background-color: #010101;
-            height: 500px;
-            text-align: center
+            height: 700px;
+            text-align: center;
+            z-index: 10;
         }
 
         #slide-3 .bcg {
-            background-image: url('../images/kitteh2.jpg');
+            height: 750px;
+            background-image: url('../images/pyramid.jpg');
         }
+        #slide-4 .bcg {
+            background-image: url('../images/city.jpg');
+            height: 800px;
+            text-align: center;
+            z-index: 10;
+        }
+    }
 
-        #slide-5 {position: fixed;}
-        #slide-5 .bcg {background-image:url('../images/nav-background.jpg')}
-        #slide-5 .bcg2 {
-            background-image:url('../images/nav-background.jpg');
-            position: fixed; bottom: 0; right: 0;
-            opacity: 0; z-index: 1
-        }
-        #slide-5 .bcg3 {
-            background: none; background-color: #010101;
-            position: fixed; bottom: 0; right: 0;
-            opacity: 0; z-index: 2
-        }
+    height: 2700px !important;
 
+    @media @desk {
+        height: 3000px !important;
     }
 }

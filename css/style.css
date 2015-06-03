@@ -8,6 +8,7 @@ html {
 }
 .home-page {
   background-color: #dd4b39;
+  height: 2700px !important;
 }
 .home-page nav {
   position: absolute;
@@ -148,6 +149,7 @@ html {
   display: inline-block;
   padding: 12px 0 0 10px;
   text-shadow: 1px 3px rgba(0, 0, 0, 0.7);
+  cursor: default;
 }
 @media only screen and (min-width: 1200px) {
   .home-page .navbar.navbar-default .container-fluid .navbar-header .profile {
@@ -213,18 +215,18 @@ html {
   color: white;
 }
 .home-page .navbar.navbar-default #navbar ul li a.email-logo {
-  color: #000;
+  color: #fff;
 }
 .home-page .navbar.navbar-default #navbar ul li a.email-logo .email {
-  color: #FCFF6C;
+  color: #9649CB;
   transition: 0.7s;
 }
 .home-page .navbar.navbar-default #navbar ul li a.email-logo:hover {
-  color: #FCFF6C;
+  color: #9649CB;
   transition: 0.7s;
 }
 .home-page .navbar.navbar-default #navbar ul li a.email-logo:hover .email {
-  color: #000;
+  color: #fff;
   transition: 0.7s;
 }
 .home-page .navbar.navbar-default #navbar ul li a.linkedin-logo .linkedin {
@@ -324,7 +326,6 @@ html {
 .home-page .container {
   width: 100%;
   height: 100%;
-  min-height: 100%;
   color: white;
   margin-top: 75px;
   padding: 0;
@@ -333,11 +334,10 @@ html {
   .home-page .container {
     margin-top: 0;
     background: #dd4b39;
-    position: fixed;
-    left: 500px;
+    position: absolute;
+    right: 0;
     height: 100%;
     padding: 0;
-    overflow-x: hidden;
   }
 }
 .home-page .container .hsContainer {
@@ -347,7 +347,7 @@ html {
   height: 100%;
   overflow: hidden;
   position: relative;
-  opacity: 0;
+  opacity: 1;
 }
 .home-page .container .hsContent {
   max-width: 450px;
@@ -358,6 +358,10 @@ html {
   padding: 0 8%;
   text-align: center;
 }
+.home-page .container .hsContent h2 {
+  text-transform: uppercase;
+  text-shadow: 2px 2px #000000;
+}
 .home-page .container .bcg {
   background-position: center center;
   background-repeat: no-repeat;
@@ -366,39 +370,59 @@ html {
   height: 100%;
   width: 100%;
 }
+.home-page .container .tech-stack,
+.home-page .container .tools-used {
+  font-size: 50px;
+  text-shadow: 2px 2px #000000;
+}
+.home-page .container .tech-stack ul,
+.home-page .container .tools-used ul {
+  position: absolute;
+  right: 50px;
+}
+.home-page .container .tech-stack ul li,
+.home-page .container .tools-used ul li {
+  display: inline-block;
+}
+.home-page .container .tech-stack ul li a,
+.home-page .container .tools-used ul li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+.home-page .container .tech-stack ul li a .devicons-github:hover,
+.home-page .container .tools-used ul li a .devicons-github:hover {
+  color: #999999;
+  transition: 0.3s;
+}
+.home-page .container .tech-stack ul li a .fa-steam:hover,
+.home-page .container .tools-used ul li a .fa-steam:hover {
+  color: #000;
+  transition: 0.3s;
+}
 .home-page .container #slide-1 .bcg {
-  height: 500px;
-  background-image: url('../images/kitteh1.jpg');
+  height: 750px;
+  background-image: url('../images/cosmos.jpg');
 }
 .home-page .container #slide-2 .bcg {
   background: none;
   background-color: #010101;
-  height: 500px;
+  height: 700px;
   text-align: center;
+  z-index: 10;
 }
 .home-page .container #slide-3 .bcg {
-  background-image: url('../images/kitteh2.jpg');
+  height: 750px;
+  background-image: url('../images/pyramid.jpg');
 }
-.home-page .container #slide-5 {
-  position: fixed;
+.home-page .container #slide-4 .bcg {
+  background-image: url('../images/city.jpg');
+  height: 800px;
+  text-align: center;
+  z-index: 10;
 }
-.home-page .container #slide-5 .bcg {
-  background-image: url('../images/nav-background.jpg');
-}
-.home-page .container #slide-5 .bcg2 {
-  background-image: url('../images/nav-background.jpg');
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  z-index: 1;
-}
-.home-page .container #slide-5 .bcg3 {
-  background: none;
-  background-color: #010101;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  z-index: 2;
+@media only screen and (min-width: 1200px) {
+  .home-page {
+    height: 3000px !important;
+  }
 }
