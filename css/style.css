@@ -1,19 +1,25 @@
 @font-face {
   
 }
-body {
+body,
+html {
   height: 100%;
+  min-height: 100%;
 }
 .home-page {
   background-color: #dd4b39;
 }
+.home-page nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 @media only screen and (min-width: 1200px) {
   .home-page nav {
+    position: fixed;
     border-right: 2px solid #fff !important;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 500px;
     margin-bottom: 0;
     border-radius: 0;
@@ -22,11 +28,14 @@ body {
 .home-page .navbar.navbar-default {
   min-height: 75px;
   background: url('../images/nav-background.jpg') no-repeat center;
+  background-attachment: fixed;
   border: none;
   border-bottom: solid #fff 2px !important;
 }
 @media only screen and (min-width: 1200px) {
   .home-page .navbar.navbar-default {
+    min-height: 100%;
+    background-attachment: local;
     background-position: 100% 0;
     border-bottom: none !important;
   }
@@ -113,7 +122,7 @@ body {
   }
 }
 .home-page .navbar.navbar-default .container-fluid .navbar-header button {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 10px;
   -webkit-box-shadow: 0 0 10px #000000;
@@ -121,14 +130,14 @@ body {
   box-shadow: 0 0 10px #000000;
 }
 .home-page .navbar.navbar-default .container-fluid .navbar-header button.navbar-toggle {
-  background: url('../images/nav-background.jpg') rgba(0, 0, 0, 0.8) top;
+  background: rgba(0, 0, 0, 0.8);
   background-position: 100% 90%;
-  transition: 0.5s;
+  transition: 0.25s;
 }
 .home-page .navbar.navbar-default .container-fluid .navbar-header button.navbar-toggle.collapsed {
-  background: url('../images/nav-background.jpg') rgba(0, 0, 0, 0.8) top;
+  background: rgba(0, 0, 0, 0.1);
   background-position: 100% 11.5%;
-  transition: 0.5s;
+  transition: 0.25s;
 }
 .home-page .navbar.navbar-default .container-fluid .navbar-header button .icon-bar {
   background-color: white;
@@ -315,12 +324,81 @@ body {
 .home-page .container {
   width: 100%;
   height: 100%;
+  min-height: 100%;
   color: white;
+  margin-top: 75px;
+  padding: 0;
 }
 @media only screen and (min-width: 1200px) {
   .home-page .container {
+    margin-top: 0;
     background: #dd4b39;
-    position: absolute;
+    position: fixed;
     left: 500px;
+    height: 100%;
+    padding: 0;
+    overflow-x: hidden;
   }
+}
+.home-page .container .hsContainer {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+}
+.home-page .container .hsContent {
+  max-width: 450px;
+  margin: -150px auto 0 auto;
+  display: table-cell;
+  vertical-align: middle;
+  color: #ebebeb;
+  padding: 0 8%;
+  text-align: center;
+}
+.home-page .container .bcg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.home-page .container #slide-1 .bcg {
+  height: 500px;
+  background-image: url('../images/kitteh1.jpg');
+}
+.home-page .container #slide-2 .bcg {
+  background: none;
+  background-color: #010101;
+  height: 500px;
+  text-align: center;
+}
+.home-page .container #slide-3 .bcg {
+  background-image: url('../images/kitteh2.jpg');
+}
+.home-page .container #slide-5 {
+  position: fixed;
+}
+.home-page .container #slide-5 .bcg {
+  background-image: url('../images/nav-background.jpg');
+}
+.home-page .container #slide-5 .bcg2 {
+  background-image: url('../images/nav-background.jpg');
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.home-page .container #slide-5 .bcg3 {
+  background: none;
+  background-color: #010101;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  z-index: 2;
 }

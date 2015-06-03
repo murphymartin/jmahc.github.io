@@ -10,8 +10,10 @@
     <title>Work in Progress</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <!--Font Awesome-->
+    <!--Font Awesome/Devicons-->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/devicons.css">
+    <link href="css/font-awesome-animation.min.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
     <link href="css/style.css" type="text/css" rel="stylesheet">
 
@@ -22,7 +24,8 @@
     <![endif]-->
 </head>
 <body class="home-page">
-    <nav class="navbar navbar-default">
+    <!--<nav class="navbar navbar-default navbar-static-top" id="nav" data-0="position:static;" data-top-top="position:fixed;top:0; left:0;" data-edge-strategy="set">-->
+    <nav class="navbar navbar-default navbar-static-top">
         <div class="container-fluid">
             <div class="navbar-header">
                 <div class="navbar-brand">
@@ -31,7 +34,7 @@
                         <i class="fa fa-user"></i>Jordan McArdle
                     </div>
                 </div>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button id="returnToMe" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -43,51 +46,51 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a class="email-logo" href="mailto:jordanmcardle@gmail.com" target="_blank">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x email"></i>
-                            <i class="fa fa-envelope-o fa-stack-1x"></i>
+                        <span class="fa-stack fa-lg animated-hover faa-parent">
+                            <i class="fa fa-circle fa-stack-2x email faa-pulse"></i>
+                            <i class="fa fa-envelope-o fa-stack-1x faa-pulse"></i>
                         </span>
                     </a>
                     <a class="linkedin-logo" href="https://www.linkedin.com/in/jtmcardle" target="_blank">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x linkedin"></i>
-                            <i class="fa fa-linkedin fa-stack-1x"></i>
+                        <span class="fa-stack fa-lg animated-hover faa-parent">
+                            <i class="fa fa-circle fa-stack-2x linkedin faa-wrench"></i>
+                            <i class="fa fa-linkedin fa-stack-1x faa-wrench"></i>
                         </span>
                     </a>
                     <a class="github-logo" href="https://github.com/jmahc" target="_blank">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x github"></i>
-                            <i class="fa fa-github-alt fa-stack-1x"></i>
+                        <span class="fa-stack fa-lg animated-hover faa-parent">
+                            <i class="fa fa-circle fa-stack-2x github faa-ring"></i>
+                            <i class="fa fa-github-alt fa-stack-1x faa-ring"></i>
                         </span>
                     </a>
                     <a class="google-plus-logo" href="https://plus.google.com/104716789379686556900" target="_blank">
-                        <span class="fa-stack fa-lg">
+                        <span class="fa-stack fa-lg animated-hover faa-parent">
                             <i class="fa fa-circle fa-stack-2x google-plus"></i>
-                            <i class="fa fa-google-plus fa-stack-1x"></i>
+                            <i class="fa fa-google-plus fa-stack-1x faa-burst"></i>
                         </span>
                     </a>
                     <a class="facebook-logo" href="https://www.facebook.com/jmaccc" target="_blank">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x facebook"></i>
-                            <i class="fa fa-facebook fa-stack-1x"></i>
+                        <span class="fa-stack fa-lg animated-hover faa-parent">
+                            <i class="fa fa-circle fa-stack-2x facebook faa-tada"></i>
+                            <i class="fa fa-facebook fa-stack-1x faa-tada"></i>
                         </span>
                     </a>
                     <a class="twitter-logo" href="https://twitter.com/fjord_an" target="_blank">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x twitter"></i>
-                            <i class="fa fa-twitter fa-stack-1x"></i>
+                        <span class="fa-stack fa-lg animated-hover faa-parent">
+                            <i class="fa fa-circle fa-stack-2x twitter faa-shake"></i>
+                            <i class="fa fa-twitter fa-stack-1x faa-shake"></i>
                         </span>
                     </a>
                     <a class="instagram-logo" href="https://instagram.com/jmahc/" target="_blank">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x instagram"></i>
-                            <i class="fa fa-instagram fa-stack-1x"></i>
+                        <span class="fa-stack fa-lg animated-hover faa-parent">
+                            <i class="fa fa-circle fa-stack-2x instagram faa-float"></i>
+                            <i class="fa fa-instagram fa-stack-1x faa-float"></i>
                         </span>
                     </a>
                     <a class="steam-logo" href="http://steamcommunity.com/id/jmahc/" target="_blank">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x steam"></i>
-                            <i class="fa fa-steam fa-stack-1x"></i>
+                        <span class="fa-stack fa-lg animated-hover faa-parent">
+                            <i class="fa fa-circle fa-stack-2x steam faa-bounce"></i>
+                            <i class="fa fa-steam fa-stack-1x faa-bounce"></i>
                         </span>
                     </a>
                 </li>
@@ -96,12 +99,108 @@
     </nav>
     <div class="container">
         <p>
-            Hello!
+            HEY BROOKLEY :)
         </p>
+        <!--<section id="slide-1" class="homeSlide">
+            <div class="bcg"
+                 data-center="background-position: 50% 0px;"
+                 data-top-bottom="background-position: 50% -100px;"
+                 data-anchor-target="#slide-1">
+                <div class="hsContainer">
+                    <div class="hsContent"
+                         data-0-top="opacity: 1"
+                         data-106-top="opacity: 0" 
+                         data-anchor-target="#slide-1 h2">
+                        <h2>Skills used</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="slide-2">
+            <div class="bcg"
+                 data-0="background-color:rgb(1,27,59);"
+                 data-top="background-color:(0,0,0);"
+                 data-anchor-target="#slide-2">
+                <div class="hsContainer">
+                    <div class="hsContent">
+                        <h2 data--200-bottom="opacity: 0"
+                            data-center="opacity: 1"
+                            data-506-bottom="opacity: 1"
+                            data-106-bottom="opacity: 0"
+                            data-anchor-target="#slide-2 h2">
+                            Fade me in and out
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+        <!--<section id="slide-3" class="homeSlide">
+            <div class="bcg"
+                 data-center="background-position: 0px 50%;"
+                 data-bottom-top="background-position: 0px 40%;"
+                 data-top-bottom="background-position: -40px 50%;"
+                 data-anchor-target="#slide-3">
+                <div class="hsContainer">
+                    <div class="hsContent">
+                        <div class="plaxEl"
+                             data-206-top="opacity: 0"
+                             data-bottom="opacity: 1; position: fixed; top: 606px; width: 100%; left: 400px;"
+                             data--100p-top="opacity: 1;"
+                             data--200p-top="opacity: 0;"
+                             data-anchor-target="#slide-3">
+                            <h2>Slide 3</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+        <!--<section id="slide-5" class="homeSlide homeSlideTall2">
+            <div class="bcg">&nbsp;</div>
+            <div class="bcg bcg2"
+                 data-bottom-top="opacity: 0;"
+                 data--100p-bottom="opacity: 0;"
+                 data--200p-bottom="opacity: 1;"
+                 data-anchor-target="#slide-5">
+                <div class="hsContainer">
+                    <div class="hsContent"
+                         data-bottom-top="opacity: 0;"
+                         data-center="opacity: 1"
+                         data-anchor-target="#slide-5">
+                        <h2>Fixed element fading in and out</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="bcg bcg3"
+                 data--0p-bottom="opacity: 0;"
+                 data--100p-bottom="opacity: 1;"
+                 data-anchor-target="#slide-5">
+                <div class="hsContainer">
+                    <div class="hsContent"
+                         data-100-bottom="opacity: 0;"
+                         data-bottom="opacity: 1;"
+                         data-anchor-target="#slide-5">
+                        <h2>The End</h2>
+                    </div>
+                </div>
+            </div>
+        </section>-->
     </div>
     <footer></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/skrollr.js"></script>
     <script src="scripts/script.js"></script>
+    <script>
+        Jmac.home.init();
+        (function ($) {
+            // Init Skrollr
+            var s = skrollr.init({
+                render: function (data) {
+                    //Debugging - Log the current scroll position.
+                    //console.log(data.curTop);
+                }
+            });
+        })(jQuery);
+    </script>
 </body>
 </html>
