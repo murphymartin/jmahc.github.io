@@ -39,6 +39,7 @@ Jmac.home.init_variables = function () {
     t.$navbarLink = $(".navbar-nav li a");
     t.$profile = $('.profile');
     t.$contact = $('.profile-contact');
+    t.$pic = $('.profile-pic');
 
     //Slide #3
     t.$icon = $('.intro div ul li i');
@@ -66,11 +67,13 @@ Jmac.home.init_methods = function () {
         scrollingSpeed: 800
     });
 
+    t.$pic.draggable().resizable();
+
     //Profile name click
     t.$profile.on('click', function () {
         if (t.$contact.css('position') == 'absolute') {
             t.$profile.animate({
-                left: '-100%',
+                left: '-1000%',
             }, 500);
             t.$contact.fadeIn('slow');
         }
