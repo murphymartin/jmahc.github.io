@@ -12,7 +12,7 @@
 body, html {
     height: 100%;
     min-height: 100%;
-    font-family: arial,helvetica;
+    font-family: 'PT Sans', Arial, Helvetica, Verdana, sans-serif;
 }
 
 .home-page {
@@ -159,6 +159,7 @@ body, html {
                         top: 50px;
                         left: 95px;
                         font-size: 35px;
+                        cursor: pointer;
                     }
 
                     i {
@@ -181,11 +182,24 @@ body, html {
 
                 .profile-contact {
                     display: none;
+                    color: white;
+                    font: 18px 'PT Sans';
+                    background-color: rgba(0,0,0,0.2);
+                    padding: 10px;
+
+                    i {
+                        margin-right: 10px;
+                    }
+
+                    .contact-email {
+                        margin-bottom: 7.5px;
+                    }
 
                     @media @desk {
                         position: absolute;
-                        top:  50px;
-
+                        top:  35px;
+                        left: 125px;
+                        cursor: pointer;
                     }
                 }
             }
@@ -203,26 +217,79 @@ body, html {
             ul {
                 text-align: center;
 
-                @media @mon {
-                    position: absolute;
-                    top: 5px;
-                    right: 15px;
+                .page-links {
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    display: none;
+
+                    @media @desk {
+                        display: inline-block;
+                        position: relative;
+                        top: 540px;
+                        left: 0;
+                        width: 50%;
+                        height: 100%;
+                        font-size: 16px;
+                        background-color: rgba(0,0,0,0.5);
+                        color: rgba(255,255,255,1);
+
+                        a {
+                            color: rgba(255,255,255,1);
+                            width: 100%;
+                        }
+
+                        &:hover {
+                            background-color: rgba(0,0,0,0.8);
+
+                            a {
+                                color: rgba(255,255,255,1);
+                                text-shadow: 1px 1px rgba(0,0,0,1);
+                                font-size: 16px;
+                            }
+                        }
+
+                        &:nth-child(1) {
+                            border-bottom: 1px solid rgba(0,0,0,0.9);
+                            border-right: 1px solid rgba(0,0,0,0.9);
+                        }
+
+                        &:nth-child(2) {
+                            border-bottom: 1px solid rgba(0,0,0,0.9);
+                            border-left: 1px solid rgba(0,0,0,0.9);
+                        }
+
+                        &:nth-child(3) {
+                            border-top: 1px solid rgba(0,0,0,0.9);
+                            border-right: 1px solid rgba(0,0,0,0.9);
+                        }
+
+                        &:nth-child(4) {
+                            border-top: 1px solid rgba(0,0,0,0.9);
+                            border-left: 1px solid rgba(0,0,0,0.9);
+                        }
+                    }
                 }
 
-                @media @desk {
-                    background: rgba(0,0,0,0.5);
-                    border: 1px solid rgba(0,0,0,0.75);
-                    position: absolute;
-                    top: 430px;
-                    left: 175px;
-                    width: 145px;
-                    -webkit-border-radius: 5%;
-                    -moz-border-radius: 5%;
-                    border-radius: 5%;
-                }
-
-                li {
+                .logos {
                     color: white;
+
+                    @media @mon {
+                        position: absolute;
+                        top: 5px;
+                        right: 15px;
+                    }
+
+                    @media @desk {
+                        background: rgba(0,0,0,0.5);
+                        border: 1px solid rgba(0,0,0,0.75);
+                        position: absolute;
+                        top: 430px;
+                        left: 95px;
+                        width: 300px;
+                        -webkit-border-radius: 5%;
+                        -moz-border-radius: 5%;
+                        border-radius: 5%;
+                    }
 
                     a {
                         display: inline-block;
@@ -382,124 +449,10 @@ body, html {
         }
     }
 
-    /*.container {
-        width: 100%;
-        height: 100%;
-        color: white;
-        margin-top: 75px;
-        padding: 0;
-
-
-        @media @desk {
-            margin-top: 0;
-            background: rgba(221, 75, 57, 1);
-            position: absolute;
-            right: 0;
-            height: 100%;
-            padding: 0;
-        }
-
-        .hsContainer {
-            display: table;
-            table-layout: fixed;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            position: relative;
-            opacity: 1;
-        }
-
-        .hsContent {
-            max-width: 450px;
-            margin: -150px auto 0 auto;
-            display: table-cell;
-            vertical-align: middle;
-            color: #ebebeb;
-            padding: 0 8%;
-            text-align: center;
-
-            h2 {
-                text-transform: uppercase;
-            text-shadow: 2px 2px rgba(0,0,0,1);
-
-            }
-        }
-
-        .bcg {
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            height: 100%;
-            width: 100%;
-        }
-
-        .tech-stack, .tools-used {
-            font-size: 50px;
-            text-shadow: 2px 2px rgba(0,0,0,1);
-            position: relative;
-            right: 0px;
-            float: right;
-            ul {
-                li {
-                    display: inline-block;
-                    a {
-                        display: inline-block;
-                        color: white;
-                        text-decoration: none;
-
-                        .devicons-github {
-                            &:hover {
-                                color: #999999;
-                                transition: 0.3s;
-                            }
-                        }
-
-                        .fa-steam {
-                            &:hover {
-                                color: #000;
-                                transition: 0.3s;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        #slide-1 .bcg {
-            height: 800px;
-            background-image: url('../images/cosmos.jpg');
-        }
-
-        #slide-2 .bcg {
-            background: none;
-            background-color: #010101;
-            height: 850px;
-            text-align: center;
-            z-index: 10;
-        }
-
-        #slide-3 .bcg {
-            height: 800px;
-            background-image: url('../images/pyramid.jpg');
-        }
-        #slide-4 .bcg {
-            background-image: url('../images/city.jpg');
-            height: 850px;
-            text-align: center;
-            z-index: 10;
-        }
-    }
-
-            height: 2700px !important;
-
-    @media @desk {
-        height: 3000px !important;
-    }
-
-    */
-
     #fullpage {
+        color: #fff;
+        text-shadow: 1px 1px rgba(0,0,0,1);
+
         .wrap{
 	        margin-left: auto;
 	        margin-right: auto;
@@ -508,7 +461,8 @@ body, html {
         }
 
         h1 {
-	        font-size: 30px;
+	        font: 30px 'Roboto Condensed';
+            text-transform: uppercase;
 
             @media @iphone6 {
                 font-size: 32px;
@@ -525,7 +479,7 @@ body, html {
         }
 
         p {
-	        font-size: 16px;
+	        font: 16px 'PT Sans Narrow';
 
             @media @iphone6 {
                 font-size: 16px;
@@ -559,16 +513,12 @@ body, html {
         }
         
         #section0 {
-            color: #fff;
-            text-shadow: 1px 1px rgba(0,0,0,0.8);
             background: url('../images/intro.jpg') no-repeat center;
             background-size: cover;
             text-align: center;
         }
 
         #section1 {
-            color: #fff;
-            text-shadow: 1px 1px rgba(0,0,0,0.8);
             background: url('../images/spring.jpg') no-repeat center;
             background-size: cover;
             text-align: center;
@@ -581,10 +531,14 @@ body, html {
                     text-align: center;
                     width: 100%;
 
+                    .tooltip.top > .tooltip-arrow {
+                            background: rgba(221, 75, 57, 1) !important;
+                        }
+
                     li {
                         padding: 15px 0;
                         display: inline-block;
-
+                        
                         i, .devicons {
                             font-size: 2em;
                             padding: 0 15px;
@@ -627,16 +581,12 @@ body, html {
         }
 
         #section2 {
-            color: #fff;
-            text-shadow: 1px 1px rgba(0,0,0,0.8);
             background: url('../images/summer.jpg') no-repeat center;
             background-size: cover;
             text-align: center;
         }
 
         #section3 {
-            color: #fff;
-            text-shadow: 1px 1px rgba(0,0,0,0.8);
             background: url('../images/leaves.jpg') no-repeat center;
             background-size: cover;
             text-align: center;

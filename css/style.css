@@ -2,126 +2,10 @@ body,
 html {
   height: 100%;
   min-height: 100%;
-  font-family: arial,helvetica;
+  font-family: 'PT Sans', Arial, Helvetica, Verdana, sans-serif;
 }
 .home-page {
   background-color: #000000;
-  /*.container {
-        width: 100%;
-        height: 100%;
-        color: white;
-        margin-top: 75px;
-        padding: 0;
-
-
-        @media @desk {
-            margin-top: 0;
-            background: rgba(221, 75, 57, 1);
-            position: absolute;
-            right: 0;
-            height: 100%;
-            padding: 0;
-        }
-
-        .hsContainer {
-            display: table;
-            table-layout: fixed;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            position: relative;
-            opacity: 1;
-        }
-
-        .hsContent {
-            max-width: 450px;
-            margin: -150px auto 0 auto;
-            display: table-cell;
-            vertical-align: middle;
-            color: #ebebeb;
-            padding: 0 8%;
-            text-align: center;
-
-            h2 {
-                text-transform: uppercase;
-            text-shadow: 2px 2px rgba(0,0,0,1);
-
-            }
-        }
-
-        .bcg {
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            height: 100%;
-            width: 100%;
-        }
-
-        .tech-stack, .tools-used {
-            font-size: 50px;
-            text-shadow: 2px 2px rgba(0,0,0,1);
-            position: relative;
-            right: 0px;
-            float: right;
-            ul {
-                li {
-                    display: inline-block;
-                    a {
-                        display: inline-block;
-                        color: white;
-                        text-decoration: none;
-
-                        .devicons-github {
-                            &:hover {
-                                color: #999999;
-                                transition: 0.3s;
-                            }
-                        }
-
-                        .fa-steam {
-                            &:hover {
-                                color: #000;
-                                transition: 0.3s;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        #slide-1 .bcg {
-            height: 800px;
-            background-image: url('../images/cosmos.jpg');
-        }
-
-        #slide-2 .bcg {
-            background: none;
-            background-color: #010101;
-            height: 850px;
-            text-align: center;
-            z-index: 10;
-        }
-
-        #slide-3 .bcg {
-            height: 800px;
-            background-image: url('../images/pyramid.jpg');
-        }
-        #slide-4 .bcg {
-            background-image: url('../images/city.jpg');
-            height: 850px;
-            text-align: center;
-            z-index: 10;
-        }
-    }
-
-            height: 2700px !important;
-
-    @media @desk {
-        height: 3000px !important;
-    }
-
-    */
 }
 .home-page nav {
   position: absolute;
@@ -270,6 +154,7 @@ html {
     top: 50px;
     left: 95px;
     font-size: 35px;
+    cursor: pointer;
   }
 }
 .home-page .navbar.navbar-default .container-fluid .navbar-header .profile i {
@@ -291,11 +176,23 @@ html {
 }
 .home-page .navbar.navbar-default .container-fluid .navbar-header .profile-contact {
   display: none;
+  color: white;
+  font: 18px 'PT Sans';
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.home-page .navbar.navbar-default .container-fluid .navbar-header .profile-contact i {
+  margin-right: 10px;
+}
+.home-page .navbar.navbar-default .container-fluid .navbar-header .profile-contact .contact-email {
+  margin-bottom: 7.5px;
 }
 @media only screen and (min-width: 1200px) {
   .home-page .navbar.navbar-default .container-fluid .navbar-header .profile-contact {
     position: absolute;
-    top: 50px;
+    top: 35px;
+    left: 125px;
+    cursor: pointer;
   }
 }
 .home-page .navbar.navbar-default #navbar .navbar-nav {
@@ -309,141 +206,191 @@ html {
 .home-page .navbar.navbar-default #navbar ul {
   text-align: center;
 }
+.home-page .navbar.navbar-default #navbar ul .page-links {
+  font-size: 18px;
+  text-transform: uppercase;
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  .home-page .navbar.navbar-default #navbar ul .page-links {
+    display: inline-block;
+    position: relative;
+    top: 540px;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+  }
+  .home-page .navbar.navbar-default #navbar ul .page-links a {
+    color: #ffffff;
+    width: 100%;
+  }
+  .home-page .navbar.navbar-default #navbar ul .page-links:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .home-page .navbar.navbar-default #navbar ul .page-links:hover a {
+    color: #ffffff;
+    text-shadow: 1px 1px #000000;
+    font-size: 16px;
+  }
+  .home-page .navbar.navbar-default #navbar ul .page-links:nth-child(1) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+    border-right: 1px solid rgba(0, 0, 0, 0.9);
+  }
+  .home-page .navbar.navbar-default #navbar ul .page-links:nth-child(2) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+    border-left: 1px solid rgba(0, 0, 0, 0.9);
+  }
+  .home-page .navbar.navbar-default #navbar ul .page-links:nth-child(3) {
+    border-top: 1px solid rgba(0, 0, 0, 0.9);
+    border-right: 1px solid rgba(0, 0, 0, 0.9);
+  }
+  .home-page .navbar.navbar-default #navbar ul .page-links:nth-child(4) {
+    border-top: 1px solid rgba(0, 0, 0, 0.9);
+    border-left: 1px solid rgba(0, 0, 0, 0.9);
+  }
+}
+.home-page .navbar.navbar-default #navbar ul .logos {
+  color: white;
+}
 @media only screen and (min-width: 768px) {
-  .home-page .navbar.navbar-default #navbar ul {
+  .home-page .navbar.navbar-default #navbar ul .logos {
     position: absolute;
     top: 5px;
     right: 15px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .home-page .navbar.navbar-default #navbar ul {
+  .home-page .navbar.navbar-default #navbar ul .logos {
     background: rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(0, 0, 0, 0.75);
     position: absolute;
     top: 430px;
-    left: 175px;
-    width: 145px;
+    left: 95px;
+    width: 300px;
     -webkit-border-radius: 5%;
     -moz-border-radius: 5%;
     border-radius: 5%;
   }
 }
-.home-page .navbar.navbar-default #navbar ul li {
-  color: white;
-}
-.home-page .navbar.navbar-default #navbar ul li a {
+.home-page .navbar.navbar-default #navbar ul .logos a {
   display: inline-block;
   color: white;
 }
-.home-page .navbar.navbar-default #navbar ul li a.email-logo {
+.home-page .navbar.navbar-default #navbar ul .logos a.email-logo {
   color: #fff;
 }
-.home-page .navbar.navbar-default #navbar ul li a.email-logo .email {
+.home-page .navbar.navbar-default #navbar ul .logos a.email-logo .email {
   color: #9649CB;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.email-logo:hover {
+.home-page .navbar.navbar-default #navbar ul .logos a.email-logo:hover {
   color: #9649CB;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.email-logo:hover .email {
+.home-page .navbar.navbar-default #navbar ul .logos a.email-logo:hover .email {
   color: #fff;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.linkedin-logo .linkedin {
+.home-page .navbar.navbar-default #navbar ul .logos a.linkedin-logo .linkedin {
   color: #517fa4;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.linkedin-logo:hover {
+.home-page .navbar.navbar-default #navbar ul .logos a.linkedin-logo:hover {
   color: #517fa4;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.linkedin-logo:hover .linkedin {
+.home-page .navbar.navbar-default #navbar ul .logos a.linkedin-logo:hover .linkedin {
   color: white;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.github-logo {
+.home-page .navbar.navbar-default #navbar ul .logos a.github-logo {
   color: #333333;
 }
-.home-page .navbar.navbar-default #navbar ul li a.github-logo .github {
+.home-page .navbar.navbar-default #navbar ul .logos a.github-logo .github {
   color: #999999;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.github-logo:hover {
+.home-page .navbar.navbar-default #navbar ul .logos a.github-logo:hover {
   color: #999999;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.github-logo:hover .github {
+.home-page .navbar.navbar-default #navbar ul .logos a.github-logo:hover .github {
   color: #333333;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.google-plus-logo .google-plus {
+.home-page .navbar.navbar-default #navbar ul .logos a.google-plus-logo .google-plus {
   color: #dd4b39;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.google-plus-logo:hover {
+.home-page .navbar.navbar-default #navbar ul .logos a.google-plus-logo:hover {
   color: #dd4b39;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.google-plus-logo:hover .google-plus {
+.home-page .navbar.navbar-default #navbar ul .logos a.google-plus-logo:hover .google-plus {
   color: white;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.facebook-logo .facebook {
+.home-page .navbar.navbar-default #navbar ul .logos a.facebook-logo .facebook {
   color: #3b5998;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.facebook-logo:hover {
+.home-page .navbar.navbar-default #navbar ul .logos a.facebook-logo:hover {
   color: #3b5998;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.facebook-logo:hover .facebook {
+.home-page .navbar.navbar-default #navbar ul .logos a.facebook-logo:hover .facebook {
   color: white;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.twitter-logo .twitter {
+.home-page .navbar.navbar-default #navbar ul .logos a.twitter-logo .twitter {
   color: #00aced;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.twitter-logo:hover {
+.home-page .navbar.navbar-default #navbar ul .logos a.twitter-logo:hover {
   color: #00aced;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.twitter-logo:hover .twitter {
+.home-page .navbar.navbar-default #navbar ul .logos a.twitter-logo:hover .twitter {
   color: white;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.instagram-logo .instagram {
+.home-page .navbar.navbar-default #navbar ul .logos a.instagram-logo .instagram {
   color: #517fa4;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.instagram-logo:hover {
+.home-page .navbar.navbar-default #navbar ul .logos a.instagram-logo:hover {
   color: #517fa4;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.instagram-logo:hover .instagram {
+.home-page .navbar.navbar-default #navbar ul .logos a.instagram-logo:hover .instagram {
   color: white;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.steam-logo .steam {
+.home-page .navbar.navbar-default #navbar ul .logos a.steam-logo .steam {
   color: #000;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.steam-logo:hover {
+.home-page .navbar.navbar-default #navbar ul .logos a.steam-logo:hover {
   color: #000;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a.steam-logo:hover .steam {
+.home-page .navbar.navbar-default #navbar ul .logos a.steam-logo:hover .steam {
   color: #fff;
   transition: 0.7s;
 }
-.home-page .navbar.navbar-default #navbar ul li a .fa-google-plus {
+.home-page .navbar.navbar-default #navbar ul .logos a .fa-google-plus {
   top: 1px;
   left: 1px;
 }
 .home-page .navbar.navbar-default .navbar-toggle {
   border: 1px solid #fff;
+}
+.home-page #fullpage {
+  color: #fff;
+  text-shadow: 1px 1px #000000;
 }
 .home-page #fullpage .wrap {
   margin-left: auto;
@@ -452,7 +399,8 @@ html {
   position: relative;
 }
 .home-page #fullpage h1 {
-  font-size: 30px;
+  font: 30px 'Roboto Condensed';
+  text-transform: uppercase;
 }
 @media only screen and (min-width: 375px) {
   .home-page #fullpage h1 {
@@ -475,7 +423,7 @@ html {
   }
 }
 .home-page #fullpage p {
-  font-size: 16px;
+  font: 16px 'PT Sans Narrow';
 }
 @media only screen and (min-width: 375px) {
   .home-page #fullpage p {
@@ -511,15 +459,11 @@ html {
   }
 }
 .home-page #fullpage #section0 {
-  color: #fff;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
   background: url('../images/intro.jpg') no-repeat center;
   background-size: cover;
   text-align: center;
 }
 .home-page #fullpage #section1 {
-  color: #fff;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
   background: url('../images/spring.jpg') no-repeat center;
   background-size: cover;
   text-align: center;
@@ -536,6 +480,11 @@ html {
   padding-left: 0;
   text-align: center;
   width: 100%;
+}
+.home-page #fullpage #section1 .tech-stack ul .tooltip.top > .tooltip-arrow,
+.home-page #fullpage #section1 .tools-used ul .tooltip.top > .tooltip-arrow,
+.home-page #fullpage #section1 .other ul .tooltip.top > .tooltip-arrow {
+  background: #dd4b39 !important;
 }
 .home-page #fullpage #section1 .tech-stack ul li,
 .home-page #fullpage #section1 .tools-used ul li,
@@ -607,15 +556,11 @@ html {
   }
 }
 .home-page #fullpage #section2 {
-  color: #fff;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
   background: url('../images/summer.jpg') no-repeat center;
   background-size: cover;
   text-align: center;
 }
 .home-page #fullpage #section3 {
-  color: #fff;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
   background: url('../images/leaves.jpg') no-repeat center;
   background-size: cover;
   text-align: center;

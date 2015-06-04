@@ -8,6 +8,8 @@
     <meta name="description" content="A portfolio">
     <link rel="shortcut icon" href="images/favicon.ico">
     <title>Jordan McArdle</title>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Narrow|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
     <!--Font Awesome/Devicon(s)-->
@@ -35,7 +37,7 @@
                         <div class="contact-phone"><i class="fa fa-phone"></i>205.960.9966</div>
                     </div>
                 </div>
-                <button id="returnToMe" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button id="hamburger" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -45,7 +47,12 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav navbar-right">
-                <li>
+                <li class="page-links"><a href="#intro">Introduction</a></li>
+                <li class="page-links"><a href="#tech">Technologies</a></li>
+                <li class="page-links"><a href="#about">About Me</a></li>
+                <li class="page-links"><a href="#contact">Contact Me</a></li>
+
+                <li class="logos">
                     <a class="email-logo" href="mailto:jordanmcardle@gmail.com" target="_blank">
                         <span class="fa-stack fa-lg animated-hover faa-parent">
                             <i class="fa fa-circle fa-stack-2x email faa-pulse"></i>
@@ -107,7 +114,7 @@
             <div class="slide">
                 <div class="intro">
                     <h1>Technologies</h1>
-                    <p>I have explored a wide-range of technologies throughout my career.  Presently, I am a .NET developer at 2-COM in Brentwood, TN.</p>
+                    <p>I have explored a wide-range of technologies throughout my career as a student and professional software developer.</p>
                 </div>
             </div>
             <div class="slide">
@@ -115,41 +122,41 @@
                     <h1>Tech Stack</h1>
                     <div class="tech-stack">
                         <ul>
-                            <li><i class="devicon-html5-plain"></i></li>
-                            <li><i class="devicon-css3-plain"></i></li>
-                            <li><i class="devicon-bootstrap-plain"></i></li>
-                            <li><i class="devicon-less-plain-wordmark"></i></li>
-                            <li><i class="devicon-sass-original"></i></li>
-                            <li><i class="devicon-javascript-plain"></i></li>
-                            <li><i class="devicon-jquery-plain"></i></li>
-                            <li><i class="devicon-csharp-plain"></i></li>
-                            <li><i class="devicon-dot-net-plain"></i></li>
-                            <li><i class="devicon-cplusplus-plain"></i></li>
-                            <li><i class="devicon-python-plain-wordmark"></i></li>
-                            <li><i class="devicon-ruby-plain"></i></li>
-                            <li><i class="devicon-rails-plain"></i></li>
-                            <li><i class="devicon-angularjs-plain"></i></li>
-                            <li><i class="devicon-nodejs-plain"></i></li>
-                            <li><i class="devicon-bower-line"></i></li>
-                            <li><i class="devicon-gulp-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I structure web pages with the HTML5 standard"><i class="devicon-html5-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I style web pages utilizing CSS3"><i class="devicon-css3-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I create aesthetic web layouts using Bootstrap"><i class="devicon-bootstrap-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I quickly create custom stylesheets with LESS"><i class="devicon-less-plain-wordmark"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I quickly create custom stylesheets with SASS"><i class=" devicon-sass-original"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I implement functionality on web pages using JavaScript"><i class="devicon-javascript-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I efficiently implement features on web pages with the jQuery library"><i class="devicon-jquery-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I prefer developing web applications in C#"><i class="devicon-csharp-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I develop powerful web applications using .NET"><i class="devicon-dot-net-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I learned Object-Oriented Programming in C++"><i class="devicon-cplusplus-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I learned to develop in Python"><i class="devicon-python-plain-wordmark"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I develop applications in Ruby for Spree-Commerce projects"><i class="devicon-ruby-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I use Rails as my framework when developing in Ruby"><i class="devicon-rails-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I create dynamic web applications with AngularJS"><i class="devicon-angularjs-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I use nodeJS as my backend for JS applications"><i class="devicon-nodejs-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I manage packages using Bower"><i class="devicon-bower-line"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I manage components using Gulp"><i class="devicon-gulp-plain"></i></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="slide">
                 <div class="intro">
-                    <h1>Tools Used</h1>
+                    <h1>Tools</h1>
                     <div class="tools-used">
                         <ul>
-                            <li><span class="devicons devicons-visualstudio"></span></li>
-                            <li><span class="devicons devicons-msql_server"></span></li>
-                            <li data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"><i class="devicon-git-plain"></i></li>
-                            <li><i class="devicon-heroku-original"></i></li>
-                            <li><i class="devicon-trello-plain"></i></li>
-                            <li><i class="devicon-atom-original"></i></li>
-                            <li><i class="devicon-chrome-plain"></i></li>
-                            <li><i class="devicon-firefox-plain"></i></li>
-                            <li><i class="devicon-ie10-original"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I develop .NET applications in Visual Studio"><span class="devicons devicons-visualstudio"></span></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I maintain databases in SQL Server"><span class="devicons devicons-msql_server"></span></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I utilize source control with Git on Github and BitBucket"><i class="devicon-git-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I deploy personal applications using Heroku"><i class="devicon-heroku-original"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I track progress throughout the SDLC using Trello"><i class="devicon-trello-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I code JS applications in Atom"><i class="devicon-atom-original"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I develop applications for Google Chrome browsers"><i class="devicon-chrome-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I develop applications for Firefox browsers"><i class="devicon-firefox-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I develop applications for Internet Explorer browsers"><i class="devicon-ie10-original"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -159,11 +166,11 @@
                     <h1>OS/Other</h1>
                     <div class="other">
                         <ul>
-                            <li><i class="devicon-windows8-original"></i></li>
-                            <li><i class="devicon-apple-original"></i></li>
-                            <li><i class="devicon-ubuntu-plain"></i></li>
-                            <li><i class="devicon-photoshop-line"></i></li>
-                            <li><i class="devicon-illustrator-line"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I develop applications for .NET applications on Windows and have extensive experience with the Operating System"><i class="devicon-windows8-original"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I incept visual components within OSX and have extensive experience with the Operating System"><i class="devicon-apple-original"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I develop Ruby on Rails and Python applications within Ubuntu"><i class="devicon-ubuntu-plain"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I create or alter images using Photoshop"><i class="devicon-photoshop-line"></i></li>
+                            <li data-toggle="tooltip" data-placement="top" title="I use Illustrator to create visually appealing logos"><i class="devicon-illustrator-line"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -171,17 +178,39 @@
         </div>
         <div class="section" id="section2">
             <div class="intro">
-                <h1>Example</h1>
-                <p>HTML markup example to define 4 sections.</p>
+                <h1>About Jordan</h1>
+                <p>I received my undergraduate from the University of Alabama in December, 2014.</p>
+                <p>Currently, I am a software developer at a marketing firm, 2-COM, in Brentwood, TN.  I began working there in January, 2015.</p>
             </div>
         </div>
         <div class="section" id="section3">
             <div class="intro">
-                <h1>Working On Tablets</h1>
+                <h1>Contact Info</h1>
                 <p>
-                    Designed to fit to different screen sizes as well as tablet and mobile devices.
-                    <!--<br /><br /><br /><br /><br /><br />-->
+                    I am available throughout the week from 8-5 PM CST.
                 </p>
+                <p>
+                    Shoot me an email & I will respond.
+                </p>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="Name" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control" id="form-name" placeholder="Your Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Comments" class="col-sm-2 control-label">Comments</label>
+                        <div class="col-sm-6">
+                            <textarea type="text" id="form-comments" name="Comments" placeholder="Comments" class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <a id="form-submit" href="#" class="btn btn-primary">Submit</a>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
