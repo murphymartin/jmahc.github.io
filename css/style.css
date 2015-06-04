@@ -594,6 +594,18 @@ html {
     padding: 0 25px;
   }
 }
+.home-page #fullpage #section1 .tech-stack ul li svg,
+.home-page #fullpage #section1 .tools-used ul li svg,
+.home-page #fullpage #section1 .other ul li svg {
+  width: 30px;
+}
+@media only screen and (min-width: 1200px) {
+  .home-page #fullpage #section1 .tech-stack ul li svg,
+  .home-page #fullpage #section1 .tools-used ul li svg,
+  .home-page #fullpage #section1 .other ul li svg {
+    width: 50px;
+  }
+}
 .home-page #fullpage #section2 {
   color: #fff;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
