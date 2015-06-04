@@ -452,70 +452,159 @@ html {
   position: relative;
 }
 .home-page #fullpage h1 {
-  font-size: 6em;
+  font-size: 30px;
+}
+@media only screen and (min-width: 375px) {
+  .home-page #fullpage h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 414px) {
+  .home-page #fullpage h1 {
+    font-size: 34px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .home-page #fullpage h1 {
+    font-size: 5em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .home-page #fullpage h1 {
+    font-size: 6em;
+  }
 }
 .home-page #fullpage p {
-  font-size: 2em;
+  font-size: 16px;
+}
+@media only screen and (min-width: 375px) {
+  .home-page #fullpage p {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 414px) {
+  .home-page #fullpage p {
+    font-size: 17px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .home-page #fullpage p {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .home-page #fullpage p {
+    font-size: 2em;
+  }
 }
 .home-page #fullpage .intro p {
   width: 50%;
   margin: 0 auto;
-  font-size: 1.5em;
 }
 .home-page #fullpage .section {
-  padding-top: 75px;
+  top: 75px;
   text-align: center;
 }
 @media only screen and (min-width: 1200px) {
   .home-page #fullpage .section {
-    padding-top: 0;
+    top: 0;
   }
 }
 .home-page #fullpage #section0 {
   color: #fff;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
-  background: url('../images/winter.jpg') no-repeat;
+  background: url('../images/intro.jpg') no-repeat center;
   background-size: cover;
   text-align: center;
 }
 .home-page #fullpage #section1 {
   color: #fff;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
-  background: url('../images/spring.jpg') no-repeat;
+  background: url('../images/spring.jpg') no-repeat center;
   background-size: cover;
   text-align: center;
-  /*.intro {
-                h1 {
-                    margin: 0 auto;
-                }
-                h1,div,p {
-                    background: rgba(0,0,0,0.4);
-                border: 1px solid rgba(0,0,0,0.8);
-                }
-                
-            }*/
 }
-.home-page #fullpage #section1 ul {
+.home-page #fullpage #section1 .tech-stack,
+.home-page #fullpage #section1 .tools-used,
+.home-page #fullpage #section1 .other {
+  width: 70%;
+  margin: 0 auto;
+}
+.home-page #fullpage #section1 .tech-stack ul,
+.home-page #fullpage #section1 .tools-used ul,
+.home-page #fullpage #section1 .other ul {
   padding-left: 0;
   text-align: center;
+  width: 100%;
 }
-.home-page #fullpage #section1 ul li {
+.home-page #fullpage #section1 .tech-stack ul li,
+.home-page #fullpage #section1 .tools-used ul li,
+.home-page #fullpage #section1 .other ul li {
+  padding: 15px 0;
   display: inline-block;
 }
-.home-page #fullpage #section1 .devicons {
-  font-size: 3em;
+.home-page #fullpage #section1 .tech-stack ul li i,
+.home-page #fullpage #section1 .tools-used ul li i,
+.home-page #fullpage #section1 .other ul li i,
+.home-page #fullpage #section1 .tech-stack ul li .devicons,
+.home-page #fullpage #section1 .tools-used ul li .devicons,
+.home-page #fullpage #section1 .other ul li .devicons {
+  font-size: 2em;
+  padding: 0 15px;
+}
+@media only screen and (min-width: 768px) {
+  .home-page #fullpage #section1 .tech-stack ul li i,
+  .home-page #fullpage #section1 .tools-used ul li i,
+  .home-page #fullpage #section1 .other ul li i,
+  .home-page #fullpage #section1 .tech-stack ul li .devicons,
+  .home-page #fullpage #section1 .tools-used ul li .devicons,
+  .home-page #fullpage #section1 .other ul li .devicons {
+    font-size: 3em;
+    padding: 0 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .home-page #fullpage #section1 .tech-stack ul li i,
+  .home-page #fullpage #section1 .tools-used ul li i,
+  .home-page #fullpage #section1 .other ul li i,
+  .home-page #fullpage #section1 .tech-stack ul li .devicons,
+  .home-page #fullpage #section1 .tools-used ul li .devicons,
+  .home-page #fullpage #section1 .other ul li .devicons {
+    font-size: 4em;
+    padding: 0 25px;
+  }
+}
+.home-page #fullpage #section1 .tech-stack ul li .devicons,
+.home-page #fullpage #section1 .tools-used ul li .devicons,
+.home-page #fullpage #section1 .other ul li .devicons {
+  font-size: 2.5em;
+}
+@media only screen and (min-width: 768px) {
+  .home-page #fullpage #section1 .tech-stack ul li .devicons,
+  .home-page #fullpage #section1 .tools-used ul li .devicons,
+  .home-page #fullpage #section1 .other ul li .devicons {
+    font-size: 3.5em;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .home-page #fullpage #section1 .tech-stack ul li .devicons,
+  .home-page #fullpage #section1 .tools-used ul li .devicons,
+  .home-page #fullpage #section1 .other ul li .devicons {
+    font-size: 4.5em;
+    padding: 0 25px;
+  }
 }
 .home-page #fullpage #section2 {
   color: #fff;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
-  background: url('../images/summer.jpg') no-repeat;
+  background: url('../images/summer.jpg') no-repeat center;
   background-size: cover;
   text-align: center;
 }
 .home-page #fullpage #section3 {
   color: #fff;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
-  background: url('../images/leaves.jpg') no-repeat;
+  background: url('../images/leaves.jpg') no-repeat center;
   background-size: cover;
   text-align: center;
 }

@@ -63,7 +63,7 @@ html, body {
 .fp-controlArrow {
   position: absolute;
   z-index: 4;
-  top: 70%;
+  top: 65%;
   cursor: pointer;
   width: 0;
   height: 0;
@@ -72,31 +72,54 @@ html, body {
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
-  @media only sreen and (min-width: 1200px) {
+  @media only screen and (min-width: 375px) {
+    .fp-controlArrow {
+      top: 62%; } }
+  @media only screen and (min-width: 568px) {
+    .fp-controlArrow {
+      top: 60%; } }
+  @media only screen and (min-width: 768px) {
+    .fp-controlArrow {
+      top: 55%; } }
+  @media only screen and (min-width: 1200px) {
     .fp-controlArrow {
       top: 50%; } }
-  .fp-controlArrow.fp-prev {
+  .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
     /*left: 15px;
     width: 0;
     border-width: 38.5px 34px 38.5px 0;
     border-color: transparent #fff transparent transparent;*/
     border: none;
+    width: 16px;
+    height: 16px;
+    background: url("../../images/right.png") no-repeat;
+    background-size: cover;
+    -webkit-filter: invert(100%); }
+    @media only screen and (min-width: 375px) {
+      .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
+        width: 24px;
+        height: 24px; } }
+    @media only screen and (min-width: 568px) {
+      .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
+        width: 32px;
+        height: 32px; } }
+    @media only screen and (min-width: 768px) {
+      .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
+        width: 40px;
+        height: 40px; } }
+    @media only screen and (min-width: 960px) {
+      .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
+        width: 48px;
+        height: 48px; } }
+    @media only screen and (min-width: 1200px) {
+      .fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
+        width: 56px;
+        height: 56px; } }
+  .fp-controlArrow.fp-prev {
     left: 15px;
-    width: 64px;
-    height: 64px;
-    background: url("../../images/right.png") no-repeat;
-    transform: rotate(180deg);
-    background-size: cover; }
+    transform: rotate(180deg); }
   .fp-controlArrow.fp-next {
-    /*right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;*/
-    border: none;
-    right: 15px;
-    width: 64px;
-    height: 64px;
-    background: url("../../images/right.png") no-repeat;
-    background-size: cover; }
+    right: 15px; }
 
 .fp-scrollable {
   overflow: scroll; }

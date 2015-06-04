@@ -29,17 +29,45 @@ Jmac.home.init_variables = function () {
     t.queryParams = Jmac.getQueryParams();
     t.background = $('.navbar.navbar-default');
     t.cont = $('.container');
-    t.btn = $('#returnToMe');
+    t.fullPageContent = $('#fullpage');
+    t.icon = $('.intro div ul li i');
+    t.visualStudio = $('.devicons-visualstudio');
+    t.msqlServer = $('.devicons-msql_server');
+    t.toolTip = $('[data-toggle="tooltip"]');
 };
 
 Jmac.home.init_methods = function () {
     var t = this;
 
-    $(document).ready(function () {
-        $('#fullpage').fullpage({
-            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-            scrollingSpeed: 800
-        });
+    t.toolTip.tooltip()
+
+    t.visualStudio.on('mouseenter', function () {
+        t.visualStudio.css('color','rgb(104,33,122)');
+    });
+
+    t.visualStudio.on('mouseleave', function () {
+        t.visualStudio.css('color','rgb(255,255,255)');
+    });
+
+    t.msqlServer.on('mouseenter', function () {
+        t.msqlServer.css('color', '#a51d29');
+    });
+
+    t.msqlServer.on('mouseleave', function () {
+        t.msqlServer.css('color', 'rgb(255,255,255)');
+    });
+
+    t.icon.on('mouseenter', function () {
+        $(this).addClass('colored');
+    });
+
+    t.icon.on('mouseleave', function () {
+        $(this).removeClass('colored');
+    });
+
+    t.fullPageContent.fullpage({
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+        scrollingSpeed: 800
     });
 };

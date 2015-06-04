@@ -6,6 +6,18 @@
  * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
  * Contribution by Jhony0311
  */
+
+$galaxy: "only screen and (min-width: 360px)";
+$iphone6: "only screen and (min-width: 375px)";
+$plus: "only screen and (min-width: 414px)";
+$ils: "only screen and (min-width: 480px)";
+$i5ls: "only screen and (min-width: 568px)";
+$ls: "only screen and (min-width: 640px)";
+$mon: "only screen and (min-width: 768px)";
+$nex: "only screen and (min-width: 800px)";
+$fs: "only screen and (min-width: 960px)";
+$desk: "only screen and (min-width: 1200px)";
+
 html, body {
     margin: 0;
     padding: 0;
@@ -63,7 +75,7 @@ html, body {
 .fp-controlArrow {
     position: absolute;
     z-index: 4;
-    top: 70%;
+    top: 65%;
     cursor: pointer;
     width: 0;
     height: 0;
@@ -73,35 +85,70 @@ html, body {
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 
-    @media only sreen and (min-width: 1200px)
+    @media #{$iphone6}
+    {
+        top: 62%;
+    }
+
+    @media #{$i5ls} {
+        top: 60%;
+    }
+
+    @media #{$mon} {
+        top: 55%;
+    }
+
+    @media #{$desk}
     {
         top: 50%;
     }
 
-    &.fp-prev {
+    &.fp-prev,&.fp-next {
         /*left: 15px;
         width: 0;
         border-width: 38.5px 34px 38.5px 0;
         border-color: transparent #fff transparent transparent;*/
         border: none;
-        left: 15px;
-        width: 64px;
-        height: 64px;
+        width: 16px;
+        height: 16px;
         background: url('../../images/right.png') no-repeat;
-        transform: rotate(180deg);
         background-size: cover;
+        -webkit-filter:invert(100%);
+
+        @media #{$iphone6} {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media #{$i5ls} {
+            width: 32px;
+            height: 32px;
+        }
+
+        @media #{$mon} {
+            width: 40px;
+            height: 40px;
+        }
+
+        @media #{$fs} {
+            width: 48px;
+            height: 48px;
+        }
+
+        @media #{$desk}
+        {
+            width: 56px;
+            height: 56px;
+        }
     }
 
-    &.fp-next {
-        /*right: 15px;
-        border-width: 38.5px 0 38.5px 34px;
-        border-color: transparent transparent transparent #fff;*/
-        border: none;
+    &.fp-prev{
+        left: 15px;
+        transform: rotate(180deg);
+    }
+
+    &.fp-next{
         right: 15px;
-        width: 64px;
-        height: 64px;
-        background: url('../../images/right.png') no-repeat;
-        background-size: cover;
     }
 }
 .fp-scrollable {
