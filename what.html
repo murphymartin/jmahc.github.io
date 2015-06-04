@@ -1,194 +1,414 @@
 ﻿<!DOCTYPE html>
-<html class="no-skrollr">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>fullPage.js One Page Scroll Sites</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll like iPhone website." />
+    <meta name="keywords" content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple" />
+    <meta name="Resource-type" content="Document" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <title>Classic parallax page</title>
+    <link rel="stylesheet" type="text/css" href="css/fullPage/jquery.fullPage.css" />
 
-    <style type="text/css">
-        * {
-            padding: 0;
-            margin: 0;
+
+    <style>
+        /* Sections
+         * --------------------------------------- */
+        #section0 img,
+        #section1 img {
+            margin: 20px 0 0 0;
         }
 
-        html, body {
-            height: 100%;
+        #section2 img {
+            margin: 20px 0 0 52px;
         }
 
-        .skrollr-desktop body {
-            height: 100% !important;
-        }
-
-        body {
-            font-family: sans-serif;
-        }
-
-        p {
-            margin: 1em 0;
-        }
-
-        .parallax-image-wrapper {
-            position: fixed;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .parallax-image-wrapper-50 {
-            height: 50%;
-            top: -50%;
-        }
-
-        .parallax-image-wrapper-100 {
-            height: 100%;
-            top: -100%;
-        }
-
-        .parallax-image {
-            display: none;
+        #section3 img {
+            bottom: 0px;
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+            margin-left: -420px;
         }
 
-        .parallax-image-50 {
-            height: 200%;
-            top: -50%;
+        .intro p {
+            width: 50%;
+            margin: 0 auto;
+            font-size: 1.5em;
         }
 
-        .parallax-image-100 {
-            height: 100%;
-            top: 0;
+        .twitter-share-button {
+            position: absolute;
+            z-index: 99;
+            right: 149px;
+            top: 9px;
         }
 
-        .parallax-image.skrollable-between {
-            display: block;
-        }
+        @CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
 
-        .no-skrollr .parallax-image-wrapper {
-            display: none !important;
-        }
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
 
-        #skrollr-body {
-            height: 100%;
-            overflow: visible;
-            position: relative;
-        }
 
-        .gap {
-            background: transparent center no-repeat;
-            background-size: cover;
-        }
+/* Custom CSS
+ * --------------------------------------- */
+body{
+	font-family: arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+h1{
+	font-size: 6em;
+}
+p{
+	font-size: 2em;
+}
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+.section{
+	text-align:center;
+}
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+.twitter-share-button{
+	position: fixed;
+	z-index: 99;
+	right: 149px;
+	top: 9px;
+}
+#download{
+	margin: 10px 0 0 0;
+	padding: 15px 10px;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #49afcd;
+	background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from( #5bc0de),to( #2f96b4));
+	background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: linear-gradient(top, #5bc0de, #2f96b4);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
+	border-color: #2f96b4 #2f96b4 #1f6377;
+	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 
-        .skrollr .gap {
-            background: transparent !important;
-        }
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	vertical-align: middle;
+	cursor: pointer;
+	display: inline-block;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+}
+#download a{
+	text-decoration:none;
+	color:#fff;
+}
+#download:hover{
+	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+	background-color: #2F96B4;
+	background-position: 0 -15px;
+	-webkit-transition: background-position .1s linear;
+	-moz-transition: background-position .1s linear;
+	-ms-transition: background-position .1s linear;
+	-o-transition: background-position .1s linear;
+	transition: background-position .1s linear;
+}
+#infoMenu{
+	height: 20px;
+	color: #f2f2f2;
+	position:fixed;
+	z-index:70;
+	bottom:0;
+	width:100%;
+	text-align:right;
+	font-size:0.9em;
+	padding:8px 0 8px 0;
+}
+#infoMenu ul{
+	padding: 0 40px;
+}
+#infoMenu li a{
+	display: block;
+	margin: 0 22px 0 0;
+	color: #333;
+}
+#infoMenu li a:hover{
+	text-decoration:underline;
+}
+#infoMenu li{
+	display:inline-block;
+	position:relative;
+}
+#examplesList{
+	display:none;
+	background: #282828;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 20px;
+	float: left;
+	position: absolute;
+	bottom: 29px;
+	right: 0;
+	width:638px;
+	text-align:left;
+}
+#examplesList ul{
+	padding:0;
+}
+#examplesList ul li{
+	display:block;
+	margin: 5px 0;
+}
+#examplesList ul li a{
+	color: #BDBDBD;
+	margin:0;
+}
+#examplesList ul li a:hover{
+	color: #f2f2f2;
+}
+#examplesList .column{
+	float: left;
+	margin: 0 20px 0 0;
+}
+#examplesList h3{
+	color: #f2f2f2;
+	font-size: 1.2em;
+	margin: 0 0 15px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	padding: 0 0 5px 0;
+}
 
-        .gap-50 {
-            height: 50%;
-        }
 
-        .gap-100 {
-            height: 100%;
-        }
 
-        .header, .content {
-            background: #fff;
-            padding: 1em;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
+/* Demos Menu
+ * --------------------------------------- */
+ #demosMenu{
+	position:fixed;
+	bottom: 10px;
+	right:10px;
+	z-index: 999;
+ }
 
-        .content-full {
-            height: 100%;
-        }
-
-        #done {
-            height: 100%;
-        }
     </style>
-</head>
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
 
-<body>
-    <!--
-        We position the images fixed and therefore need to place them outside of #skrollr-body.
-        We will then use data-anchor-target to display the correct image matching the current section (.gap element).
-    -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-    <div class="parallax-image-wrapper parallax-image-wrapper-100"
-         data-anchor-target="#dragons + .gap"
-         data-bottom-top="transform:translate3d(0px, 200%, 0px)"
-         data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-
-        <div class="parallax-image parallax-image-100"
-             style="background-image:url(images/kitteh1.jpg)"
-             data-anchor-target="#dragons + .gap"
-             data-bottom-top="transform: translate3d(0px, -80%, 0px);"
-             data-top-bottom="transform: translate3d(0px, 80%, 0px);"></div>
-        <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
-    </div>
-
-    <div class="parallax-image-wrapper parallax-image-wrapper-100"
-         data-anchor-target="#bacons + .gap"
-         data-bottom-top="transform:translate3d(0px, 200%, 0px)"
-         data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-
-        <div class="parallax-image parallax-image-100"
-             style="background-image:url(images/kitteh2.jpg)"
-             data-anchor-target="#bacons + .gap"
-             data-bottom-top="transform: translate3d(0px, -80%, 0px);"
-             data-top-bottom="transform: translate3d(0px, 80%, 0px);"></div>
-    </div>
-
-    <div class="parallax-image-wrapper parallax-image-wrapper-50"
-         data-anchor-target="#kittens + .gap"
-         data-bottom-top="transform:translate3d(0px, 300%, 0px)"
-         data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-
-        <div class="parallax-image parallax-image-50"
-             style="background-image:url(images/kitteh3.jpg)"
-             data-anchor-target="#kittens + .gap"
-             data-bottom-top="transform: translate3d(0px, -60%, 0px);"
-             data-top-bottom="transform: translate3d(0px, 60%, 0px);"></div>
-    </div>
-
-    <div id="skrollr-body">
-        <div class="header" id="dragons">
-            Skrollr demo of classic parallax sections. Degrades without JavaScript (could be disabled on mobile without breaking everything).
-        </div>
-        <div class="gap gap-100" style="background-image:url(images/kitteh1.jpg);"></div>
-        <div class="content" id="bacons">
-            <p>Landjaeger chicken ham fatback sausage hamburger, tri-tip capicola pastrami pancetta ribeye turducken. Rump shank turkey pig kevin sausage meatloaf tenderloin drumstick short ribs short loin. Prosciutto spare ribs chuck, pork strip steak pork chop swine bacon turkey shoulder andouille. Jowl landjaeger chicken corned beef. Ham hock kielbasa pancetta ground round sausage. Spare ribs porchetta pastrami filet mignon drumstick ball tip. Beef ribs prosciutto kevin, landjaeger shoulder ham hock ham brisket sirloin chuck t-bone drumstick kielbasa pork chop.</p>
-
-            <p>Landjaeger spare ribs chicken ball tip, filet mignon frankfurter ribeye tenderloin corned beef. Strip steak boudin pork loin, chicken turkey ball tip beef ribs ground round shank ham hock. Kevin capicola beef, chuck pork chop shoulder brisket doner meatloaf shank ham hock tenderloin. Chuck ham hock short ribs ground round sausage prosciutto shoulder bacon andouille tri-tip beef biltong filet mignon chicken. Pork belly andouille shank, bacon sausage meatloaf bresaola pork chop short ribs t-bone. Ham hock salami porchetta bacon beef turkey, strip steak kielbasa pancetta brisket meatball t-bone.</p>
-
-            <p>Chicken pancetta capicola chuck, turkey meatball jerky frankfurter kielbasa ball tip bacon ground round. Beef ribs brisket meatloaf short ribs landjaeger shankle spare ribs sausage, pancetta swine sirloin flank. Tail shank chuck pancetta, ham meatloaf short ribs sausage rump turkey kevin pork chop landjaeger. Doner boudin short ribs t-bone, jerky shankle bresaola drumstick. Strip steak shank spare ribs boudin doner short ribs. Boudin prosciutto jowl tenderloin tongue beef ribs, short ribs salami short loin strip steak ham jerky. Shank pancetta beef ribs, corned beef ham hock pork belly drumstick tail bresaola chuck.</p>
-        </div>
-        <div class="gap gap-100" style="background-image:url(images/kitteh2.jpg);"></div>
-        <div class="content content-full" id="kittens">
-            Here be kittens
-        </div>
-        <div class="gap gap-50" style="background-image:url(images/kitteh3.jpg);"></div>
-        <div class="content" id="done">
-            Images from <a href="http://placekitten.com/attribution.html">http://placekitten.com/</a>, thanks!
-        </div>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/skrollr.js"></script>
+    <script type="text/javascript" src="scripts/jquery.fullPage.min.js"></script>
     <script type="text/javascript">
-        window.onload = function () {
-            skrollr.init({
-                forceHeight: false
+        $(document).ready(function () {
+            $("#demosMenu").change(function () {
+                window.location.href = $(this).find("option:selected").attr("id") + '.html';
             });
-        }
+        });
     </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                menu: '#menu',
+                scrollingSpeed: 1000
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+
+    <select id="demosMenu">
+        <option selected>Choose Demo</option>
+        <option id="backgrounds">Background images</option>
+        <option id="backgroundVideo">Background video</option>
+        <option id="gradientBackgrounds">Gradient backgrounds</option>
+        <option id="backgroundsFixed">Fixed fullscreen backgrounds</option>
+        <option id="looping">Looping</option>
+        <option id="noAnchor">No anchor links</option>
+        <option id="scrollingSpeed">Scrolling speed</option>
+        <option id="easing">Easing</option>
+        <option id="callbacks">Callbacks</option>
+        <option id="css3">CSS3</option>
+        <option id="continuous">Continuous scrolling</option>
+        <option id="normalScroll">Normal scrolling</option>
+        <option id="scrollBar">Scroll bar enabled</option>
+        <option id="scrolling">Scroll inside sections and slides</option>
+        <option id="navigationV">Vertical navigation dots</option>
+        <option id="navigationH">Horizontal navigation dots</option>
+        <option id="fixedHeaders">Fixed headers</option>
+        <option id="apple">Apple iPhone demo (animations)</option>
+        <option id="oneSection">One single section</option>
+        <option id="responsive">Responsive</option>
+        <option id="methods">Methods</option>
+    </select>
+
+    <ul id="menu">
+        <li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+        <li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
+    </ul>
+
+
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <h1>fullPage.js</h1>
+            <p>Create Beautiful Fullscreen Scrolling Websites</p>
+            <img src="imgs/fullPage.png" alt="fullPage" />
+        </div>
+        <div class="section" id="section1">
+            <div class="slide">
+                <div class="intro">
+                    <h1>Create Sliders</h1>
+                    <p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
+                    <img src="imgs/slider.png" alt="slider" />
+                </div>
+
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <img src="imgs/1.png" alt="simple" />
+                    <h1>Simple</h1>
+                    <p>Easy to use. Configurable and customizable.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <img src="imgs/2.png" alt="Cool" />
+                    <h1>Cool</h1>
+                    <p>It just looks cool. Impress everybody with a simple and modern web design!</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <img src="imgs/3.png" alt="Compatible" />
+                    <h1>Compatible</h1>
+                    <p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div class="intro">
+                <h1>Example</h1>
+                <p>HTML markup example to define 4 sections.</p>
+                <img src="imgs/example2.png" alt="example" />
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <div class="intro">
+                <h1>Working On Tablets</h1>
+                <p>
+                    Designed to fit to different screen sizes as well as tablet and mobile devices.
+                    <br /><br /><br /><br /><br /><br />
+                </p>
+            </div>
+            <img src="imgs/tablets.png" alt="tablets" />
+        </div>
+    </div>
+
 </body>
 </html>

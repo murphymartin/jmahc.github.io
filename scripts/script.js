@@ -1,13 +1,3 @@
-(function ($) {
-    // Init Skrollr
-    var s = skrollr.init({
-        render: function (data) {
-            //Debugging - Log the current scroll position.
-            //console.log(data.curTop);
-        }
-    });
-})(jQuery);
-
 var Jmac = {}; //SiteName can be an abbreviation (e.g. SN for SiteName)
 Jmac.development = false;
 Jmac.debug = false;
@@ -45,17 +35,11 @@ Jmac.home.init_variables = function () {
 Jmac.home.init_methods = function () {
     var t = this;
 
-    t.btn.on('click', function () {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        if (t.btn.hasClass('collapsed')) {
-            t.btn.removeClass('collapsed');
-        }
-        else {
-            t.btn.addClass('collapsed');
-        }
+    $(document).ready(function () {
+        $('#fullpage').fullpage({
+            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+            scrollingSpeed: 800
+        });
     });
-    //$(window).on('scroll', function () {
-    //    var x = t.background.scrollTop();
-    //    t.background.css('background-position', '100% ' + parseInt(-(x + 20)) + 'px');
-    //});
 };

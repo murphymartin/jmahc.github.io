@@ -8,21 +8,17 @@
     <meta name="description" content="A portfolio">
     <link rel="shortcut icon" href="images/favicon.ico">
     <title>Jordan McArdle</title>
-
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
     <!--Font Awesome/Devicons-->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/devicons.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome-animation.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/devicons/devicons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/font-awesome-animation.min.css" />
+    <!--FullPage.js-->
+    <link rel="stylesheet" href="css/fullPage/jquery.fullPage.css" />
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body class="home-page">
     <nav class="navbar navbar-default navbar-static-top">
@@ -32,6 +28,10 @@
                     <div class="profile-pic faa-parent animated-hover faa-float"></div>
                     <div class="profile faa-parent animated-hover">
                         <i class="fa fa-user faa-tada"></i>Jordan McArdle
+                    </div>
+                    <div class="profile-contact">
+                        <div class="contact-email"><i class="fa fa-envelope-o"></i>jordanmcardle@gmail.com</div>
+                        <div class="contact-phone"><i class="fa fa-phone"></i>205.960.9966</div>
                     </div>
                 </div>
                 <button id="returnToMe" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -97,7 +97,55 @@
             </ul>
         </div>
     </nav>
-    <div id="skrollr-body" class="container">
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <h1>fullPage.js</h1>
+            <p>Create Beautiful Fullscreen Scrolling Websites</p>
+        </div>
+        <div class="section" id="section1">
+            <div class="slide">
+                <div class="intro">
+                    <h1>Create Sliders</h1>
+                    <p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
+                </div>
+
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <h1>Simple</h1>
+                    <p>Easy to use. Configurable and customizable.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <h1>Cool</h1>
+                    <p>It just looks cool. Impress everybody with a simple and modern web design!</p>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <h1>Compatible</h1>
+                    <p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div class="intro">
+                <h1>Example</h1>
+                <p>HTML markup example to define 4 sections.</p>
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <div class="intro">
+                <h1>Working On Tablets</h1>
+                <p>
+                    Designed to fit to different screen sizes as well as tablet and mobile devices.
+                    <br /><br /><br /><br /><br /><br />
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--<div id="skrollr-body" class="container">
         <section id="slide-1" class="homeSlide">
             <div class="bcg"
                  data-center="background-position: 50% 0px;"
@@ -206,23 +254,14 @@
                 </div>
             </div>
         </section>
-    </div>
+    </div>-->
     <footer></footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="scripts/jquery-1.11.3.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/skrollr.js"></script>
+    <script src="scripts/jquery.fullPage.js"></script>
     <script src="scripts/script.js"></script>
     <script>
         Jmac.home.init();
-        (function ($) {
-            // Init Skrollr
-            var s = skrollr.init({
-                render: function (data) {
-                    //Debugging - Log the current scroll position.
-                    //console.log(data.curTop);
-                }
-            });
-        })(jQuery);
     </script>
 </body>
 </html>

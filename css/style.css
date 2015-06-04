@@ -1,11 +1,127 @@
-﻿body,
+body,
 html {
   height: 100%;
   min-height: 100%;
+  font-family: arial,helvetica;
 }
 .home-page {
   background-color: #000000;
-  height: 2700px !important;
+  /*.container {
+        width: 100%;
+        height: 100%;
+        color: white;
+        margin-top: 75px;
+        padding: 0;
+
+
+        @media @desk {
+            margin-top: 0;
+            background: rgba(221, 75, 57, 1);
+            position: absolute;
+            right: 0;
+            height: 100%;
+            padding: 0;
+        }
+
+        .hsContainer {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            opacity: 1;
+        }
+
+        .hsContent {
+            max-width: 450px;
+            margin: -150px auto 0 auto;
+            display: table-cell;
+            vertical-align: middle;
+            color: #ebebeb;
+            padding: 0 8%;
+            text-align: center;
+
+            h2 {
+                text-transform: uppercase;
+            text-shadow: 2px 2px rgba(0,0,0,1);
+
+            }
+        }
+
+        .bcg {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .tech-stack, .tools-used {
+            font-size: 50px;
+            text-shadow: 2px 2px rgba(0,0,0,1);
+            position: relative;
+            right: 0px;
+            float: right;
+            ul {
+                li {
+                    display: inline-block;
+                    a {
+                        display: inline-block;
+                        color: white;
+                        text-decoration: none;
+
+                        .devicons-github {
+                            &:hover {
+                                color: #999999;
+                                transition: 0.3s;
+                            }
+                        }
+
+                        .fa-steam {
+                            &:hover {
+                                color: #000;
+                                transition: 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #slide-1 .bcg {
+            height: 800px;
+            background-image: url('../images/cosmos.jpg');
+        }
+
+        #slide-2 .bcg {
+            background: none;
+            background-color: #010101;
+            height: 850px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        #slide-3 .bcg {
+            height: 800px;
+            background-image: url('../images/pyramid.jpg');
+        }
+        #slide-4 .bcg {
+            background-image: url('../images/city.jpg');
+            height: 850px;
+            text-align: center;
+            z-index: 10;
+        }
+    }
+
+            height: 2700px !important;
+
+    @media @desk {
+        height: 3000px !important;
+    }
+
+    */
 }
 .home-page nav {
   position: absolute;
@@ -173,6 +289,15 @@ html {
     top: -5px;
   }
 }
+.home-page .navbar.navbar-default .container-fluid .navbar-header .profile-contact {
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  .home-page .navbar.navbar-default .container-fluid .navbar-header .profile-contact {
+    position: absolute;
+    top: 50px;
+  }
+}
 .home-page .navbar.navbar-default #navbar .navbar-nav {
   margin: 0 -15px 7.5px -15px;
 }
@@ -320,105 +445,30 @@ html {
 .home-page .navbar.navbar-default .navbar-toggle {
   border: 1px solid #fff;
 }
-.home-page .container {
-  width: 100%;
-  height: 100%;
-  color: white;
-  margin-top: 75px;
-  padding: 0;
-}
 @media only screen and (min-width: 1200px) {
-  .home-page .container {
-    margin-top: 0;
-    background: #dd4b39;
-    position: absolute;
-    right: 0;
-    height: 100%;
-    padding: 0;
+  .home-page #fullpage {
+    position: absolute !important;
+    left: 400px;
   }
 }
-.home-page .container .hsContainer {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+/*Fullpage.js Styling*/
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
   position: relative;
-  opacity: 1;
 }
-.home-page .container .hsContent {
-  max-width: 450px;
-  margin: -150px auto 0 auto;
-  display: table-cell;
-  vertical-align: middle;
-  color: #ebebeb;
-  padding: 0 8%;
+h1 {
+  font-size: 6em;
+}
+p {
+  font-size: 2em;
+}
+.intro p {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+.section {
   text-align: center;
 }
-.home-page .container .hsContent h2 {
-  text-transform: uppercase;
-  text-shadow: 2px 2px #000000;
-}
-.home-page .container .bcg {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
-.home-page .container .tech-stack,
-.home-page .container .tools-used {
-  font-size: 50px;
-  text-shadow: 2px 2px #000000;
-  position: relative;
-  right: 0px;
-  float: right;
-}
-.home-page .container .tech-stack ul li,
-.home-page .container .tools-used ul li {
-  display: inline-block;
-}
-.home-page .container .tech-stack ul li a,
-.home-page .container .tools-used ul li a {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-}
-.home-page .container .tech-stack ul li a .devicons-github:hover,
-.home-page .container .tools-used ul li a .devicons-github:hover {
-  color: #999999;
-  transition: 0.3s;
-}
-.home-page .container .tech-stack ul li a .fa-steam:hover,
-.home-page .container .tools-used ul li a .fa-steam:hover {
-  color: #000;
-  transition: 0.3s;
-}
-.home-page .container #slide-1 .bcg {
-  height: 800px;
-  background-image: url('../images/cosmos.jpg');
-}
-.home-page .container #slide-2 .bcg {
-  background: none;
-  background-color: #010101;
-  height: 850px;
-  text-align: center;
-  z-index: 10;
-}
-.home-page .container #slide-3 .bcg {
-  height: 800px;
-  background-image: url('../images/pyramid.jpg');
-}
-.home-page .container #slide-4 .bcg {
-  background-image: url('../images/city.jpg');
-  height: 850px;
-  text-align: center;
-  z-index: 10;
-}
-@media only screen and (min-width: 1200px) {
-  .home-page {
-    height: 3000px !important;
-  }
-}
-/*# sourceMappingURL=style.css.map */
