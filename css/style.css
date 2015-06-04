@@ -1,7 +1,4 @@
-@font-face {
-  
-}
-body,
+﻿body,
 html {
   height: 100%;
   min-height: 100%;
@@ -374,11 +371,9 @@ html {
 .home-page .container .tools-used {
   font-size: 50px;
   text-shadow: 2px 2px #000000;
-}
-.home-page .container .tech-stack ul,
-.home-page .container .tools-used ul {
   position: relative;
-  right: 50px;
+  right: 0px;
+  float: right;
 }
 .home-page .container .tech-stack ul li,
 .home-page .container .tools-used ul li {
@@ -401,23 +396,23 @@ html {
   transition: 0.3s;
 }
 .home-page .container #slide-1 .bcg {
-  height: 750px;
+  height: 800px;
   background-image: url('../images/cosmos.jpg');
 }
 .home-page .container #slide-2 .bcg {
   background: none;
   background-color: #010101;
-  height: 700px;
+  height: 850px;
   text-align: center;
   z-index: 10;
 }
 .home-page .container #slide-3 .bcg {
-  height: 750px;
+  height: 800px;
   background-image: url('../images/pyramid.jpg');
 }
 .home-page .container #slide-4 .bcg {
   background-image: url('../images/city.jpg');
-  height: 800px;
+  height: 850px;
   text-align: center;
   z-index: 10;
 }
@@ -426,3 +421,4 @@ html {
     height: 3000px !important;
   }
 }
+/*# sourceMappingURL=style.css.map */
