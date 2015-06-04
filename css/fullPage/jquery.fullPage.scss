@@ -63,7 +63,7 @@ html, body {
 .fp-controlArrow {
     position: absolute;
     z-index: 4;
-    top: 50%;
+    top: 70%;
     cursor: pointer;
     width: 0;
     height: 0;
@@ -73,17 +73,35 @@ html, body {
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 
+    @media only sreen and (min-width: 1200px)
+    {
+        top: 50%;
+    }
+
     &.fp-prev {
-        left: 15px;
+        /*left: 15px;
         width: 0;
         border-width: 38.5px 34px 38.5px 0;
-        border-color: transparent #fff transparent transparent;
+        border-color: transparent #fff transparent transparent;*/
+        border: none;
+        left: 15px;
+        width: 64px;
+        height: 64px;
+        background: url('../../images/right.png') no-repeat;
+        transform: rotate(180deg);
+        background-size: cover;
     }
 
     &.fp-next {
-        right: 15px;
+        /*right: 15px;
         border-width: 38.5px 0 38.5px 34px;
-        border-color: transparent transparent transparent #fff;
+        border-color: transparent transparent transparent #fff;*/
+        border: none;
+        right: 15px;
+        width: 64px;
+        height: 64px;
+        background: url('../../images/right.png') no-repeat;
+        background-size: cover;
     }
 }
 .fp-scrollable {
