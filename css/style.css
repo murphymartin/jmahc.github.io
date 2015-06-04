@@ -377,7 +377,7 @@ html {
 }
 .home-page .container .tech-stack ul,
 .home-page .container .tools-used ul {
-  position: absolute;
+  position: relative;
   right: 50px;
 }
 .home-page .container .tech-stack ul li,
