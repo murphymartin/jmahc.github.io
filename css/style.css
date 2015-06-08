@@ -1,4 +1,4 @@
-body,
+﻿body,
 html {
   height: 100%;
   min-height: 100%;
@@ -460,13 +460,17 @@ html {
   }
 }
 .home-page #fullpage #section0 {
-  background: url('../images/intro.jpg') no-repeat center;
-  background-size: cover;
   text-align: center;
 }
+.home-page #fullpage #section0 .hint {
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  .home-page #fullpage #section0 .hint {
+    display: inline-block;
+  }
+}
 .home-page #fullpage #section1 {
-  background: url('../images/spring.jpg') no-repeat center;
-  background-size: cover;
   text-align: center;
 }
 .home-page #fullpage #section1 .tech-stack,
@@ -552,13 +556,9 @@ html {
   }
 }
 .home-page #fullpage #section2 {
-  background: url('../images/summer.jpg') no-repeat center;
-  background-size: cover;
   text-align: center;
 }
 .home-page #fullpage #section3 {
-  background: url('../images/leaves.jpg') no-repeat center;
-  background-size: cover;
   text-align: center;
 }
 @media only screen and (min-width: 1200px) {
@@ -567,4 +567,4 @@ html {
     left: 500px;
   }
 }
-/*Fullpage.js Styling*/
+/*# sourceMappingURL=style.css.map */

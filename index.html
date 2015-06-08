@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body class="home-page">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top lazy">
         <div class="container-fluid">
             <div class="navbar-header">
                 <div class="navbar-brand">
@@ -106,9 +106,9 @@
         </div>
     </nav>
     <div id="fullpage">
-        <div class="section " id="section0">
+        <div class="section" id="section0">
             <h1>Hello, World!</h1>
-            <p>Scroll down to learn more about me.</p>
+            <p>Scroll down to learn more about me.</p> <p class="hint">Or drag the profile picture around the screen for an easter egg.</p>
         </div>
         <div class="section" id="section1">
             <div class="slide">
@@ -177,42 +177,18 @@
             </div>
         </div>
         <div class="section" id="section2">
-            <div class="intro">
-                <h1>About Jordan</h1>
-                <p>I received my undergraduate from the University of Alabama in December, 2014.</p>
-                <p>Currently, I am a software developer at a marketing firm, 2-COM, in Brentwood, TN.  I began working there in January, 2015.</p>
-            </div>
+            <div class=" intro">
+            <h1>About Jordan</h1>
+            <p>I received my undergraduate from the University of Alabama in December, 2014.</p>
+            <p>Currently, I am a software developer at a marketing firm, 2-COM, in Brentwood, TN.  I began working there in January, 2015.</p>
         </div>
-        <div class="section" id="section3">
-            <div class="intro">
-                <h1>Contact Info</h1>
-                <p>
-                    I am available throughout the week from 8-5 PM CST.
-                </p>
-                <p>
-                    Shoot me an email & I will respond.
-                </p>
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="Name" class="col-sm-2 control-label">Name</label>
-                        <div class="col-sm-6">
-                            <input type="email" class="form-control" id="form-name" placeholder="Your Name">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="Comments" class="col-sm-2 control-label">Comments</label>
-                        <div class="col-sm-6">
-                            <textarea type="text" id="form-comments" name="Comments" placeholder="Comments" class="form-control" rows="3"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-10">
-                            <a id="form-submit" href="#" class="btn btn-primary">Submit</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
+    </div>
+    <div class="section" id="section3">
+        <div class="intro">
+            <h1>Contact Info</h1>
+            <div id="example1"></div>
         </div>
+    </div>
     </div>
     <footer></footer>
     <script src="scripts/jquery-1.11.3.min.js"></script>
@@ -220,8 +196,17 @@
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/jquery.fullPage.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/twitterfetcher.js"></script>
+    <!--<script src="scripts/jquery.lazy.min.js"></script>-->
+    <script src="scripts/jquery.backstretch.min.js"></script>
     <script>
+        $("#section0").backstretch("./images/intro.jpg");
+        $("#section1").backstretch("./images/spring.jpg");
+        $("#section2").backstretch("./images/summer.jpg");
+        $("#section3").backstretch("./images/leaves.jpg");
+
         Jmac.home.init();
+        //Jmac.game.init();
     </script>
 </body>
 </html>
