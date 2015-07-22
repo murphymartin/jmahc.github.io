@@ -24,94 +24,56 @@
 </head>
 
 <body class='home-page'>
-  <nav class="navbar navbar-default navbar-static-top lazy">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <div class="navbar-brand">
-          <div class="profile-pic faa-parent animated-hover faa-float"></div>
-          <div class="profile faa-parent animated-hover">
-            <i class="fa fa-user faa-tada"></i>
-            <p>
-              Jordan McArdle
-            </p>
+  <div class='header'>
+    <div id='menu'>
+      <div id='menu-button'>
+        <div id='menu-text-container'>
+          <div id='menu-text'>
+            MENU
+          </div>
+          <div id='menu-lines'>
+            <span class='menu-line'>|</span>
+            <span class='menu-line'>|</span>
+            <span class='menu-line'>|</span>
           </div>
         </div>
-        <button id="hamburger" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+      </div>
+      <div id='menu-tray'>
+
       </div>
     </div>
-    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
-      <div class="homepage-hero-module header-video">
-        <div class="video-container">
+  </div>
+  <div class='content'>
+    <section id="code-video">
+      <div id="outer-wrap" class="homepage-hero-module">
+        <div id="video-wrap" class="video-container">
           <div class="filter"></div>
-          <video autoplay loop class="fillWidth">
-            <source src="videos/Sail-Away/MP4/Sail-Away.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            <source src="videos/Sail-Away/WEBM/Sail-Away.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+          <video id="intro-video" autoplay loop class="fillWidth">
+            <source src="videos/Hello-World/Hello-World.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="videos/Hello-World/Hello-World.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
           </video>
           <div class="poster hidden">
-            <img src="videos/Sail-Away/Snapshots/Sail-Away.jpg" alt="">
+            <img src="videos/Hello-World/Hello-World.jpg" alt="">
           </div>
         </div>
       </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="logos">
-          <a class="email-logo" href="mailto:jordanmcardle@gmail.com" target="_blank">
-            <span class="fa-stack fa-lg animated-hover faa-parent">
-                <i class="fa fa-circle fa-stack-2x email faa-pulse"></i>
-                <i class="fa fa-envelope-o fa-stack-1x faa-pulse"></i>
-            </span>
-          </a>
-          <a class="linkedin-logo" href="https://www.linkedin.com/in/jtmcardle" target="_blank">
-            <span class="fa-stack fa-lg animated-hover faa-parent">
-                <i class="fa fa-circle fa-stack-2x linkedin faa-shake"></i>
-                <i class="fa fa-linkedin fa-stack-1x faa-shake"></i>
-            </span>
-          </a>
-          <a class="github-logo" href="https://github.com/jmahc" target="_blank">
-            <span class="fa-stack fa-lg animated-hover faa-parent">
-                <i class="fa fa-circle fa-stack-2x github faa-ring"></i>
-                <i class="fa fa-github-alt fa-stack-1x faa-ring"></i>
-            </span>
-          </a>
-          <a class="google-plus-logo" href="https://plus.google.com/104716789379686556900" target="_blank">
-            <span class="fa-stack fa-lg animated-hover faa-parent">
-                <i class="fa fa-circle fa-stack-2x google-plus faa-pulse"></i>
-                <i class="fa fa-google-plus fa-stack-1x faa-pulse"></i>
-            </span>
-          </a>
-          <a class="facebook-logo" href="https://www.facebook.com/jmaccc" target="_blank">
-            <span class="fa-stack fa-lg animated-hover faa-parent">
-                <i class="fa fa-circle fa-stack-2x facebook faa-shake"></i>
-                <i class="fa fa-facebook fa-stack-1x faa-shake"></i>
-            </span>
-          </a>
-          <a class="twitter-logo" href="https://twitter.com/fjord_an" target="_blank">
-            <span class="fa-stack fa-lg animated-hover faa-parent">
-                <i class="fa fa-circle fa-stack-2x twitter faa-ring"></i>
-                <i class="fa fa-twitter fa-stack-1x faa-ring"></i>
-            </span>
-          </a>
-          <a class="instagram-logo" href="https://instagram.com/jmahc/" target="_blank">
-            <span class="fa-stack fa-lg animated-hover faa-parent">
-                <i class="fa fa-circle fa-stack-2x instagram faa-pulse"></i>
-                <i class="fa fa-instagram fa-stack-1x faa-pulse"></i>
-            </span>
-          </a>
-          <a class="steam-logo" href="http://steamcommunity.com/id/jmahc/" target="_blank">
-            <span class="fa-stack fa-lg animated-hover faa-parent">
-                <i class="fa fa-circle fa-stack-2x steam faa-wrench"></i>
-                <i class="fa fa-steam fa-stack-1x faa-wrench"></i>
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class='content'>
+      <div class="text-content">
+        <h5>Hello, world!</h5>
+      </div>
+    </section>
+    <section id="story-freext">
+      <div class="black-bar"></div>
+      <article>
+        <h1>Drebin</h1>
+        <p>
+          <strong>Frank</strong>
+          WOOO!!!
+        </p>
+      </article>
+      <div class="parallax background-shoes" data-velocity="-.1"></div>
+      <div class="parallax foreground-shoes" data-velocity="-.5" data-fit="525"></div>
+      <div class="black-bar"></div>
+    </section>
     <section id="bottle">
       <article>
         <h1>Whaddup</h1>
@@ -122,31 +84,6 @@
       </article>
       <div class="parallax" data-velocity="-.3"></div>
     </section>
-    <section id="story-freext">
-      <article>
-        <h1>Drebin</h1>
-        <p>
-          <strong>Frank</strong>
-          WOOO!!!
-        </p>
-      </article>
-      <div class="parallax" data-velocity="-.1"></div>
-      <div class="parallax" data-velocity="-.5" data-fit="525"></div>
-    </section>
-    <section>
-      <div class="homepage-hero-module">
-        <div class="video-container">
-          <div class="filter"></div>
-          <video autoplay loop class="fillWidth">
-            <source src="videos/Hello-World/Hello-World.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            <source src="videos/Hello-World/Hello-World.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-          </video>
-          <div class="poster hidden">
-            <img src="videos/Hello-World/Hello-World.jpg" alt="">
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
   <section></section>
   <script src="scripts/jquery-1.11.3.min.js"></script>
@@ -155,12 +92,25 @@
   <script src="scripts/jquery.scrolly.js"></script>
   <script src="scripts/bootstrap.min.js"></script>
   <script src="scripts/script.js"></script>
+  <script src="scripts/backgroundVideo.min.js"></script>
   <script>
     Jmac.home.init();
     Jmac.game.init();
+    Jmac.header.init();
     $(document).ready(function() {
       $('.parallax').scrolly({
         bgParallax: true
+      });
+    });
+    $(document).ready(function() {
+      $('#intro-video').backgroundVideo({
+        $videoWrap: $('#video-wrap'),
+        $outerWrap: $('#outer-wrap'),
+        preventContextMenu: true,
+        parallaxOptions: {
+            offset: 60,
+            effect: 1.7
+        }
       });
     });
   </script>

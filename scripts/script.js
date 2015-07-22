@@ -65,19 +65,7 @@ Jmac.home.init_variables = function () {
 Jmac.home.init_methods = function () {
     var t = this;
 
-    //initiates Bootstrap Tooltips
-    t.$toolTip.tooltip()
-
-    // //initiates FullPageJS for slides
-    // t.$fullPageContent.fullpage({
-    //     sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-    //     anchors: ['intro', 'tech', 'about', 'contact'],
-    //     scrollingSpeed: 800
-    // });
-
-    //Initiates Scrolly
-
-    //Profile name click
+    t.$toolTip.tooltip();
     t.$profile.on('click', function () {
         if (t.$contact.css('position') == 'absolute') {
             t.$profile.animate({
@@ -236,6 +224,35 @@ Jmac.game.init_methods = function () {
     });
 };
 
+Jmac.header = {};
+
+Jmac.header.init = function () {
+    var t = this;
+
+    t.init_variables();
+    t.init_methods();
+};
+
+Jmac.header.init_variables = function () {
+    var t = this;
+
+    t.$menu = $('#menu');
+    t.$menuButton = $('#menu-button');
+    t.$menuTextContainer = $('#menu-text-container');
+    t.$menuText = $('#menu-text');
+    t.$menuLines = $('#menu-lines');
+    t.$menuTray = $('#menu-tray');
+    t.$pic = $('.profile-pic');
+};
+
+Jmac.header.init_methods = function () {
+    var t = this;
+
+    t.$menuButton.on('click', function() {
+      t.$menuLines.toggleClass('open-menu');
+      t.$menuTray.toggleClass('open-tray');
+    });
+};
 
 //jQuery is required to run this code
 $( document ).ready(function() {
