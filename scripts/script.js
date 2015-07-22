@@ -140,7 +140,7 @@ Jmac.game.init_methods = function () {
 
     var x1, x2, y1, y2, t1, t2, // Posititons/Time
     minDistance = 100,       // Minimum px distance object must be dragged to enable momentum.
-    friction = 10;           // Set friction higher to make tossing harder
+    friction = 1;           // Set friction higher to make tossing harder
 
     var onMouseMove = function(e) {
         var mouseEvents = $d.data("mouseEvents");
@@ -242,7 +242,8 @@ Jmac.header.init_variables = function () {
     t.$menuText = $('#menu-text');
     t.$menuLines = $('#menu-lines');
     t.$menuTray = $('#menu-tray');
-    t.$pic = $('.profile-pic');
+    t.$profilePic = $('.profile-pic');
+    t.$profileLink = $('.profile-link');
 };
 
 Jmac.header.init_methods = function () {
@@ -251,6 +252,8 @@ Jmac.header.init_methods = function () {
     t.$menuButton.on('click', function() {
       t.$menuLines.toggleClass('open-menu');
       t.$menuTray.toggleClass('open-tray');
+      t.$profilePic.toggleClass('profile-pic-open');
+      t.$profileLink.toggleClass('profile-link-open');
     });
 };
 

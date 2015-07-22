@@ -39,7 +39,18 @@
         </div>
       </div>
       <div id='menu-tray'>
-
+        <div class='profile-pic'></div>
+        <div class='profile-links'>
+          <!-- Accordion style menu
+          where, when you hover over the icon, it moves right and
+          the name of the website expands (slides out to the right of the icon)
+          and the icon moves a little to the left-->
+          <div class='profile-link-row'>
+            <div class='profile-link github'>
+              <i class="devicons devicons-github_alt"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -57,13 +68,14 @@
           </div>
         </div>
       </div>
-      <img class="video-placeholder" src="videos/Hello-World/Hello-World.jpg" alt="">
+      <div class="video-placeholder">
+      </div>
       <div class="text-content">
-        <h5>Hello, world!</h5>
+        <h5 class='hello'>Hello, world!</h5>
+        <h5 class='jordan'>Welcome to Jordan McArdle's website.</h5>
       </div>
     </section>
     <section id="story-freext">
-      <div class="black-bar"></div>
       <article>
         <h1>Drebin</h1>
         <p>
@@ -73,7 +85,7 @@
       </article>
       <div class="parallax background-shoes" data-velocity="-.1"></div>
       <div class="parallax foreground-shoes" data-velocity="-.5" data-fit="525"></div>
-      <div class="black-bar"></div>
+      <!-- <div class="black-bar"></div> -->
     </section>
     <section id="bottle">
       <article>
@@ -102,8 +114,6 @@
       $('.parallax').scrolly({
         bgParallax: true
       });
-    });
-    $(document).ready(function() {
       $('#intro-video').backgroundVideo({
         $videoWrap: $('#video-wrap'),
         $outerWrap: $('#outer-wrap'),
