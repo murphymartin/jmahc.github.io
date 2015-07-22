@@ -1,0 +1,621 @@
+@import "variables.less";
+
+/* Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+body {
+  font:13px/1.1 Helvetica,sans-serif;
+}
+
+p {
+  line-height:1.6;
+}
+
+strong {
+  font-weight:bold;
+}
+
+header {
+  height: 100px;
+
+  img {
+    float: left;
+    margin: 14px 0 0 14px;
+  }
+
+  h1 {
+    margin-left: 14px;
+    float: left;
+    font-size: 20px;
+    line-height: 100px;
+  }
+}
+
+body, html {
+    height: 100%;
+    min-height: 100%;
+    font-family: 'PT Sans', Arial, Helvetica, Verdana, sans-serif;
+}
+
+.home-page {
+    background-color: rgba(0,0,0, 1);
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        @media @desk {
+            position: fixed;
+            border-right: 2px solid #fff !important;
+            height: 100%;
+            width: 500px;
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+    }
+
+    .navbar.navbar-default {
+        min-height: 75px;
+        background: rgba(0,0,0,0);
+        background-attachment: fixed;
+        border: none;
+        border-bottom: solid #fff 2px !important;
+
+        @media @desk {
+            min-height: 100%;
+            background-attachment: local;
+            background-position: 100% 0;
+            border-bottom: none !important;
+        }
+
+        .container-fluid {
+            min-height: 75px;
+
+            .navbar-header {
+                min-height: 75px;
+
+                @media @mon {
+                    width: 100%;
+                }
+
+                .navbar-brand {
+                    height: 75px;
+                    width: 100%;
+                    display: inline-block;
+
+                    .profile-pic {
+                        float: left;
+                        min-height: 100%;
+                        display: inline-block;
+                        width: 44px;
+                        background-color: #000;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        border-radius: 50%;
+                        -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+                        -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+                        background: url('../images/profilepicture.jpg') no-repeat center;
+                        background-size: cover;
+                        background-position-y: 10%;
+                        z-index: 10000;
+
+                        @media @galaxy {
+                            width: 46px;
+                        }
+
+                        @media @iphone6 {
+                            width: 46px;
+                        }
+
+                        @media @plus {
+                            width: 46px;
+                        }
+
+                        @media @ils {
+                            width: 46px;
+                        }
+
+                        @media @i5ls {
+                            width: 46px;
+                        }
+
+                        @media @ls {
+                            width: 46px;
+                        }
+
+                        @media @mon {
+                            width: 46px;
+                        }
+
+                        @media @nex {
+                            width: 47px;
+                        }
+
+                        @media @desk {
+                            position: relative;
+                            top: 125px;
+                            left: 105px;
+                            width: 250px;
+                            height: 250px;
+                        }
+                    }
+                }
+
+                button {
+                    position: absolute;
+                    right: 0;
+                    top: 10px;
+                    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+                    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+
+                    &.navbar-toggle {
+                        background: rgba(0,0,0,0.8);
+                        background-position: 100% 90%;
+                        transition: 0.25s;
+                    }
+
+                    &.navbar-toggle.collapsed {
+                        background: rgba(0,0,0,0.1);
+                        background-position: 100% 11.5%;
+                        transition: 0.25s;
+                    }
+
+                    .icon-bar {
+                        background-color: white;
+                    }
+                }
+
+                .profile {
+                    color: #fff;
+                    float: left;
+                    display: inline-block;
+                    padding: 12px 0 0 10px;
+                    text-shadow: 1px 3px rgba(0,0,0,0.7);
+                    cursor: default;
+
+                    @media @desk {
+                        position: relative;
+                        top: 50px;
+                        left: 95px;
+                        font-size: 35px;
+                        cursor: pointer;
+                    }
+
+                    i {
+                        display: none;
+                        color: rgba(0,0,0,0.6);
+                        padding-right: 5px;
+
+                        @media @desk {
+                            font-size: 20px;
+                            color: #e6e6e6;
+                            display: inline-block;
+                            text-shadow: none;
+                            padding-bottom: 5px;
+                            margin-right: 5px;
+                            position: relative;
+                            top: -5px;
+                        }
+                    }
+                }
+            }
+
+            @media @desk {
+              display: inline-block;
+            }
+        }
+
+        #navbar {
+            .navbar-nav {
+                margin: 0 -15px 7.5px -15px;
+
+                @media @desk {
+                    margin: 0;
+                }
+            }
+
+            .header-video {
+              top: -80px;
+            }
+
+            ul {
+                text-align: center;
+
+                .page-links {
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    display: none;
+
+                    @media @desk {
+                        display: inline-block;
+                        position: relative;
+                        top: 540px;
+                        left: 0;
+                        width: 50%;
+                        height: 100%;
+                        font-size: 16px;
+                        background-color: rgba(0,0,0,0.5);
+                        color: rgba(255,255,255,1);
+
+                        a {
+                            color: rgba(255,255,255,1);
+                            width: 100%;
+                        }
+
+                        &:hover {
+                            background-color: rgba(0,0,0,0.8);
+
+                            a {
+                                color: rgba(255,255,255,1);
+                                text-shadow: 1px 1px rgba(0,0,0,1);
+                                font-size: 16px;
+                            }
+                        }
+
+                        &:nth-child(1) {
+                            border-bottom: 1px solid rgba(0,0,0,0.9);
+                            border-right: 1px solid rgba(0,0,0,0.9);
+                        }
+
+                        &:nth-child(2) {
+                            border-bottom: 1px solid rgba(0,0,0,0.9);
+                            border-left: 1px solid rgba(0,0,0,0.9);
+                        }
+
+                        &:nth-child(3) {
+                            border-top: 1px solid rgba(0,0,0,0.9);
+                            border-right: 1px solid rgba(0,0,0,0.9);
+                        }
+
+                        &:nth-child(4) {
+                            border-top: 1px solid rgba(0,0,0,0.9);
+                            border-left: 1px solid rgba(0,0,0,0.9);
+                        }
+                    }
+                }
+
+                .logos {
+                    color: white;
+
+                    @media @mon {
+                        position: absolute;
+                        top: 5px;
+                        right: 15px;
+                    }
+
+                    @media @desk {
+                        background: rgba(0,0,0,0.5);
+                        border: 1px solid rgba(0,0,0,0.75);
+                        position: absolute;
+                        top: 430px;
+                        left: 95px;
+                        width: 300px;
+                        -webkit-border-radius: 5%;
+                        -moz-border-radius: 5%;
+                        border-radius: 5%;
+                    }
+
+                    a {
+                        display: inline-block;
+                        color: white;
+
+                        &.email-logo {
+                            color: #fff;
+
+                            .email {
+                                color: #9649CB;
+                                transition: 0.7s;
+                            }
+
+                            &:hover {
+                                color: #9649CB;
+                                transition: 0.7s;
+
+                                .email {
+                                    color: #fff;
+                                    transition: 0.7s;
+                                }
+                            }
+                        }
+
+                        &.linkedin-logo {
+                            .linkedin {
+                                color: rgba(81, 127, 164, 1);
+                                transition: 0.7s;
+                            }
+
+                            &:hover {
+                                color: rgba(81, 127, 164, 1);
+                                transition: 0.7s;
+
+                                .linkedin {
+                                    color: white;
+                                    transition: 0.7s;
+                                }
+                            }
+                        }
+
+                        &.github-logo {
+                            color: #333333;
+
+                            .github {
+                                color: #999999;
+                                transition: 0.7s;
+                            }
+
+                            &:hover {
+                                color: #999999;
+                                transition: 0.7s;
+
+                                .github {
+                                    color: #333333;
+                                    transition: 0.7s;
+                                }
+                            }
+                        }
+
+                        &.google-plus-logo {
+                            .google-plus {
+                                color: rgba(221, 75, 57, 1);
+                                transition: 0.7s;
+                            }
+
+                            &:hover {
+                                color: rgba(221, 75, 57, 1);
+                                transition: 0.7s;
+
+                                .google-plus {
+                                    color: white;
+                                    transition: 0.7s;
+                                }
+                            }
+                        }
+
+                        &.facebook-logo {
+                            .facebook {
+                                color: rgba(59, 89, 152, 1);
+                                transition: 0.7s;
+                            }
+
+                            &:hover {
+                                color: rgba(59, 89, 152, 1);
+                                transition: 0.7s;
+
+                                .facebook {
+                                    color: white;
+                                    transition: 0.7s;
+                                }
+                            }
+                        }
+
+                        &.twitter-logo {
+                            .twitter {
+                                color: rgba(0, 172, 237, 1);
+                                transition: 0.7s;
+                            }
+
+                            &:hover {
+                                color: rgba(0, 172, 237, 1);
+                                transition: 0.7s;
+
+                                .twitter {
+                                    color: white;
+                                    transition: 0.7s;
+                                }
+                            }
+                        }
+
+                        &.instagram-logo {
+                            .instagram {
+                                color: rgba(81, 127, 164, 1);
+                                transition: 0.7s;
+                            }
+
+                            &:hover {
+                                color: rgba(81, 127, 164, 1);
+                                transition: 0.7s;
+
+                                .instagram {
+                                    color: white;
+                                    transition: 0.7s;
+                                }
+                            }
+                        }
+
+                        &.steam-logo {
+                            .steam {
+                                color: #000;
+                                transition: 0.7s;
+                            }
+
+                            &:hover {
+                                color: #000;
+                                transition: 0.7s;
+
+                                .steam {
+                                    color: #fff;
+                                    transition: 0.7s;
+                                }
+                            }
+                        }
+
+                        .fa-google-plus {
+                            top: 1px;
+                            left: 1px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navbar-toggle {
+            border: 1px solid #fff;
+        }
+    }
+}
+
+.home-page {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+
+  .content {
+    @media @desk {
+      position: absolute;
+      left: 500px;
+      top: 0;
+      right: 0;
+    }
+
+
+    section {
+      min-height: 1000px;
+      position: relative;
+      width: 100% !important;
+      min-width: 100%;
+      margin: 0;
+      padding: 0;
+
+      &:nth-of-type(1) {
+        background: whitesmoke;
+        height:1200px;
+      }
+      &:nth-of-type(2) {
+        background: black;
+        height:1600px;
+      }
+
+      &:nth-of-type(3) {
+        background: black;
+        height:1200px;
+      }
+
+      &#story-freext {
+        > div {
+          margin: 0;
+          height: 1600px;
+          position: absolute;
+          width: 100%;
+          top: 0;
+
+          &:nth-of-type(1) {
+            background: url(../img/nike-bg.jpeg) 50% 0 no-repeat fixed;
+            left: 0;
+          }
+
+          &:nth-of-type(2) {
+            background: url(../img/nike.png) 50% 0 no-repeat fixed;
+            left: 0;
+          }
+        }
+      }
+
+      &#bottle {
+        > div {
+          &:nth-of-type(1) {
+            background: url(../img/bottle.jpeg) 50% 0 no-repeat fixed;
+            margin: 0;
+            height: 1200px;
+            position:absolute;
+            top:0;left:0;
+            width:100%;
+          }
+        }
+      }
+
+      h1 {
+        color: #4F9426;
+        width: 300px;
+        font-size: 65px;
+        margin-bottom: 14px;
+      }
+      p {
+        color: black;
+        width: 300px;
+      }
+      article {
+        position:absolute;
+        top:240px;
+        left:40px;
+        width:300px;
+        z-index:4;}
+    }
+  }
+}
+
+
+//scrolly
+.parallax-item {
+  position: absolute;
+  z-index: 5;
+  top: 40px;
+  left: 400px;
+}
+
+//coverr
+.homepage-hero-module {
+  border-right: none;
+  border-left: none;
+  position: relative;
+
+  .video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+
+    .filter {
+      z-index: 100;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.4);
+      width: 100%;
+    }
+
+    video {
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+
+      &.fillWidth {
+        width: 100%;
+      }
+    }
+
+    .poster {
+      img {
+        width: 100%;
+        bottom: 0;
+        position: absolute;
+      }
+    }
+  }
+
+  &.header-video {
+    .video-container {
+      video.fillWidth {
+        @media @desk {
+          min-width: 1400px;
+        }
+      }
+    }
+  }
+}
+
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+
+.video-container video.fillWidth {
+}

@@ -68,12 +68,14 @@ Jmac.home.init_methods = function () {
     //initiates Bootstrap Tooltips
     t.$toolTip.tooltip()
 
-    //initiates FullPageJS for slides
-    t.$fullPageContent.fullpage({
-        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-        anchors: ['intro', 'tech', 'about', 'contact'],
-        scrollingSpeed: 800
-    });
+    // //initiates FullPageJS for slides
+    // t.$fullPageContent.fullpage({
+    //     sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+    //     anchors: ['intro', 'tech', 'about', 'contact'],
+    //     scrollingSpeed: 800
+    // });
+
+    //Initiates Scrolly
 
     //Profile name click
     t.$profile.on('click', function () {
@@ -124,8 +126,6 @@ Jmac.home.init_methods = function () {
         var subject = "Contact Form from " + name +" via jordanmcardle.me";
         window.location = 'mailto:' + t.email + '?subject=' + subject + '&body=' + com;
     });
-
-    twitterFetcher.fetch(t.config1);
 };
 
 
@@ -152,8 +152,8 @@ Jmac.game.init_methods = function () {
 
     var x1, x2, y1, y2, t1, t2, // Posititons/Time
     minDistance = 100,       // Minimum px distance object must be dragged to enable momentum.
-    friction = 1;           // Set friction higher to make tossing harder
-    
+    friction = 10;           // Set friction higher to make tossing harder
+
     var onMouseMove = function(e) {
         var mouseEvents = $d.data("mouseEvents");
         if (e.timeStamp - mouseEvents[mouseEvents.length - 1].timeStamp > 40) {
@@ -202,7 +202,7 @@ Jmac.game.init_methods = function () {
             if (distance > minDistance) {
                 // Momentum
                 var lastStepTime = new Date();
-                
+
                 var maxLeft = $(window).width() - ($d.width() + 15),
                     maxTop = $(window).height() - ($d.height() + 15);
 
@@ -235,3 +235,68 @@ Jmac.game.init_methods = function () {
         }
     });
 };
+
+
+//jQuery is required to run this code
+$( document ).ready(function() {
+
+    scaleVideoContainer();
+
+    initBannerVideoSize('.video-container .poster img');
+    initBannerVideoSize('.video-container .filter');
+    initBannerVideoSize('.video-container video');
+
+    $(window).on('resize', function() {
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
+    });
+
+});
+
+function scaleVideoContainer() {
+
+    var height = $(window).height() + 5;
+    var unitHeight = parseInt(height) + 'px';
+    $('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+
+    $(element).each(function(){
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
+
+    scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+    var windowWidth = $(window).width(),
+    windowHeight = $(window).height() + 5,
+    videoWidth,
+    videoHeight;
+
+    console.log(windowHeight);
+
+    $(element).each(function(){
+        var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+        $(this).width(windowWidth);
+
+        if(windowWidth < 1000){
+            videoHeight = windowHeight;
+            videoWidth = videoHeight / videoAspectRatio;
+            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+            $(this).width(videoWidth).height(videoHeight);
+        }
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+    });
+}
