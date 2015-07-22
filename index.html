@@ -10,11 +10,11 @@
   <link rel="shortcut icon" href="images/favicon.ico">
   <title>Jordan McArdle</title>
   <!--Google Fonts-->
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Narrow|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Narrow|Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
   <!--Font Awesome/Devicon(s)-->
-  <link href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/devicons/devicons.min.css">
   <link rel="stylesheet" href="css/devicon/devicon.min.css" />
   <link rel="stylesheet" href="css/devicon/devicon-colors.css" />
@@ -23,38 +23,89 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
 
-<body class='home-page'>
-  <div class='header'>
-    <div id='menu'>
-      <div id='menu-button'>
-        <div id='menu-text-container'>
-          <div id='menu-text'>
+<body class="home-page">
+  <div class="header">
+    <div id="menu">
+      <div id="menu-button">
+        <div id="menu-text-container">
+          <div id="menu-text">
             MENU
           </div>
-          <div id='menu-lines'>
-            <span class='menu-line'>|</span>
-            <span class='menu-line'>|</span>
-            <span class='menu-line'>|</span>
+          <div id="menu-lines">
+            <span class="menu-line">|</span>
+            <span class="menu-line">|</span>
+            <span class="menu-line">|</span>
           </div>
         </div>
       </div>
-      <div id='menu-tray'>
-        <div class='profile-pic'></div>
-        <div class='profile-links'>
+      <div id="menu-tray">
+        <div class="profile-pic"></div>
+        <div class="profile-links">
           <!-- Accordion style menu
           where, when you hover over the icon, it moves right and
           the name of the website expands (slides out to the right of the icon)
           and the icon moves a little to the left-->
-          <div class='profile-link-row'>
-            <div class='profile-link github'>
-              <i class="devicons devicons-github_alt"></i>
+          <div class="profile-link-row">
+            <div class="profile-link github">
+              <a class="link-text" href="https://github.com/jmahc" target="_blank">
+                <i class="move-me fa fa-github-square"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+          <div class="profile-link-row">
+            <div class="profile-link facebook">
+              <a class="link-text" href="https://www.linkedin.com/in/jtmcardle" target="_blank">
+                <i class="move-me fa fa-linkedin-square"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+          <div class="profile-link-row">
+            <div class="profile-link github">
+              <a class="link-text" href="https://gist.github.com/jmahc" target="_blank">
+                <i class="move-me fa fa-github-alt"></i>
+                <span>Gists</span>
+              </a>
+            </div>
+          </div>
+          <div class="profile-link-row">
+            <div class="profile-link facebook">
+              <a class="link-text" href="https://www.facebook.com/jmaccc" target="_blank">
+                <i class="move-me fa fa-facebook-official"></i>
+                <span>Facebook</span>
+              </a>
+            </div>
+          </div>
+          <div class="profile-link-row">
+            <div class="profile-link twitter">
+              <a class="link-text" href="http://twitter.com/fjord_an" target="_blank">
+                <i class="move-me fa fa-twitter-square"></i>
+                <span>Twitter</span>
+              </a>
+            </div>
+          </div>
+          <div class="profile-link-row">
+            <div class="profile-link google">
+              <a class="link-text" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
+                <i class="move-me fa fa-google-plus-square"></i>
+                <span>Google+</span>
+              </a>
+            </div>
+          </div>
+          <div class="profile-link-row">
+            <div class="profile-link steam">
+              <a class="link-text" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
+                <i class="move-me fa fa-steam-square"></i>
+                <span>Steam</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class='content'>
+  <div class="content">
     <section id="code-video">
       <div id="outer-wrap" class="homepage-hero-module">
         <div id="video-wrap" class="video-container">
@@ -71,8 +122,10 @@
       <div class="video-placeholder">
       </div>
       <div class="text-content">
-        <h5 class='hello'>Hello, world!</h5>
-        <h5 class='jordan'>Welcome to Jordan McArdle's website.</h5>
+        <h5 class="hello">Hello, world!</h5>
+        <h5 class="jordan">Made with
+        <i class="fa fa-heart"></i>
+        by Jordan McArdle</h5>
       </div>
     </section>
     <section id="story-freext">
@@ -108,15 +161,14 @@
   <script src="scripts/backgroundVideo.min.js"></script>
   <script>
     Jmac.home.init();
-    Jmac.game.init();
     Jmac.header.init();
     $(document).ready(function() {
-      $('.parallax').scrolly({
+      $(".parallax").scrolly({
         bgParallax: true
       });
-      $('#intro-video').backgroundVideo({
-        $videoWrap: $('#video-wrap'),
-        $outerWrap: $('#outer-wrap'),
+      $("#intro-video").backgroundVideo({
+        $videoWrap: $("#video-wrap"),
+        $outerWrap: $("#outer-wrap"),
         preventContextMenu: true,
         parallaxOptions: {
             offset: 60,
