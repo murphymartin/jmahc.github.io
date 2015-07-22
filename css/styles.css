@@ -270,6 +270,19 @@ html {
   color: #FFF;
   font-size: 35px;
 }
+.home-page .content section#code-video #outer-wrap {
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  .home-page .content section#code-video #outer-wrap {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .home-page .content section#code-video .video-placeholder {
+    display: none;
+  }
+}
 .home-page .content section#story-freext {
   background: black;
   height: 1600px;
