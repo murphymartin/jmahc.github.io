@@ -9,30 +9,6 @@ body {
   font-family: 'Lato';
 }
 
-p {
-  line-height:1.6;
-}
-
-strong {
-  font-weight:bold;
-}
-
-header {
-  height: 100px;
-
-  img {
-    float: left;
-    margin: 14px 0 0 14px;
-  }
-
-  h1 {
-    margin-left: 14px;
-    float: left;
-    font-size: 20px;
-    line-height: 100px;
-  }
-}
-
 body, html {
     width: 100%;
     height: 100%;
@@ -44,8 +20,14 @@ body, html {
     text-align: center;
 }
 
+//Bottom spacing
 .bs {
-    margin-bottom: 80px;
+    margin-bottom: 30px;
+}
+
+//Top spacing
+.ts {
+    padding: 20px 0;
 }
 
 //Hide on mobile
@@ -53,46 +35,45 @@ body, html {
     display: none !important;
 }
 
+//Mobile row issue
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
 .home-page {
     max-width: 100%;
     width: 100%;
-    
-    nav {
-        #navbar {
-            ul {
-                li {
-                    a {
-                        &.linkedin:hover {
-                            color: rgba(81, 127, 164, 1);
-                        }
-                        &.facebook:hover {
-                            color: rgba(59, 89, 152, 1);
-                        }
-                        &.twitter:hover {
-                            color: rgba(0, 172, 237, 1);
-                        }
-                        &.google:hover {
-                            color: rgba(221, 75, 57, 1);
-                        }
-                    }
-                }
+
+    #navbar {
+        a {
+            &.linkedin:hover {
+                color: rgba(81, 127, 164, 1);
+            }
+            &.facebook:hover {
+                color: rgba(59, 89, 152, 1);
+            }
+            &.twitter:hover {
+                color: rgba(0, 172, 237, 1);
+            }
+            &.google:hover {
+                color: rgba(221, 75, 57, 1);
             }
         }
     }
-  
-
+    
     #intro_video {
-      position: relative;
-      width: 100% !important;
-      min-width: 100%;
-      margin: 0;
-      padding: 0;
+        position: relative;
+        width: 100% !important;
+        min-width: 100%;
+        margin: 0;
+        padding: 0;
 
-      .video-container {
-          video {
-              display: none;
-          }
-      }
+        .video-container {
+            video {
+                display: none;
+            }
+        }
 
         .text-content {
           color: #FFF;
@@ -101,7 +82,7 @@ body, html {
           left: 0;
           right: 0;
           text-align: center;
-          z-index: 98;
+          z-index: 102;
 
             h5 {
                 color: #FFF;
@@ -124,21 +105,42 @@ body, html {
                 }
             }
         }
-
-        #outer-wrap {
-            display: none;
-        }
     }
 
-    #about {
-        padding: 80px 0;
-        span {
-            font-size: 50px;
+    .portfolio {
+        background-color: #ecebec;
+        width: 100%;
+        height: 100%;
+
+        .portfolio_work {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-flow: row wrap;
+            justify-content: center;
+            line-height:30px;
+
+            .pi {
+                height: auto;
+                width: 200px;
+                margin: 5px;
+                text-align: center;
+                vertical-align: middle;
+
+                img {
+                    -webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+                    max-width: 100%;
+                }
+            }
         }
-    }
-
-    #contact {
-
     }
 }
 
@@ -204,21 +206,48 @@ body, html {
 }
 
 
+
+
 @media @xs {
 }
 @media @sm {
+    .bs {
+        margin-bottom: 35px;
+    }
+
+    .ts {
+        padding: 35px 0;
+    }
 }
 @media @md {
+    .bs {
+        margin-bottom: 50px;
+    }
+
+    .ts {
+        padding: 45px 0;
+    }
 }
 
 @media @lg {
+    .bs {
+        margin-bottom: 65px;
+    }
 
+    .ts {
+        padding: 60px 0;
+    }
 }
 
 @media @xl {
     .mobile_hide {
         display: block !important;
     }
+
+    .bs {
+        margin-bottom: 80px;
+    }
+
     nav {
         z-index: 999;
         top: 0;
@@ -283,5 +312,9 @@ body, html {
         &.jordan {
             font-size: 2.5em !important;
         }
+    }
+
+    .ts {
+        padding: 80px 0 !important;
     }
 }
