@@ -1,14 +1,9 @@
-@galaxy: ~"only screen and (min-width: 360px)";
-@iphone6: ~"only screen and (min-width: 375px)";
-@plus: ~"only screen and (min-width: 414px)";
-@ils: ~"only screen and (min-width: 480px)";
-@i5ls: ~"only screen and (min-width: 568px)";
-@ls: ~"only screen and (min-width: 640px)";
-@mon: ~"only screen and (min-width: 768px)";
-@nex: ~"only screen and (min-width: 800px)";
-@fs: ~"only screen and (min-width: 960px)";
-@desk: ~"only screen and (min-width: 1200px)";
-
+@xs: ~"(min-width:320px) and (max-width:479px)";
+@sm: ~"(min-width: 480px) and (max-width:639px)";
+@md: ~"(min-width: 640px) and (max-width:767px)";
+@lg: ~"(min-width: 768px) and (max-width:991px)";
+@xl: ~"(min-width: 992px)";
+@xxl: ~"(min-width: 1200px)";
 
 @keyframes bounceIn {
   0% {
@@ -27,18 +22,43 @@
 
 @keyframes heartBeat {
   0% {
-    transform: scale(0.5);
+    transform: scale(0.33);
   }
   25% {
-    transform: scale(1);
+    transform: scale(0.66);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(0.99);
   }
   75% {
-    transform: scale(1);
+    transform: scale(0.66);
   }
   100% {
-    transform: scale(0.5);
+    transform: scale(0.33);
   }
 }
+
+@keyframes affixFadeIn
+{
+from {opacity: 0;}
+to {opacity: 1;}
+}
+
+@-webkit-keyframes affixFadeIn 
+{
+from {opacity: 1;}
+to {opacity: 0;}
+}
+
+@keyframes affixFadeOut
+{
+from {opacity: 0;}
+to {opacity: 1;}
+}
+
+@-webkit-keyframes affixFadeOut
+{
+from {opacity: 1;}
+to {opacity: 0;}
+}
+

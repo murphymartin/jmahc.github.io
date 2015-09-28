@@ -14,19 +14,51 @@
 }
 @keyframes heartBeat {
   0% {
-    transform: scale(0.5);
+    transform: scale(0.33);
   }
   25% {
-    transform: scale(1);
+    transform: scale(0.66);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(0.99);
   }
   75% {
-    transform: scale(1);
+    transform: scale(0.66);
   }
   100% {
-    transform: scale(0.5);
+    transform: scale(0.33);
+  }
+}
+@keyframes affixFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes affixFadeIn {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes affixFadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes affixFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 /* Reset */
@@ -155,6 +187,7 @@ table {
 }
 body {
   font: 13px/1.1 Helvetica, sans-serif;
+  padding: 20px 0;
 }
 p {
   line-height: 1.6;
@@ -181,245 +214,130 @@ html {
   min-height: 100%;
   font-family: 'PT Sans', Arial, Helvetica, Verdana, sans-serif;
 }
+.mobile_hide {
+  display: none !important;
+}
+@media (min-width: 992px) {
+  .mobile_hide {
+    display: block !important;
+  }
+}
+h5 {
+  color: #000;
+}
+h5.hello {
+  font-size: 2.5em;
+  animation: bounceIn 1s;
+}
+h5.jordan {
+  margin-top: 15px;
+  font-size: 2em;
+  opacity: 0;
+  animation: bounceIn 1s ease-in-out 1.45s forwards;
+}
+h5.jordan .fa-heart {
+  color: hotpink;
+  animation: heartBeat 1s ease-in-out 2.5s infinite;
+}
 .home-page {
-  position: relative;
   max-width: 100%;
   width: 100%;
 }
-.home-page .header {
-  position: absolute;
-  z-index: 999999999;
-}
-.home-page .header #menu #menu-button {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  color: white;
-  width: 30px;
-  height: 20px;
-  z-index: 9999;
-}
-.home-page .header #menu #menu-button #menu-text-container {
-  position: relative;
-  width: 65px;
-  height: 25px;
-  background: rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-.home-page .header #menu #menu-button #menu-text-container #menu-text {
-  position: relative;
-  display: inline-block;
-  top: 6px;
-  left: 5px;
-  color: #FFF;
-}
-.home-page .header #menu #menu-button #menu-text-container #menu-lines {
-  position: relative;
-  top: 4px;
-  left: 10px;
-  display: inline-block;
-  transform: rotate(90deg);
-  transition: transform 1s;
-  -webkit-transition: -webkit-transform 1s;
-}
-.home-page .header #menu #menu-button #menu-text-container #menu-lines .menu-line {
-  margin-right: -2px;
-}
-.home-page .header #menu #menu-button #menu-text-container #menu-lines.open-menu {
-  transform: rotate(0deg);
-  transition: transform 1s;
-  -webkit-transition: -webkit-transform 1s;
-}
-.home-page .header #menu #menu-tray {
-  width: 0;
-  position: fixed;
-  top: 0;
-  left: -2px;
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.6);
-  height: 100%;
-  -webkit-transition: width 1s ease-in-out;
-  transition: width 1s ease-in-out;
-  border-right: 2px solid #FFF;
-}
-.home-page .header #menu #menu-tray.open-tray {
-  left: 0;
-  height: 100%;
-  width: 25%;
-  border-right: 2px solid #FFF;
-  -webkit-transition: width 1s ease-in-out;
-  transition: width 1s ease-in-out;
+.home-page nav {
   z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-.home-page .header #menu #menu-tray .profile-pic {
-  position: relative;
-  top: 20%;
-  left: 15%;
-  width: 0;
-  height: 0;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 10px #000000;
-  -moz-box-shadow: 0 0 10px #000000;
-  box-shadow: 0 0 10px #000000;
-  background: url('../images/profilepicture.jpg') no-repeat center;
-  background-size: cover;
-  background-position-y: 10%;
-  -webkit-transition: width 0.85s, height 0.85s, ease-in-out;
-  transition: width 0.85s, height 0.85s, ease-in-out;
-  z-index: 1000;
+.home-page nav.navbar {
+  margin-bottom: 0 !important;
 }
-.home-page .header #menu #menu-tray .profile-pic.profile-pic-open {
-  width: 70px;
-  height: 70px;
-  -webkit-transition: width 1.5s, height 1.5s, ease-in-out;
-  transition: width 1.5s, height 1.5s, ease-in-out;
+.home-page nav.affix {
+  animation: affixFadeIn 1.25s ease-in;
+  -webkit-animation: affixFadeIn 1.25s;
 }
-@media only screen and (min-width: 1200px) {
-  .home-page .header #menu #menu-tray .profile-pic.profile-pic-open {
-    width: 250px;
-    height: 250px;
-  }
+.home-page nav.affix-top {
+  background-color: #ecebec !important;
+  border-color: #ecebec !important;
+  margin-top: -20px !important;
 }
-.home-page .header #menu #menu-tray .profile-links {
-  position: relative;
-  top: 25%;
+.home-page nav.affix-top a {
+  color: #000;
 }
-.home-page .header #menu #menu-tray .profile-links .profile-link-row {
-  border-bottom: 1px solid #FFF;
-  height: 45px;
-  width: 100%;
-  text-align: center;
+.home-page nav.affix-top a:hover {
+  color: #808080;
 }
-.home-page .header #menu #menu-tray .profile-links .profile-link-row:nth-of-type(1) {
-  border-top: 1px solid #FFF;
+.home-page nav.affix-top .navbar-brand {
+  font-size: 30px;
+  color: #000;
 }
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link {
-  color: #FFF;
-  font-size: 0;
-  height: 43px;
+.home-page nav.affix-top .navbar-brand:hover {
+  color: #808080;
 }
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.profile-link-open {
-  font-size: 40px;
+.home-page nav.affix-top #navbar {
+  display: none !important;
 }
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link .link-text {
-  max-height: 43px;
-  text-decoration: none;
-  overflow: hidden;
-  margin-right: 5px;
-  display: inline-block;
-  transition: max-width 1s, opacity 1s ease-in-out 0.5s;
+.home-page nav.affix-top .navbar-toggle {
+  display: none !important;
 }
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link .link-text i,
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link .link-text i.move-me {
-  transition: max-width 1s, opacity 1s ease-in-out 0.5s;
-  display: inline-block;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link .link-text span {
-  max-width: 0;
-  display: inline-block;
-  transition: max-width 1s, opacity 1s ease-in-out 0.5s;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link .link-text:hover .move-me {
-  padding-right: 10px;
-  text-align: center;
-  line-height: inherit;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link .link-text:hover .fa-square,
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link .link-text:hover .fa-circle {
-  display: none;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link .link-text:hover span {
-  float: right;
-  display: inline-block;
-  opacity: 1;
-  max-width: 150px;
-  transition: max-width 1s, opacity 1s ease-in-out 0.5s, color 0.2s;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link .link-text .fa-square {
-  color: #FFF;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.github .link-text {
-  color: #999999;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.github .link-text:hover {
-  color: #FFFFFF;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.linkedin {
-  padding-top: 2px;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.linkedin .link-text {
+.home-page nav #navbar ul li a.linkedin:hover {
   color: #517fa4;
 }
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.linkedin .link-text:hover {
-  color: #FFFFFF;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.linkedin .link-text:hover span {
-  max-width: 175px;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.facebook {
-  padding-top: 2px;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.facebook .link-text {
+.home-page nav #navbar ul li a.facebook:hover {
   color: #3b5998;
 }
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.facebook .link-text:hover {
-  color: #FFFFFF;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.facebook .link-text:hover span {
-  max-width: 175px;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.twitter {
-  padding-top: 2px;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.twitter .link-text {
+.home-page nav #navbar ul li a.twitter:hover {
   color: #00aced;
 }
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.twitter .link-text:hover {
-  color: #FFFFFF;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.twitter .link-text:hover span {
-  max-width: 175px;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.google {
-  padding-top: 2px;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.google .link-text {
+.home-page nav #navbar ul li a.google:hover {
   color: #dd4b39;
 }
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.google .link-text:hover {
-  color: #FFFFFF;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.google .link-text:hover span {
-  max-width: 175px;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.steam {
-  padding-top: 2px;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.steam .link-text {
-  color: #000000;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.steam .link-text:hover {
-  color: #FFFFFF;
-}
-.home-page .header #menu #menu-tray .profile-links .profile-link-row .profile-link.steam .link-text:hover span {
-  max-width: 175px;
-}
-.home-page .content .black-bar {
-  position: relative;
-  width: 100%;
-  background-color: #FFF;
-  height: 500px;
-  z-index: 999999;
-}
 .home-page .content section {
-  min-height: 1000px;
   position: relative;
   width: 100% !important;
   min-width: 100%;
   margin: 0;
   padding: 0;
+  /*&#story-freext {
+        background: black;
+        height:1600px;
+
+        article {
+          height: 600px;
+        }
+
+        .parallax {
+          margin: 0;
+          height: 1600px;
+          position: absolute;
+          width: 100%;
+          top: 0;
+
+          &.background-shoes {
+            background: url(../img/nike-bg.jpeg) 50% 0 no-repeat fixed;
+            left: 0;
+          }
+
+          &.foreground-shoes {
+            background: url(../img/nike.png) 50% 0 no-repeat fixed;
+            left: 0;
+          }
+        }
+      }
+
+      &#bottle {
+        background: whitesmoke;
+        height:1200px;
+
+        .parallax {
+          background: url(../img/bottle.jpeg) 50% 0 no-repeat fixed;
+          margin: 0;
+          height: 1200px;
+          position: absolute;
+          top:0;left:0;
+          width:100%;
+        }
+      }*/
 }
 .home-page .content section h1 {
   color: #4F9426;
@@ -440,13 +358,7 @@ html {
 }
 .home-page .content section#code-video {
   position: relative;
-  min-height: 500px;
   background: url('../videos/Hello-World/Hello-World.jpg') no-repeat center;
-}
-@media only screen and (min-width: 1200px) {
-  .home-page .content section#code-video {
-    background: black;
-  }
 }
 .home-page .content section#code-video .text-content {
   color: #FFF;
@@ -457,64 +369,8 @@ html {
   text-align: center;
   z-index: 99;
 }
-.home-page .content section#code-video .text-content h5 {
-  color: #FFF;
-}
-.home-page .content section#code-video .text-content h5.hello {
-  font-size: 2.5em;
-  animation: bounceIn 1s;
-}
-.home-page .content section#code-video .text-content h5.jordan {
-  margin-top: 15px;
-  font-size: 2em;
-  opacity: 0;
-  animation: bounceIn 1s ease-in-out 1.45s forwards;
-}
-.home-page .content section#code-video .text-content h5.jordan .fa-heart {
-  animation: heartBeat 1s ease-in-out 2.5s infinite;
-}
 .home-page .content section#code-video #outer-wrap {
   display: none;
-}
-@media only screen and (min-width: 1200px) {
-  .home-page .content section#code-video #outer-wrap {
-    display: block;
-  }
-}
-.home-page .content section#story-freext {
-  background: black;
-  height: 1600px;
-}
-.home-page .content section#story-freext article {
-  height: 600px;
-}
-.home-page .content section#story-freext .parallax {
-  margin: 0;
-  height: 1600px;
-  position: absolute;
-  width: 100%;
-  top: 0;
-}
-.home-page .content section#story-freext .parallax.background-shoes {
-  background: url(../img/nike-bg.jpeg) 50% 0 no-repeat fixed;
-  left: 0;
-}
-.home-page .content section#story-freext .parallax.foreground-shoes {
-  background: url(../img/nike.png) 50% 0 no-repeat fixed;
-  left: 0;
-}
-.home-page .content section#bottle {
-  background: whitesmoke;
-  height: 1200px;
-}
-.home-page .content section#bottle .parallax {
-  background: url(../img/bottle.jpeg) 50% 0 no-repeat fixed;
-  margin: 0;
-  height: 1200px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
 .parallax-item {
   position: absolute;
@@ -554,11 +410,6 @@ html {
   width: 100%;
   bottom: 0;
   position: absolute;
-}
-@media only screen and (min-width: 1200px) {
-  .homepage-hero-module.header-video .video-container video.fillWidth {
-    min-width: 1400px;
-  }
 }
 .no-video .video-container video,
 .touch .video-container video {

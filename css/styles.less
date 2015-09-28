@@ -5,6 +5,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body {
   font:13px/1.1 Helvetica,sans-serif;
+  padding: 20px 0;
 }
 
 p {
@@ -37,287 +38,113 @@ body, html {
     font-family: 'PT Sans', Arial, Helvetica, Verdana, sans-serif;
 }
 
+.mobile_hide {
+    display: none !important;
+}
+
+@media @xl {
+    .mobile_hide {
+        display: block !important;
+    }
+}
+
+.scroll_hide {}
+
+h5 {
+    color: #000;
+
+    &.hello {
+        font-size: 2.5em;
+        animation: bounceIn 1s;
+    }
+
+    &.jordan {
+        margin-top: 15px;
+        font-size: 2em;
+        opacity: 0;
+        animation: bounceIn 1s ease-in-out 1.45s forwards;
+
+        .fa-heart {
+            color: hotpink;
+        animation: heartBeat 1s ease-in-out 2.5s infinite;
+        }
+    }
+}
+
 .home-page {
-  position: relative;
   max-width: 100%;
   width: 100%;
+nav {
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
 
-  .header {
-    position: absolute;
-    z-index: 999999999;
-
-    #menu {
-      #menu-button {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        color: white;
-        width: 30px;
-        height: 20px;
-        z-index: 9999;
-
-        #menu-text-container {
-          position: relative;
-          width: 65px;
-          height: 25px;
-          background: rgba(0,0,0,0.3);
-          cursor: pointer;
-
-          #menu-text {
-            position: relative;
-            display: inline-block;
-            top: 6px;
-            left: 5px;
-            color: #FFF;
-          }
-
-          #menu-lines {
-            position: relative;
-            top: 4px;
-            left: 10px;
-            display: inline-block;
-            transform: rotate(90deg);
-            transition: transform 1s;
-            -webkit-transition: -webkit-transform 1s;
-
-            .menu-line {
-              margin-right: -2px;
-            }
-
-            &.open-menu {
-              transform: rotate(0deg);
-              transition: transform 1s;
-              -webkit-transition: -webkit-transform 1s;
-            }
-          }
-        }
-      }
-
-      #menu-tray {
-        width: 0;
-        position: fixed;
-        top: 0;
-        left: -2px;
-        z-index: 100;
-        background: rgba(0,0,0,0.6);
-        height: 100%;
-        -webkit-transition: width 1s ease-in-out;
-        transition: width 1s ease-in-out;
-        border-right: 2px solid #FFF;
-
-        &.open-tray {
-          left:0;
-          height: 100%;
-          width: 25%;
-          border-right: 2px solid #FFF;
-          -webkit-transition: width 1s ease-in-out;
-          transition: width 1s ease-in-out;
-          z-index: 999;
-        }
-
-        .profile-pic {
-          position: relative;
-          top: 20%;
-          left: 15%;
-          width: 0;
-          height: 0;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          border-radius: 50%;
-          -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-          -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-          background: url('../images/profilepicture.jpg') no-repeat center;
-          background-size: cover;
-          background-position-y: 10%;
-          -webkit-transition: width 0.85s, height 0.85s, ease-in-out;
-          transition: width 0.85s, height 0.85s, ease-in-out;
-          z-index: 1000;
-
-          &.profile-pic-open {
-            width: 70px;
-            height: 70px;
-            -webkit-transition: width 1.5s, height 1.5s, ease-in-out;
-            transition: width 1.5s, height 1.5s, ease-in-out;
-
-            @media @desk {
-              width: 250px;
-              height: 250px;
-            }
-          }
-        }
-
-        .profile-links {
-          position: relative;
-          top: 25%;
-
-          .profile-link-row {
-            border-bottom: 1px solid #FFF;
-            height: 45px;
-            width: 100%;
-            text-align: center;
-
-            &:nth-of-type(1) {
-              border-top: 1px solid #FFF;
-            }
-
-            .profile-link {
-              color: #FFF;
-              font-size: 0;
-              height: 43px;
-
-              &.profile-link-open {
-                font-size: 40px;
-              }
-
-              .link-text {
-                max-height: 43px;
-                text-decoration: none;
-                overflow: hidden;
-                margin-right: 5px;
-                display: inline-block;
-                transition: max-width 1s, opacity 1s ease-in-out .5s;
-
-                i, i.move-me {
-                  transition: max-width 1s, opacity 1s ease-in-out .5s;
-                  display: inline-block;
-                }
-
-                span {
-                  max-width: 0;
-                  display: inline-block;
-                  transition: max-width 1s, opacity 1s ease-in-out .5s;
-                }
-
-                &:hover {
-                  .move-me {
-                    padding-right: 10px;
-                    text-align: center;
-                    line-height: inherit;
-                  }
-
-                  .fa-square, .fa-circle {
-                    display: none;
-                  }
-
-                  span {
-                    float:right;
-                    display: inline-block;
-                    opacity: 1;
-                    max-width: 150px;
-                    transition: max-width 1s, opacity 1s ease-in-out .5s, color .2s;
-                  }
-                }
-
-                .fa-square {
-                  color: #FFF;
-                }
-              }
-
-              &.github {
-                .link-text {
-                  color: #999999;
-
-                  &:hover {
-                    color: #FFFFFF;
-                  }
-                }
-              }
-
-              &.linkedin {
-                padding-top: 2px;
-
-                .link-text {
-                  color: rgba(81, 127, 164, 1);
-
-                  &:hover {
-                    color: #FFFFFF;
-
-                    span {
-                      max-width: 175px;
-                    }
-                  }
-                }
-              }
-
-              &.facebook {
-                padding-top: 2px;
-
-                .link-text {
-                  color: rgba(59, 89, 152, 1);
-
-                  &:hover {
-                    color: #FFFFFF;
-
-                    span {
-                      max-width: 175px;
-                    }
-                  }
-                }
-              }
-              &.twitter {
-                padding-top: 2px;
-
-                .link-text {
-                  color: rgba(0, 172, 237, 1);
-
-                  &:hover {
-                    color: #FFFFFF;
-
-                    span {
-                      max-width: 175px;
-                    }
-                  }
-                }
-              }
-              &.google {
-                padding-top: 2px;
-
-                .link-text {
-                  color: rgba(221, 75, 57, 1);
-
-                  &:hover {
-                    color: #FFFFFF;
-
-                    span {
-                      max-width: 175px;
-                    }
-                  }
-                }
-              }
-
-              &.steam {
-                padding-top: 2px;
-
-                .link-text {
-                  color: rgba(0, 0, 0, 1);
-
-                  &:hover {
-                    color: #FFFFFF;
-
-                    span {
-                      max-width: 175px;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+    &.navbar {
+        margin-bottom: 0 !important;
     }
-  }
+
+    &.affix {
+        animation: affixFadeIn 1.25s  ease-in;
+        -webkit-animation: affixFadeIn 1.25s;
+    }
+
+    &.affix-top {
+        background-color: rgba(236,235,236, 1) !important;
+        border-color: rgba(236,235,236, 1) !important;
+        margin-top: -20px !important;
+
+        a {
+            color: #000;
+
+            &:hover {
+                color: #808080;
+            }
+        }
+
+        .navbar-brand {
+            font-size: 30px;
+            color: #000;
+
+            &:hover {
+                color: #808080;
+            }
+        }
+
+        #navbar {
+            display: none !important;
+        }
+
+        .navbar-toggle {
+            display: none !important;
+        }
+    }
+
+    #navbar {
+        ul {
+            li {
+                a {
+                    &.linkedin:hover {
+                        color: rgba(81, 127, 164, 1);
+                    }
+                    &.facebook:hover {
+                        color: rgba(59, 89, 152, 1);
+                    }
+                    &.twitter:hover {
+                        color: rgba(0, 172, 237, 1);
+                    }
+                    &.google:hover {
+                        color: rgba(221, 75, 57, 1);
+                    }
+                }
+            }
+        }
+    }
+}
+  
 
   .content {
-    .black-bar {
-      position: relative;
-      width: 100%;
-      background-color: #FFF;
-      height: 500px;
-      z-index: 999999;
-    }
     section {
-      min-height: 1000px;
       position: relative;
       width: 100% !important;
       min-width: 100%;
@@ -346,12 +173,7 @@ body, html {
 
       &#code-video {
         position: relative;
-        min-height: 500px;
         background: url('../videos/Hello-World/Hello-World.jpg') no-repeat center;
-
-        @media @desk {
-          background: black;
-        }
 
         .text-content {
           color: #FFF;
@@ -362,37 +184,15 @@ body, html {
           text-align: center;
           z-index: 99;
 
-          h5 {
-            color: #FFF;
-
-            &.hello {
-              font-size: 2.5em;
-              animation: bounceIn 1s;
-            }
-
-            &.jordan {
-              margin-top: 15px;
-              font-size: 2em;
-              opacity: 0;
-              animation: bounceIn 1s ease-in-out 1.45s forwards;
-
-              .fa-heart {
-                animation: heartBeat 1s ease-in-out 2.5s infinite;
-              }
-            }
-          }
+          
         }
 
         #outer-wrap {
           display: none;
-
-          @media @desk {
-            display: block;
-          }
         }
       }
 
-      &#story-freext {
+      /*&#story-freext {
         background: black;
         height:1600px;
 
@@ -431,7 +231,7 @@ body, html {
           top:0;left:0;
           width:100%;
         }
-      }
+      }*/
     }
   }
 }
@@ -489,9 +289,6 @@ body, html {
   &.header-video {
     .video-container {
       video.fillWidth {
-        @media @desk {
-          min-width: 1400px;
-        }
       }
     }
   }

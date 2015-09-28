@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 
 <head>
@@ -24,159 +24,141 @@
 </head>
 
 <body class="home-page">
-  <div class="header">
-    <div id="menu">
-      <div id="menu-button">
-        <div id="menu-text-container">
-          <div id="menu-text">
-            MENU
-          </div>
-          <div id="menu-lines">
-            <span class="menu-line">|</span>
-            <span class="menu-line">|</span>
-            <span class="menu-line">|</span>
-          </div>
+    <nav class="navbar navbar-inverse navbar-default" data-spy="affix" data-offset-top="0">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="mailto:jordanmcardle@gmail.com">Jordan McArdle</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <a class="github" href="https://github.com/jmahc" target="_blank">
+                            <i class="move-me fa fa-github-square"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="gists" href="https://gist.github.com/jmahc" target="_blank">
+                            <i class="move-me fa fa-github-alt"></i>
+                            <span>Gists</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="linkedin" href="https://www.linkedin.com/in/jtmcardle" target="_blank">
+                            <i class="move-me fa fa-linkedin-square"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="facebook" href="https://www.facebook.com/jmaccc" target="_blank">
+                            <i class="move-me fa fa-facebook-official"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="twitter" href="http://twitter.com/fjord_an" target="_blank">
+                            <i class="move-me fa fa-twitter-square"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </li>
+                    <li class="mobile_hide">
+                        <a class="google" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
+                            <i class="move-me fa fa-google-plus-square"></i>
+                            <span>Google+</span>
+                        </a>
+                    </li>
+                    <li class="mobile_hide">
+                        <a class="steam" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
+                            <i class="move-me fa fa-steam-square"></i>
+                            <span>Steam</span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
         </div>
-      </div>
-      <div id="menu-tray">
-        <div class="profile-pic"></div>
-        <div class="profile-links">
-          <!-- Accordion style menu
-          where, when you hover over the icon, it moves right and
-          the name of the website expands (slides out to the right of the icon)
-          and the icon moves a little to the left-->
-          <div class="profile-link-row">
-            <div class="profile-link github">
-              <a class="link-text" href="https://github.com/jmahc" target="_blank">
-                <i class="move-me fa fa-github-square"></i>
-                <span>GitHub</span>
-              </a>
+    </nav>
+    <div class="content">
+        <section id="code-video">
+            <div class="homepage-hero-module">
+                <div class="video-container">
+                    <div class="filter"></div>
+                    <video autoplay loop class="fillWidth">
+                        <source src="/videos/Relaxation/Relaxation.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                        <source src="/videos/Relaxation/Relaxation.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    </video>
+                    <div class="poster hidden">
+                        <img src="/videos/Relaxation/Relaxation.jpg" alt="">
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="profile-link-row">
-            <div class="profile-link facebook">
-              <a class="link-text" href="https://www.linkedin.com/in/jtmcardle" target="_blank">
-                <i class="move-me fa fa-linkedin-square"></i>
-                <span>LinkedIn</span>
-              </a>
+            <div class="text-content">
+                <h5 class="hello">Hello, world!</h5>
+                <h5 class="jordan">
+                    Made with
+                    <i class="fa fa-heart"></i>
+                    by Jordan McArdle
+                </h5>
             </div>
-          </div>
-          <div class="profile-link-row">
-            <div class="profile-link github">
-              <a class="link-text" href="https://gist.github.com/jmahc" target="_blank">
-                <i class="move-me fa fa-github-alt"></i>
-                <span>Gists</span>
-              </a>
-            </div>
-          </div>
-          <div class="profile-link-row">
-            <div class="profile-link facebook">
-              <a class="link-text" href="https://www.facebook.com/jmaccc" target="_blank">
-                <i class="move-me fa fa-facebook-official"></i>
-                <span>Facebook</span>
-              </a>
-            </div>
-          </div>
-          <div class="profile-link-row">
-            <div class="profile-link twitter">
-              <a class="link-text" href="http://twitter.com/fjord_an" target="_blank">
-                <i class="move-me fa fa-twitter-square"></i>
-                <span>Twitter</span>
-              </a>
-            </div>
-          </div>
-          <div class="profile-link-row">
-            <div class="profile-link google">
-              <a class="link-text" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
-                <i class="move-me fa fa-google-plus-square"></i>
-                <span>Google+</span>
-              </a>
-            </div>
-          </div>
-          <div class="profile-link-row">
-            <div class="profile-link steam">
-              <a class="link-text" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
-                <i class="move-me fa fa-steam-square"></i>
-                <span>Steam</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+        </section>
+        <section id="story-freext">
+            <article>
+                <h1>Drebin</h1>
+                <p>
+                    <strong>Frank</strong>
+                    WOOO!!!
+                </p>
+            </article>
+            <div class="parallax background-shoes" data-velocity="-.1"></div>
+            <div class="parallax foreground-shoes" data-velocity="-.5" data-fit="525"></div>
+            <!-- <div class="black-bar"></div> -->
+        </section>
+        <section id="bottle">
+            <article>
+                <h1>Whaddup</h1>
+                <p>
+                    <strong>J MAC</strong>
+                    This is my site!!!!!
+                </p>
+            </article>
+            <div class="parallax" data-velocity="-.3"></div>
+        </section>
     </div>
-  </div>
-  <div class="content">
-    <section id="code-video">
-      <div id="outer-wrap" class="homepage-hero-module">
-        <div id="video-wrap" class="video-container">
-          <div class="filter"></div>
-          <video id="intro-video" autoplay loop class="fillWidth">
-            <source src="videos/Hello-World/Hello-World.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            <source src="videos/Hello-World/Hello-World.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-          </video>
-          <div class="poster hidden">
-            <img src="videos/Hello-World/Hello-World.jpg" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="video-placeholder">
-      </div>
-      <div class="text-content">
-        <h5 class="hello">Hello, world!</h5>
-        <h5 class="jordan">Made with
-        <i class="fa fa-heart"></i>
-        by Jordan McArdle</h5>
-      </div>
-    </section>
-    <section id="story-freext">
-      <article>
-        <h1>Drebin</h1>
-        <p>
-          <strong>Frank</strong>
-          WOOO!!!
-        </p>
-      </article>
-      <div class="parallax background-shoes" data-velocity="-.1"></div>
-      <div class="parallax foreground-shoes" data-velocity="-.5" data-fit="525"></div>
-      <!-- <div class="black-bar"></div> -->
-    </section>
-    <section id="bottle">
-      <article>
-        <h1>Whaddup</h1>
-        <p>
-          <strong>J MAC</strong>
-          This is my site!!!!!
-        </p>
-      </article>
-      <div class="parallax" data-velocity="-.3"></div>
-    </section>
-  </div>
-  <section></section>
-  <script src="scripts/jquery-1.11.3.min.js"></script>
-  <script src="scripts/jquery-ui.min.js"></script>
-  <script src="scripts/bootstrap.min.js"></script>
-  <script src="scripts/jquery.scrolly.js"></script>
-  <script src="scripts/bootstrap.min.js"></script>
-  <script src="scripts/script.js"></script>
-  <script src="scripts/backgroundVideo.min.js"></script>
-  <script>
-    Jmac.home.init();
-    Jmac.header.init();
-    $(document).ready(function() {
-      $(".parallax").scrolly({
-        bgParallax: true
-      });
-      $("#intro-video").backgroundVideo({
-        $videoWrap: $("#video-wrap"),
-        $outerWrap: $("#outer-wrap"),
-        preventContextMenu: true,
-        parallaxOptions: {
-            offset: 60,
-            effect: 1.7
-        }
-      });
-    });
-  </script>
+    <section></section>
+    <script src="scripts/jquery-1.11.3.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery.scrolly.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/backgroundVideo.min.js"></script>
+    <script>
+        $('nav').affix();
+        Jmac.home.init();
+        Jmac.header.init();
+        $(document).ready(function () {
+            $(".parallax").scrolly({
+                bgParallax: true
+            });
+            $("#intro-video").backgroundVideo({
+                $videoWrap: $("#video-wrap"),
+                $outerWrap: $("#outer-wrap"),
+                preventContextMenu: true,
+                parallaxOptions: {
+                    offset: 60,
+                    effect: 1.7
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
