@@ -110,7 +110,7 @@ body, html {
     .portfolio {
         background-color: #ecebec;
         width: 100%;
-        height: 100%;
+        height: auto;
 
         .portfolio_work {
             width: 100%;
@@ -133,11 +133,120 @@ body, html {
                 margin: 5px;
                 text-align: center;
                 vertical-align: middle;
+                line-height: 200px;
+                overflow: hidden;
+                position: relative;
+                -moz-transition: all ease-in-out 250ms;
+                -o-transition: all ease-in-out 250ms;
+                -webkit-transition: all ease-in-out 250ms;
+                transition: all ease-in-out 250ms;
 
                 img {
                     -webkit-filter: grayscale(100%);
-filter: grayscale(100%);
+                    filter: grayscale(100%);
                     max-width: 100%;
+                }
+
+                .feature-overlay {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    -moz-transition: all ease-in-out 250ms;
+                    -o-transition: all ease-in-out 250ms;
+                    -webkit-transition: all ease-in-out 250ms;
+                    transition: all ease-in-out 250ms;
+                    background: rgba(0,0,0,0);
+
+                    .feature-info {
+                        position: relative;
+                        border-bottom: 5px solid #000;
+                        bottom: -200px;
+                        width: 100%;
+                        -moz-box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        -moz-transition: all ease-in-out 250ms;
+                        -o-transition: all ease-in-out 250ms;
+                        -webkit-transition: all ease-in-out 250ms;
+                        transition: all ease-in-out 250ms;
+
+                        h4 {
+                            color: #000;
+                            text-transform: uppercase;
+                            font-size: 24px;
+                            margin: 0 0 5px;
+                        }
+                        div {
+                            font-size: 13px;
+                            color: #000;
+                            line-height: 15px;
+
+                            a {
+                                color: #FFF;
+                                text-decoration: none;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                        
+
+                        &.bw {
+                            background: #e22016;
+                        }
+                        &.rka {
+                            background: #ee3124;
+                        }
+                        &.hs {
+                            background: #3d822e;
+                        }
+                        &.vf {
+                            background: #005bab;
+                        }
+                        &.yt {
+                            background: #dc1e37;
+                        }
+                        &.col {
+                            background: #e87722;
+                        }
+                        &.cub {
+                            background: #ffc82f;
+                        }
+                        &.ecom {
+                            background: #77bd1e;
+                        }
+                    }
+                }
+
+                &.circle {
+                    img {
+                        max-width: 150px;
+                    }
+                }
+
+                &:hover, &:focus {
+                    text-decoration: none;
+
+                    .feature-box-overlay {
+                        background: rgba(0,0,0,0.4);
+                    }
+
+                    .feature-info {
+                        &.bw {
+                            bottom: -121px;
+                        }
+                        &.rka {
+                            bottom: -121px;
+                        }
+                    }
+
+                    img {
+                        -webkit-filter: grayscale(0);
+                        filter: grayscale(0);
+                    }
                 }
             }
         }

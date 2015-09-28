@@ -146,7 +146,7 @@ html {
 .home-page .portfolio {
   background-color: #ecebec;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .home-page .portfolio .portfolio_work {
   width: 100%;
@@ -169,11 +169,109 @@ html {
   margin: 5px;
   text-align: center;
   vertical-align: middle;
+  line-height: 200px;
+  overflow: hidden;
+  position: relative;
+  -moz-transition: all ease-in-out 250ms;
+  -o-transition: all ease-in-out 250ms;
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
 }
 .home-page .portfolio .portfolio_work .pi img {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   max-width: 100%;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -moz-transition: all ease-in-out 250ms;
+  -o-transition: all ease-in-out 250ms;
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
+  background: rgba(0, 0, 0, 0);
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info {
+  position: relative;
+  border-bottom: 5px solid #000;
+  bottom: -200px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: all ease-in-out 250ms;
+  -o-transition: all ease-in-out 250ms;
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info h4 {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 0 0 5px;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div {
+  font-size: 13px;
+  color: #000;
+  line-height: 15px;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div a {
+  color: #FFF;
+  text-decoration: none;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div a:hover {
+  text-decoration: underline;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.bw {
+  background: #e22016;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.rka {
+  background: #ee3124;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.hs {
+  background: #3d822e;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.vf {
+  background: #005bab;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.yt {
+  background: #dc1e37;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.col {
+  background: #e87722;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.cub {
+  background: #ffc82f;
+}
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.ecom {
+  background: #77bd1e;
+}
+.home-page .portfolio .portfolio_work .pi.circle img {
+  max-width: 150px;
+}
+.home-page .portfolio .portfolio_work .pi:hover,
+.home-page .portfolio .portfolio_work .pi:focus {
+  text-decoration: none;
+}
+.home-page .portfolio .portfolio_work .pi:hover .feature-box-overlay,
+.home-page .portfolio .portfolio_work .pi:focus .feature-box-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+.home-page .portfolio .portfolio_work .pi:hover .feature-info.bw,
+.home-page .portfolio .portfolio_work .pi:focus .feature-info.bw {
+  bottom: -121px;
+}
+.home-page .portfolio .portfolio_work .pi:hover .feature-info.rka,
+.home-page .portfolio .portfolio_work .pi:focus .feature-info.rka {
+  bottom: -121px;
+}
+.home-page .portfolio .portfolio_work .pi:hover img,
+.home-page .portfolio .portfolio_work .pi:focus img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
 }
 .parallax-item {
   position: absolute;
