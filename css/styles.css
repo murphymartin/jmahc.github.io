@@ -126,6 +126,9 @@ html {
   margin: 0;
   padding: 0;
 }
+.home-page #intro_video .video-container video {
+  display: none;
+}
 .home-page #intro_video .text-content {
   color: #FFF;
   position: absolute;
@@ -167,6 +170,14 @@ html {
   top: 40px;
   left: 400px;
 }
+.no-video .video-container video,
+.touch .video-container video {
+  display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+  display: block !important;
+}
 .homepage-hero-module {
   border-right: none;
   border-left: none;
@@ -201,23 +212,9 @@ html {
   bottom: 0;
   position: absolute;
 }
-.no-video .video-container video,
-.touch .video-container video {
-  display: none;
-}
-.no-video .video-container .poster,
-.touch .video-container .poster {
-  display: block !important;
-}
 @media (min-width: 992px) {
   .mobile_hide {
     display: block !important;
-  }
-  h5.hello {
-    font-size: 3em !important;
-  }
-  h5.jordan {
-    font-size: 2.5em !important;
   }
   nav {
     z-index: 999;
@@ -254,5 +251,18 @@ html {
   }
   nav.affix-top .navbar-toggle {
     display: none !important;
+  }
+  .video-container video {
+    display: block !important;
+  }
+  .video-container .poster {
+    display: none;
+    visibility: hidden;
+  }
+  h5.hello {
+    font-size: 3em !important;
+  }
+  h5.jordan {
+    font-size: 2.5em !important;
   }
 }

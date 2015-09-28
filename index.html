@@ -94,7 +94,7 @@
                     <source src="/videos/Relaxation/Relaxation.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
                     <source src="/videos/Relaxation/Relaxation.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
-                <div class="poster hidden">
+                <div class="poster">
                     <img src="/videos/Relaxation/Relaxation.jpg" alt="">
                 </div>
             </div>
@@ -140,23 +140,12 @@
     <script src="scripts/jquery.scrolly.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/script.js"></script>
-    <script src="scripts/backgroundVideo.min.js"></script>
     <script>
         $('nav').affix();
-        Jmac.home.init();
-        Jmac.header.init();
+
         $(document).ready(function () {
             $(".parallax").scrolly({
                 bgParallax: true
-            });
-            $("#intro-video").backgroundVideo({
-                $videoWrap: $("#video-wrap"),
-                $outerWrap: $("#outer-wrap"),
-                preventContextMenu: true,
-                parallaxOptions: {
-                    offset: 60,
-                    effect: 1.7
-                }
             });
         });
     </script>
