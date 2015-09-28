@@ -217,13 +217,8 @@ html {
 .mobile_hide {
   display: none !important;
 }
-@media (min-width: 992px) {
-  .mobile_hide {
-    display: block !important;
-  }
-}
 h5 {
-  color: #000;
+  color: #FFF;
 }
 h5.hello {
   font-size: 2.5em;
@@ -242,43 +237,6 @@ h5.jordan .fa-heart {
 .home-page {
   max-width: 100%;
   width: 100%;
-}
-.home-page nav {
-  z-index: 999;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-.home-page nav.navbar {
-  margin-bottom: 0 !important;
-}
-.home-page nav.affix {
-  animation: affixFadeIn 1.25s ease-in;
-  -webkit-animation: affixFadeIn 1.25s;
-}
-.home-page nav.affix-top {
-  background-color: #ecebec !important;
-  border-color: #ecebec !important;
-  margin-top: -20px !important;
-}
-.home-page nav.affix-top a {
-  color: #000;
-}
-.home-page nav.affix-top a:hover {
-  color: #808080;
-}
-.home-page nav.affix-top .navbar-brand {
-  font-size: 30px;
-  color: #000;
-}
-.home-page nav.affix-top .navbar-brand:hover {
-  color: #808080;
-}
-.home-page nav.affix-top #navbar {
-  display: none !important;
-}
-.home-page nav.affix-top .navbar-toggle {
-  display: none !important;
 }
 .home-page nav #navbar ul li a.linkedin:hover {
   color: #517fa4;
@@ -367,7 +325,7 @@ h5.jordan .fa-heart {
   left: 0;
   right: 0;
   text-align: center;
-  z-index: 99;
+  z-index: 100;
 }
 .home-page .content section#code-video #outer-wrap {
   display: none;
@@ -397,6 +355,7 @@ h5.jordan .fa-heart {
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
   width: 100%;
+  height: 100%;
 }
 .homepage-hero-module .video-container video {
   position: absolute;
@@ -418,4 +377,45 @@ h5.jordan .fa-heart {
 .no-video .video-container .poster,
 .touch .video-container .poster {
   display: block !important;
+}
+@media (min-width: 992px) {
+  .mobile_hide {
+    display: block !important;
+  }
+  nav {
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  nav.navbar {
+    margin-bottom: 0 !important;
+  }
+  nav.affix {
+    animation: affixFadeIn 1.25s ease-in;
+    -webkit-animation: affixFadeIn 1.25s;
+  }
+  nav.affix-top {
+    background-color: #ecebec !important;
+    border-color: #ecebec !important;
+  }
+  nav.affix-top a {
+    color: #000;
+  }
+  nav.affix-top a:hover {
+    color: #808080;
+  }
+  nav.affix-top .navbar-brand {
+    font-size: 30px;
+    color: #000;
+  }
+  nav.affix-top .navbar-brand:hover {
+    color: #808080;
+  }
+  nav.affix-top #navbar {
+    display: none !important;
+  }
+  nav.affix-top .navbar-toggle {
+    display: none !important;
+  }
 }
