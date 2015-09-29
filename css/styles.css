@@ -61,7 +61,101 @@
     opacity: 0;
   }
 }
-/*/* Reset 
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+.flipInX {
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+}
+@keyframes flipOutX {
+  from {
+    transform: perspective(400px);
+  }
+  30% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+.flipOutX {
+  animation-name: flipOutX;
+  backface-visibility: visible !important;
+}
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+.flipInY {
+  backface-visibility: visible !important;
+  animation-name: flipInY;
+}
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInDown {
+  animation-name: slideInDown;
+}
+/*/* Reset
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*/
 body {
   font: 13px/1.1 Helvetica, sans-serif;
@@ -90,6 +184,20 @@ html {
 .row {
   margin-left: 0 !important;
   margin-right: 0 !important;
+}
+.bounce {
+  animation: bounce 2s infinite;
+}
+.arrow {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+  background-size: contain;
+  z-index: 999;
 }
 .home-page {
   max-width: 100%;
@@ -143,6 +251,15 @@ html {
   color: hotpink;
   animation: heartBeat 1s ease-in-out 2.5s infinite;
 }
+.home-page .intro_pictures .row {
+  text-align: center;
+}
+.home-page .intro_pictures .bg_img img {
+  width: 55%;
+  border-radius: 10px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
 .home-page .portfolio {
   background-color: #ecebec;
   width: 100%;
@@ -182,6 +299,9 @@ html {
   filter: grayscale(100%);
   max-width: 100%;
 }
+.home-page .portfolio .portfolio_work .pi img.dark_image {
+  opacity: 0.7;
+}
 .home-page .portfolio .portfolio_work .pi .feature-overlay {
   position: absolute;
   top: 0;
@@ -197,6 +317,7 @@ html {
 .home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info {
   position: relative;
   border-bottom: 5px solid #000;
+  border-top: 1px solid #000;
   bottom: -200px;
   width: 100%;
   -moz-box-sizing: border-box;
@@ -206,6 +327,8 @@ html {
   -o-transition: all ease-in-out 250ms;
   -webkit-transition: all ease-in-out 250ms;
   transition: all ease-in-out 250ms;
+  padding: 7.5px;
+  opacity: 1;
 }
 .home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info h4 {
   color: #000;
@@ -258,20 +381,55 @@ html {
 }
 .home-page .portfolio .portfolio_work .pi:hover .feature-box-overlay,
 .home-page .portfolio .portfolio_work .pi:focus .feature-box-overlay {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.1);
 }
 .home-page .portfolio .portfolio_work .pi:hover .feature-info.bw,
 .home-page .portfolio .portfolio_work .pi:focus .feature-info.bw {
-  bottom: -121px;
+  bottom: -104px;
+}
+.home-page .portfolio .portfolio_work .pi:hover .feature-info.hs,
+.home-page .portfolio .portfolio_work .pi:focus .feature-info.hs {
+  bottom: -134px;
 }
 .home-page .portfolio .portfolio_work .pi:hover .feature-info.rka,
 .home-page .portfolio .portfolio_work .pi:focus .feature-info.rka {
-  bottom: -121px;
+  bottom: -93px;
+}
+.home-page .portfolio .portfolio_work .pi:hover .feature-info.vf,
+.home-page .portfolio .portfolio_work .pi:focus .feature-info.vf {
+  bottom: -119px;
+}
+.home-page .portfolio .portfolio_work .pi:hover .feature-info.yt,
+.home-page .portfolio .portfolio_work .pi:focus .feature-info.yt {
+  bottom: -108px;
+}
+.home-page .portfolio .portfolio_work .pi:hover .feature-info.col,
+.home-page .portfolio .portfolio_work .pi:focus .feature-info.col {
+  bottom: -119px;
+}
+.home-page .portfolio .portfolio_work .pi:hover .feature-info.cub,
+.home-page .portfolio .portfolio_work .pi:focus .feature-info.cub {
+  bottom: -119px;
+}
+.home-page .portfolio .portfolio_work .pi:hover .feature-info.ecom,
+.home-page .portfolio .portfolio_work .pi:focus .feature-info.ecom {
+  bottom: -134px;
 }
 .home-page .portfolio .portfolio_work .pi:hover img,
 .home-page .portfolio .portfolio_work .pi:focus img {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
+}
+.home-page .portfolio .portfolio_work .pi:hover img.dark_image,
+.home-page .portfolio .portfolio_work .pi:focus img.dark_image {
+  opacity: 1;
+}
+.home-page .footer a {
+  color: #000;
+  text-decoration: none;
+}
+.home-page .footer a:hover {
+  text-decoration: underline;
 }
 .parallax-item {
   position: absolute;
@@ -362,12 +520,14 @@ html {
     margin-bottom: 0 !important;
   }
   nav.affix {
-    animation: affixFadeIn 1.25s ease-in;
-    -webkit-animation: affixFadeIn 1.25s;
+    animation: flipInX 1.25s ease-in;
+    -webkit-animation: flipInX 1.25s;
   }
   nav.affix-top {
     background-color: #ecebec !important;
     border-color: #ecebec !important;
+    animation: slideInDown 0.95s ease-in;
+    -webkit-animation: slideInDown 0.95s;
   }
   nav.affix-top a {
     color: #000;

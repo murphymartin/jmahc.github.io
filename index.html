@@ -23,7 +23,7 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
 
-<body class="home-page">
+<body class="home-page" data-spy="scroll" data-target="#navbar">
     <nav class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="0">
         <div class="container">
             <div class="navbar-header">
@@ -37,49 +37,72 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li>
-                        <a class="github" href="https://github.com/jmahc" target="_blank">
-                            <i class="move-me fa fa-github-square"></i>
-                            <span>GitHub</span>
+                    <li class="active">
+                        <a href="#intro_video">
+                            Home
                         </a>
                     </li>
                     <li>
-                        <a class="gists" href="https://gist.github.com/jmahc" target="_blank">
-                            <i class="move-me fa fa-github-alt"></i>
-                            <span>Gists</span>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects">
+                            Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                          Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a class="github" href="https://github.com/jmahc" target="_blank">
+                            <i class="move-me fa fa-github-square"></i>
+                            <span>
+                                GitHub
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a class="linkedin" href="https://www.linkedin.com/in/jtmcardle" target="_blank">
                             <i class="move-me fa fa-linkedin-square"></i>
-                            <span>LinkedIn</span>
+                            <span>
+                                LinkedIn
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a class="facebook" href="https://www.facebook.com/jmaccc" target="_blank">
                             <i class="move-me fa fa-facebook-official"></i>
-                            <span>Facebook</span>
+                            <span>
+                                Facebook
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a class="twitter" href="http://twitter.com/fjord_an" target="_blank">
                             <i class="move-me fa fa-twitter-square"></i>
-                            <span>Twitter</span>
+                            <span>
+                                Twitter
+                            </span>
                         </a>
                     </li>
                     <li class="mobile_hide">
                         <a class="google" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
                             <i class="move-me fa fa-google-plus-square"></i>
-                            <span>Google+</span>
+                            <span>
+                                Google+
+                            </span>
                         </a>
                     </li>
                     <li class="mobile_hide">
                         <a class="steam" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
                             <i class="move-me fa fa-steam-square"></i>
-                            <span>Steam</span>
+                            <span>
+                                Steam
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -91,11 +114,11 @@
             <div class="video-container">
                 <div class="filter"></div>
                 <video autoplay loop class="fillWidth">
-                    <source src="/videos/Relaxation/Relaxation.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-                    <source src="/videos/Relaxation/Relaxation.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    <source src="videos/Relaxation/Relaxation.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    <source src="videos/Relaxation/Relaxation.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
                 <div class="poster">
-                    <img src="/videos/Relaxation/Relaxation.jpg" alt="">
+                    <img src="videos/Relaxation/Relaxation.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -132,9 +155,19 @@
                     </div>
                 </div>
             </div>
+            <div class="intro_pictures">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bg_img">
+                            <img src="images/stock.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="arrow bounce"></div>
     </div>
-    <div class="ts portfolio">
+    <div id="projects" class="ts portfolio">
         <div class="container centered">
             <h2>Here's some work that I have done.</h2>
         </div>
@@ -145,7 +178,11 @@
                     <div class="feature-overlay">
                         <div class="feature-info bw">
                             <h4>Bulwark FR</h4>
-                            <div><a href="http://bulwark.com" target="_blank">Site redesign</a> and an in-site <a href="http://bulwark.com/Calculator" target="_blank">Calculator application</a> for Fire-Resistant clothes</div>
+                            <div>
+                                <a href="http://bulwark.com" target="_blank">Site redesign</a> and an in-site
+                                <a href="http://bulwark.com/Calculator" target="_blank">Calculator application</a>
+                                for Fire-Resistant clothes
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -153,7 +190,10 @@
                     <img class="logo_image" src="images/clients/hs.png" />
                     <div class="feature-overlay">
                         <div class="feature-info hs">
-                            <h4>Hello</h4>
+                            <h4>Horace Small</h4>
+                            <div>
+                                <a href="http://horace-small.com" target="_blank">Site updates</a>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -161,8 +201,13 @@
                     <img class="logo_image" src="images/clients/rka.png" />
                     <div class="feature-overlay">
                         <div class="feature-info rka">
-                            <h4>Hello</h4>
-                            <div><a href="http://redkapautomotive.com" target="_blank">Site redesign</a> and <a href="http://www.redkapautomotive.com/ballistic" target="_blank">various promotional</a> pages.</div>
+                            <h4>RedKap Automotive</h4>
+                            <div>
+                                <a href="http://redkapautomotive.com" target="_blank">Site redesign</a>
+                                and
+                                <a href="http://www.redkapautomotive.com/ballistic" target="_blank">various promotional</a>
+                                pages
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -170,7 +215,11 @@
                     <img class="logo_image" src="images/clients/vf.png" />
                     <div class="feature-overlay">
                         <div class="feature-info vf">
-                            <h4>Hello</h4>
+                            <h4>VF Imagewear</h4>
+                            <div>
+                                <a href="http://wpg.vfimagewear.com" target="_blank">Site development</a>
+                                and implementation for v2.0
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -178,23 +227,34 @@
                     <img class="logo_image" src="images/clients/yt.png" />
                     <div class="feature-overlay">
                         <div class="feature-info yt">
-                            <h4>Hello</h4>
+                            <h4>Yanmar Tractors</h4>
+                            <div>
+                                <a href="http://wpg.vfimagewear.com" target="_blank">Site updates</a>
+                            </div>
                         </div>
                     </div>
                 </li>
                 <li class="pi">
-                    <img class="logo_image" src="images/clients/col.png" />
+                    <img class="logo_image dark_image" src="images/clients/col.png" />
                     <div class="feature-overlay">
                         <div class="feature-info col">
-                            <h4>Hello</h4>
+                            <h4>Columbia</h4>
+                            <div>
+                                <a href="http://columbia-equip.com" target="_blank">Site updates</a>
+                                and
+                                <a href="http://columbia-equip.com/distributors">distributor locator tool</a>
+                            </div>
                         </div>
                     </div>
                 </li>
                 <li class="pi cub">
-                    <img class="logo_image" src="images/clients/cub.png" />
+                    <img class="logo_image dark_image" src="images/clients/cub.png" />
                     <div class="feature-overlay">
                         <div class="feature-info cub">
-                            <h4>Hello</h4>
+                            <h4>Cub Cadet</h4>
+                            <div>
+                                <a href="http://cubcadetondemandmarketing.com" target="_blank">Proprietary e-commerce implementation</a>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -202,14 +262,41 @@
                     <img class="logo_image" src="images/clients/2com.png" />
                     <div class="feature-overlay">
                         <div class="feature-info ecom">
-                            <h4>Hello</h4>
+                            <h4>2-COM</h4>
+                            <div>
+                                <a href="http://2-com.net" target="_blank">Proprietary e-commerce service</a>
+                            </div>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
-    <div id="contact"></div>
+    <div id="contact" class="ts">
+        <div class="container centered">
+            <h2>Contact Information</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    EMAIL
+                </div>
+                <div class="col-md-4">
+                    PHONE
+                </div>
+                <div class="col-md-4">
+                    LINKS
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">
+                <a href="mailto:jordanmcardle@gmail.com">
+                    jordanmcardle@gmail.com
+                </a>
+            </p>
+        </div>
+    </footer>
     <script src="scripts/jquery-1.11.3.min.js"></script>
     <script src="scripts/jquery-ui.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
@@ -217,14 +304,41 @@
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/script.js"></script>
     <script>
+        //enables navbar affix-top
         $('nav').affix();
 
-        $(document).ready(function () {
-            $(".parallax").scrolly({
-                bgParallax: true
-            });
+        //navbar affix closes arrow
+        $('nav').on('affixed.bs.affix', function(){
+            $('.arrow.bounce').fadeOut(200);
         });
+        $('nav').on('affixed-top.bs.affix', function() {
+            $('.arrow.bounce').fadeIn(200);
+        });
+
+        $(function() {
+          if ($('nav').hasClass('affix'))
+          {
+              $('.arrow.bounce').fadeOut(200);
+          }
+        });
+        //enables scrollspy for navbar
+        $('body').scrollspy({ target: '#navbar' });
+
+        //smooth scrolling
+        $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
     </script>
 </body>
-
 </html>
