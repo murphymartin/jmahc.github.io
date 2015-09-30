@@ -272,174 +272,19 @@ html {
   justify-content: center;
   line-height: 30px;
 }
-.home-page .portfolio .portfolio_work .pi {
-  height: auto;
-  width: 350px;
-  margin: 5px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 200px;
-  overflow: hidden;
-  position: relative;
-  -moz-transition: all ease-in-out 250ms;
-  -o-transition: all ease-in-out 250ms;
-  -webkit-transition: all ease-in-out 250ms;
-  transition: all ease-in-out 250ms;
-}
-.home-page .portfolio .portfolio_work .pi img {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  max-width: 100%;
-}
-.home-page .portfolio .portfolio_work .pi img.dark_image {
-  opacity: 0.7;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  -moz-transition: all ease-in-out 250ms;
-  -o-transition: all ease-in-out 250ms;
-  -webkit-transition: all ease-in-out 250ms;
-  transition: all ease-in-out 250ms;
-  background: rgba(0, 0, 0, 0);
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info,
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background {
-  position: relative;
-  bottom: -200px;
-  width: 100%;
-  height: 100%;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-transition: all ease-in-out 250ms;
-  -o-transition: all ease-in-out 250ms;
-  -webkit-transition: all ease-in-out 250ms;
-  transition: all ease-in-out 250ms;
-  padding: 7.5px;
-  opacity: 1;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info h4,
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background h4 {
-  color: #000;
-  text-transform: uppercase;
-  font-size: 24px;
-  margin: 0 0 5px;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div,
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background div {
-  font-size: 13px;
-  color: #000;
-  line-height: 15px;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div a,
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background div a {
+.home-page #contact {
+  background: url('../images/location.jpg') no-repeat center;
+  background-size: cover;
   color: #FFF;
+}
+.home-page #contact .overlay_filter {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: auto;
+}
+.home-page #contact .overlay_filter .container a {
   text-decoration: none;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div a:hover,
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background div a:hover {
-  text-decoration: underline;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.bw {
-  background: #e22016;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.rka {
-  background: #ee3124;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.hs {
-  background: #3d822e;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.vf {
-  background: #005bab;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.yt {
-  background: #dc1e37;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.col {
-  background: #e87722;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.cub {
-  background: #ffc82f;
-}
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.ecom {
-  background: #77bd1e;
-}
-.home-page .portfolio .portfolio_work .pi.circle img {
-  max-width: 150px;
-}
-.home-page .portfolio .portfolio_work .pi:hover,
-.home-page .portfolio .portfolio_work .pi:focus {
-  text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-}
-.home-page .portfolio .portfolio_work .pi:hover .feature-box-overlay,
-.home-page .portfolio .portfolio_work .pi:focus .feature-box-overlay {
-  background: rgba(0, 0, 0, 0.1);
-}
-.home-page .portfolio .portfolio_work .pi:hover .feature_background,
-.home-page .portfolio .portfolio_work .pi:focus .feature_background {
-  bottom: 0;
-  opacity: 0.7;
-}
-.home-page .portfolio .portfolio_work .pi:hover .feature-info,
-.home-page .portfolio .portfolio_work .pi:focus .feature-info {
-  bottom: 200px;
-}
-.home-page .portfolio .portfolio_work .pi:hover img,
-.home-page .portfolio .portfolio_work .pi:focus img {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
-}
-.home-page .portfolio .portfolio_work .pi:hover img.dark_image,
-.home-page .portfolio .portfolio_work .pi:focus img.dark_image {
-  opacity: 1;
-}
-.home-page .footer {
-  background: repeating-linear-gradient(45deg, #111111, #111111 50px, #222222 50px, #222222 100px);
-}
-.home-page .footer ul {
-  list-style: none;
-}
-.home-page .footer ul li {
-  display: inline-block;
-  margin: 0 20px;
-  font-size: 50px;
-}
-.home-page .footer a {
-  color: #000;
-}
-.home-page .footer a span {
-  display: none;
-}
-.home-page .footer a.linkedin:hover,
-.home-page .footer a.linkedin.hover_effect {
-  color: #517fa4;
-}
-.home-page .footer a.linkedin:hover span,
-.home-page .footer a.linkedin.hover_effect span {
-  display: inline-block;
-  animation: slideInDown ease-in;
-}
-.home-page .footer a.facebook:hover,
-.home-page .footer a.facebook.hover_effect {
-  color: #3b5998;
-}
-.home-page .footer a.twitter:hover,
-.home-page .footer a.twitter.hover_effect {
-  color: #00aced;
-}
-.home-page .footer a.google:hover,
-.home-page .footer a.google.hover_effect {
-  color: #dd4b39;
+  color: #fff;
 }
 .parallax-item {
   position: absolute;
@@ -537,6 +382,88 @@ html {
     padding: 80px 0 !important;
   }
 }
+@media (min-width:320px) and (max-width:767px) {
+  .portfolio_work .pi {
+    height: auto;
+    width: 100%;
+    margin: 30px 5px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px;
+    overflow: hidden;
+    position: relative;
+    -moz-transition: all ease-in-out 250ms;
+    -o-transition: all ease-in-out 250ms;
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+  }
+  .portfolio_work .pi .pi_logo_image {
+    height: 100%;
+    vertical-align: middle;
+    width: 33%;
+    float: left;
+    display: inline-block;
+  }
+  .portfolio_work .pi .pi_logo_image .logo_image {
+    width: 80%;
+    display: inline-block;
+  }
+  .portfolio_work .pi .feature-overlay {
+    width: 66%;
+    display: inline-block;
+  }
+  .portfolio_work .pi .feature-overlay .feature_background {
+    display: none;
+  }
+  .portfolio_work .pi .feature-overlay .feature-info {
+    height: 100%;
+  }
+  .portfolio_work .pi .feature-overlay .feature-info h4 {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 0 0 5px;
+  }
+  .portfolio_work .pi .feature-overlay .feature-info div {
+    font-size: 13px;
+    color: #000;
+    line-height: 15px;
+  }
+  .portfolio_work .pi .feature-overlay .feature-info div a {
+    color: #FFF;
+    text-decoration: none;
+  }
+  .footer {
+    background: repeating-linear-gradient(45deg, #111111, #111111 50px, #222222 50px, #222222 100px);
+  }
+  .footer ul {
+    list-style: none;
+    padding-top: 10px;
+  }
+  .footer ul li {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 2.2em;
+  }
+  .footer a {
+    color: #FFF;
+  }
+  .footer a span {
+    display: none;
+  }
+  .footer a.linkedin {
+    color: #517fa4;
+  }
+  .footer a.facebook {
+    color: #3b5998;
+  }
+  .footer a.twitter {
+    color: #00aced;
+  }
+  .footer a.google {
+    color: #dd4b39;
+  }
+}
 @media (min-width: 768px) {
   nav {
     z-index: 999;
@@ -581,5 +508,174 @@ html {
   }
   nav.affix-top .navbar-toggle {
     display: none !important;
+  }
+  .pi {
+    height: auto;
+    width: 350px;
+    margin: 5px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px;
+    overflow: hidden;
+    position: relative;
+    -moz-transition: all ease-in-out 250ms;
+    -o-transition: all ease-in-out 250ms;
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+  }
+  .pi img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    max-width: 100%;
+  }
+  .pi img.dark_image {
+    opacity: 0.7;
+  }
+  .pi .feature-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    -moz-transition: all ease-in-out 250ms;
+    -o-transition: all ease-in-out 250ms;
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+    background: rgba(0, 0, 0, 0);
+  }
+  .pi .feature-overlay .feature-info,
+  .pi .feature-overlay .feature_background {
+    position: relative;
+    bottom: -200px;
+    width: 100%;
+    height: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-transition: all ease-in-out 250ms;
+    -o-transition: all ease-in-out 250ms;
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+    padding: 7.5px;
+    opacity: 1;
+  }
+  .pi .feature-overlay .feature-info h4,
+  .pi .feature-overlay .feature_background h4 {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 0 0 5px;
+  }
+  .pi .feature-overlay .feature-info div,
+  .pi .feature-overlay .feature_background div {
+    font-size: 13px;
+    color: #000;
+    line-height: 15px;
+  }
+  .pi .feature-overlay .feature-info div a,
+  .pi .feature-overlay .feature_background div a {
+    color: #FFF;
+    text-decoration: none;
+  }
+  .pi .feature-overlay .feature-info div a:hover,
+  .pi .feature-overlay .feature_background div a:hover {
+    text-decoration: underline;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+  .pi .feature-overlay .feature_background.bw {
+    background: #e22016;
+  }
+  .pi .feature-overlay .feature_background.rka {
+    background: #ee3124;
+  }
+  .pi .feature-overlay .feature_background.hs {
+    background: #3d822e;
+  }
+  .pi .feature-overlay .feature_background.vf {
+    background: #005bab;
+  }
+  .pi .feature-overlay .feature_background.yt {
+    background: #dc1e37;
+  }
+  .pi .feature-overlay .feature_background.col {
+    background: #e87722;
+  }
+  .pi .feature-overlay .feature_background.cub {
+    background: #ffc82f;
+  }
+  .pi .feature-overlay .feature_background.ecom {
+    background: #77bd1e;
+  }
+  .pi.circle img {
+    max-width: 150px;
+  }
+  .pi:hover,
+  .pi:focus {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+  .pi:hover .feature-box-overlay,
+  .pi:focus .feature-box-overlay {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .pi:hover .feature_background,
+  .pi:focus .feature_background {
+    bottom: 0;
+    opacity: 0.7;
+  }
+  .pi:hover .feature-info,
+  .pi:focus .feature-info {
+    bottom: 200px;
+  }
+  .pi:hover .pi_logo_image .logo_image,
+  .pi:focus .pi_logo_image .logo_image {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+  .pi:hover .pi_logo_image .logo_image.dark_image,
+  .pi:focus .pi_logo_image .logo_image.dark_image {
+    opacity: 1;
+  }
+  .footer {
+    background: repeating-linear-gradient(45deg, #111111, #111111 50px, #222222 50px, #222222 100px);
+  }
+  .footer ul {
+    list-style: none;
+  }
+  .footer ul li {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 50px;
+  }
+  .footer a {
+    color: #FFF;
+  }
+  .footer a span {
+    display: none;
+  }
+  .footer a.linkedin:hover,
+  .footer a.linkedin.hover_effect {
+    color: #517fa4;
+  }
+  .footer a.linkedin:hover span,
+  .footer a.linkedin.hover_effect span {
+    display: inline-block;
+    animation: slideInDown ease-in;
+  }
+  .footer a.facebook:hover,
+  .footer a.facebook.hover_effect {
+    color: #3b5998;
+  }
+  .footer a.twitter:hover,
+  .footer a.twitter.hover_effect {
+    color: #00aced;
+  }
+  .footer a.google:hover,
+  .footer a.google.hover_effect {
+    color: #dd4b39;
   }
 }
