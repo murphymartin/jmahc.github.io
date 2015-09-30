@@ -88,11 +88,6 @@ Jmac.home.init_methods = function () {
           scaleBannerVideoSize('.video-container .filter');
           scaleBannerVideoSize('.video-container video');
       });
-
-        $('.hover').bind('touchstart touchend', function(e) {
-            e.preventDefault();
-            $(this).toggleClass('hover_effect');
-        });
     });
 
     function scaleVideoContainer() {
