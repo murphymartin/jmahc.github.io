@@ -21,6 +21,7 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome-animation.min.css" />
   <!-- Custom styles for this template -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link href="http://vjs.zencdn.net/4.9.0/video-js.css" rel="stylesheet">
 </head>
 
 <body class="home-page" data-spy="scroll" data-target="#navbar">
@@ -64,13 +65,13 @@
     <div id="intro_video">
         <div class="homepage-hero-module">
             <div class="video-container">
-                <div class="filter"></div>
-                <video autoplay loop class="fillWidth">
+                <div class="filter no_stretch"></div>
+                <video autoplay loop class="video-js">
                     <source src="videos/Relaxation/Relaxation.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
                     <source src="videos/Relaxation/Relaxation.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
                 <div class="poster">
-                    <img src="videos/Relaxation/Relaxation.jpg" alt="">
+                    <img class="no_stretch" src="videos/Relaxation/Relaxation.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -140,6 +141,8 @@
                 <li class="pi circle">
                     <img class="logo_image" src="images/clients/bulwark.png" />
                     <div class="feature-overlay">
+                        <div class="feature_background bw">
+                        </div>
                         <div class="feature-info bw">
                             <h4>Bulwark FR</h4>
                             <div>
@@ -153,6 +156,8 @@
                 <li class="pi circle">
                     <img class="logo_image" src="images/clients/hs.png" />
                     <div class="feature-overlay">
+                        <div class="feature_background hs">
+                        </div>
                         <div class="feature-info hs">
                             <h4>Horace Small</h4>
                             <div>
@@ -164,6 +169,8 @@
                 <li class="pi circle">
                     <img class="logo_image" src="images/clients/rka.png" />
                     <div class="feature-overlay">
+                        <div class="feature_background rka">
+                        </div>
                         <div class="feature-info rka">
                             <h4>RedKap Automotive</h4>
                             <div>
@@ -178,6 +185,8 @@
                 <li class="pi circle">
                     <img class="logo_image" src="images/clients/vf.png" />
                     <div class="feature-overlay">
+                        <div class="feature_background vf">
+                        </div>
                         <div class="feature-info vf">
                             <h4>VF Imagewear</h4>
                             <div>
@@ -190,6 +199,8 @@
                 <li class="pi">
                     <img class="logo_image" src="images/clients/yt.png" />
                     <div class="feature-overlay">
+                        <div class="feature_background yt">
+                        </div>
                         <div class="feature-info yt">
                             <h4>Yanmar Tractors</h4>
                             <div>
@@ -201,6 +212,8 @@
                 <li class="pi">
                     <img class="logo_image dark_image" src="images/clients/col.png" />
                     <div class="feature-overlay">
+                        <div class="feature_background col">
+                        </div>
                         <div class="feature-info col">
                             <h4>Columbia</h4>
                             <div>
@@ -214,6 +227,8 @@
                 <li class="pi cub">
                     <img class="logo_image dark_image" src="images/clients/cub.png" />
                     <div class="feature-overlay">
+                        <div class="feature_background cub">
+                        </div>
                         <div class="feature-info cub">
                             <h4>Cub Cadet</h4>
                             <div>
@@ -225,6 +240,8 @@
                 <li class="pi ecom">
                     <img class="logo_image" src="images/clients/2com.png" />
                     <div class="feature-overlay">
+                        <div class="feature_background ecom">
+                        </div>
                         <div class="feature-info ecom">
                             <h4>2-COM</h4>
                             <div>
@@ -312,52 +329,7 @@
     <script src="scripts/isotope.min.js"></script>
     <script src="scripts/script.js"></script>
     <script>
-        //enables navbar affix-top
-        $('nav').affix();
-
-        //navbar affix closes arrow
-        $('nav').on('affixed.bs.affix', function(){
-            $('.arrow.bounce').fadeOut(200);
-        });
-        $('nav').on('affixed-top.bs.affix', function() {
-            $('.arrow.bounce').fadeIn(200);
-        });
-
-        //Remove arrow bounce
-        $(function () {
-
-            //$('.portfolio_work').isotope({
-            //    layoutMode: 'fitRows',
-            //    itemSelector: '.pi',
-            //    percentPosition: true,
-            //    //fitRows: {
-            //    //    gutter: '.gutter-sizer'
-            //    //}
-            //});
-
-            if ($('nav').hasClass('affix'))
-            {
-                $('.arrow.bounce').fadeOut(200);
-            }
-        });
-        //enables scrollspy for navbar
-        $('body').scrollspy({ target: '#navbar' });
-
-        //smooth scrolling
-        $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html,body').animate({
-                scrollTop: target.offset().top
-              }, 1000);
-              return false;
-            }
-          }
-        });
-      });
+        Jmac.home.init();
     </script>
 </body>
 </html>

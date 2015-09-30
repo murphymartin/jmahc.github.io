@@ -199,6 +199,10 @@ html {
   background-size: contain;
   z-index: 999;
 }
+.hover {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
 .home-page {
   max-width: 100%;
   width: 100%;
@@ -302,12 +306,12 @@ html {
   transition: all ease-in-out 250ms;
   background: rgba(0, 0, 0, 0);
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info,
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background {
   position: relative;
-  border-bottom: 5px solid #000;
-  border-top: 1px solid #000;
   bottom: -200px;
   width: 100%;
+  height: 100%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -318,98 +322,87 @@ html {
   padding: 7.5px;
   opacity: 1;
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info h4 {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info h4,
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background h4 {
   color: #000;
   text-transform: uppercase;
   font-size: 24px;
   margin: 0 0 5px;
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div,
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background div {
   font-size: 13px;
   color: #000;
   line-height: 15px;
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div a {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div a,
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background div a {
   color: #FFF;
   text-decoration: none;
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div a:hover {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div a:hover,
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background div a:hover,
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info div a.hover_effect,
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background div a.hover_effect {
   text-decoration: underline;
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.bw {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.bw {
   background: #e22016;
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.rka {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.rka {
   background: #ee3124;
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.hs {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.hs {
   background: #3d822e;
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.vf {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.vf {
   background: #005bab;
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.yt {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.yt {
   background: #dc1e37;
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.col {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.col {
   background: #e87722;
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.cub {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.cub {
   background: #ffc82f;
 }
-.home-page .portfolio .portfolio_work .pi .feature-overlay .feature-info.ecom {
+.home-page .portfolio .portfolio_work .pi .feature-overlay .feature_background.ecom {
   background: #77bd1e;
 }
 .home-page .portfolio .portfolio_work .pi.circle img {
   max-width: 150px;
 }
 .home-page .portfolio .portfolio_work .pi:hover,
-.home-page .portfolio .portfolio_work .pi:focus {
+.home-page .portfolio .portfolio_work .pi:focus,
+.home-page .portfolio .portfolio_work .pi.hover_effect {
   text-decoration: none;
 }
 .home-page .portfolio .portfolio_work .pi:hover .feature-box-overlay,
-.home-page .portfolio .portfolio_work .pi:focus .feature-box-overlay {
+.home-page .portfolio .portfolio_work .pi:focus .feature-box-overlay,
+.home-page .portfolio .portfolio_work .pi.hover_effect .feature-box-overlay {
   background: rgba(0, 0, 0, 0.1);
 }
-.home-page .portfolio .portfolio_work .pi:hover .feature-info.bw,
-.home-page .portfolio .portfolio_work .pi:focus .feature-info.bw {
-  bottom: -104px;
+.home-page .portfolio .portfolio_work .pi:hover .feature_background,
+.home-page .portfolio .portfolio_work .pi:focus .feature_background,
+.home-page .portfolio .portfolio_work .pi.hover_effect .feature_background {
+  bottom: 0;
+  opacity: 0.7;
 }
-.home-page .portfolio .portfolio_work .pi:hover .feature-info.hs,
-.home-page .portfolio .portfolio_work .pi:focus .feature-info.hs {
-  bottom: -134px;
-}
-.home-page .portfolio .portfolio_work .pi:hover .feature-info.rka,
-.home-page .portfolio .portfolio_work .pi:focus .feature-info.rka {
-  bottom: -93px;
-}
-.home-page .portfolio .portfolio_work .pi:hover .feature-info.vf,
-.home-page .portfolio .portfolio_work .pi:focus .feature-info.vf {
-  bottom: -119px;
-}
-.home-page .portfolio .portfolio_work .pi:hover .feature-info.yt,
-.home-page .portfolio .portfolio_work .pi:focus .feature-info.yt {
-  bottom: -108px;
-}
-.home-page .portfolio .portfolio_work .pi:hover .feature-info.col,
-.home-page .portfolio .portfolio_work .pi:focus .feature-info.col {
-  bottom: -119px;
-}
-.home-page .portfolio .portfolio_work .pi:hover .feature-info.cub,
-.home-page .portfolio .portfolio_work .pi:focus .feature-info.cub {
-  bottom: -119px;
-}
-.home-page .portfolio .portfolio_work .pi:hover .feature-info.ecom,
-.home-page .portfolio .portfolio_work .pi:focus .feature-info.ecom {
-  bottom: -134px;
+.home-page .portfolio .portfolio_work .pi:hover .feature-info,
+.home-page .portfolio .portfolio_work .pi:focus .feature-info,
+.home-page .portfolio .portfolio_work .pi.hover_effect .feature-info {
+  bottom: 200px;
 }
 .home-page .portfolio .portfolio_work .pi:hover img,
-.home-page .portfolio .portfolio_work .pi:focus img {
+.home-page .portfolio .portfolio_work .pi:focus img,
+.home-page .portfolio .portfolio_work .pi.hover_effect img {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
 .home-page .portfolio .portfolio_work .pi:hover img.dark_image,
-.home-page .portfolio .portfolio_work .pi:focus img.dark_image {
+.home-page .portfolio .portfolio_work .pi:focus img.dark_image,
+.home-page .portfolio .portfolio_work .pi.hover_effect img.dark_image {
   opacity: 1;
 }
 .home-page .footer {
@@ -429,20 +422,25 @@ html {
 .home-page .footer a span {
   display: none;
 }
-.home-page .footer a.linkedin:hover {
+.home-page .footer a.linkedin:hover,
+.home-page .footer a.linkedin.hover_effect {
   color: #517fa4;
 }
-.home-page .footer a.linkedin:hover span {
+.home-page .footer a.linkedin:hover span,
+.home-page .footer a.linkedin.hover_effect span {
   display: inline-block;
   animation: slideInDown ease-in;
 }
-.home-page .footer a.facebook:hover {
+.home-page .footer a.facebook:hover,
+.home-page .footer a.facebook.hover_effect {
   color: #3b5998;
 }
-.home-page .footer a.twitter:hover {
+.home-page .footer a.twitter:hover,
+.home-page .footer a.twitter.hover_effect {
   color: #00aced;
 }
-.home-page .footer a.google:hover {
+.home-page .footer a.google:hover,
+.home-page .footer a.google.hover_effect {
   color: #dd4b39;
 }
 .parallax-item {
@@ -524,6 +522,24 @@ html {
   .bs {
     margin-bottom: 80px;
   }
+  .video-container video {
+    display: block !important;
+  }
+  .video-container .poster {
+    display: none;
+    visibility: hidden;
+  }
+  #intro_video .text-content h5.hello {
+    font-size: 3em !important;
+  }
+  #intro_video .text-content h5.jordan {
+    font-size: 2.5em !important;
+  }
+  .ts {
+    padding: 80px 0 !important;
+  }
+}
+@media (min-width: 768px) {
   nav {
     z-index: 999;
     top: 0;
@@ -546,14 +562,16 @@ html {
   nav.affix-top a {
     color: #000;
   }
-  nav.affix-top a:hover {
+  nav.affix-top a:hover,
+  nav.affix-top a.hover_effect {
     color: #808080;
   }
   nav.affix-top .navbar-brand {
     font-size: 30px;
     color: #000;
   }
-  nav.affix-top .navbar-brand:hover {
+  nav.affix-top .navbar-brand:hover,
+  nav.affix-top .navbar-brand.hover_effect {
     color: #808080;
   }
   nav.affix-top #navbar {
@@ -561,21 +579,5 @@ html {
   }
   nav.affix-top .navbar-toggle {
     display: none !important;
-  }
-  .video-container video {
-    display: block !important;
-  }
-  .video-container .poster {
-    display: none;
-    visibility: hidden;
-  }
-  #intro_video .text-content h5.hello {
-    font-size: 3em !important;
-  }
-  #intro_video .text-content h5.jordan {
-    font-size: 2.5em !important;
-  }
-  .ts {
-    padding: 80px 0 !important;
   }
 }

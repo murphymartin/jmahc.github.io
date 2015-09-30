@@ -57,6 +57,12 @@ body, html {
   z-index: 999;
 }
 
+//Assits with simulating mobile hover effects
+.hover {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
 .home-page {
     max-width: 100%;
     width: 100%;
@@ -176,12 +182,11 @@ body, html {
                     transition: all ease-in-out 250ms;
                     background: rgba(0,0,0,0);
 
-                    .feature-info {
+                    .feature-info, .feature_background {
                         position: relative;
-                        border-bottom: 5px solid #000;
-                        border-top: 1px solid #000;
                         bottom: -200px;
                         width: 100%;
+                        height: 100%;
                         -moz-box-sizing: border-box;
                         -webkit-box-sizing: border-box;
                         box-sizing: border-box;
@@ -207,13 +212,14 @@ body, html {
                                 color: #FFF;
                                 text-decoration: none;
 
-                                &:hover {
+                                &:hover, &.hover_effect {
                                     text-decoration: underline;
                                 }
                             }
                         }
+                    }
 
-
+                    .feature_background {
                         &.bw {
                             background: #e22016;//rgba(226, 32, 22, 0.9);
                         }
@@ -247,38 +253,20 @@ body, html {
                     }
                 }
 
-                &:hover, &:focus {
+                &:hover, &:focus, &.hover_effect {
                     text-decoration: none;
 
                     .feature-box-overlay {
                         background: rgba(0,0,0,0.1);
                     }
 
+                    .feature_background {
+                        bottom: 0;
+                        opacity: 0.7;
+                    }
+
                     .feature-info {
-                        &.bw {
-                            bottom: -104px;
-                        }
-                        &.hs {
-                            bottom: -134px;
-                        }
-                        &.rka {
-                            bottom: -93px;
-                        }
-                        &.vf {
-                            bottom: -119px;
-                        }
-                        &.yt {
-                            bottom: -108px;
-                        }
-                        &.col {
-                            bottom: -119px;
-                        }
-                        &.cub {
-                            bottom: -119px;
-                        }
-                        &.ecom {
-                            bottom: -134px;
-                        }
+                        bottom: 200px;
                     }
 
                     img {
@@ -310,7 +298,7 @@ body, html {
             span {
                 display: none;
             }
-            &.linkedin:hover {
+            &.linkedin:hover, &.linkedin.hover_effect {
                 color: rgba(81, 127, 164, 1);
 
                 span {
@@ -318,13 +306,13 @@ body, html {
                     animation: slideInDown ease-in;
                 }
             }
-            &.facebook:hover {
+            &.facebook:hover, &.facebook.hover_effect {
                 color: rgba(59, 89, 152, 1);
             }
-            &.twitter:hover {
+            &.twitter:hover, &.twitter.hover_effect {
                 color: rgba(0, 172, 237, 1);
             }
-            &.google:hover {
+            &.google:hover, &.google.hover_effect {
                 color: rgba(221, 75, 57, 1);
             }
         }
@@ -435,53 +423,6 @@ body, html {
         margin-bottom: 80px;
     }
 
-    nav {
-        z-index: 999;
-        top: 0;
-        left: 0;
-        right: 0;
-
-        &.navbar {
-            margin-bottom: 0 !important;
-        }
-
-        &.affix {
-            animation: flipInX 1.25s  ease-in;
-            -webkit-animation: flipInX 1.25s;
-        }
-
-        &.affix-top {
-            background-color: rgba(236,235,236, 1);
-            border-color: rgba(236,235,236, 1);
-            animation: slideInDown 0.95s  ease-in;
-            -webkit-animation: slideInDown 0.95s;
-            a {
-                color: #000;
-
-                &:hover {
-                    color: #808080;
-                }
-            }
-
-            .navbar-brand {
-                font-size: 30px;
-                color: #000;
-
-                &:hover {
-                    color: #808080;
-                }
-            }
-
-            #navbar {
-                display: none !important;
-            }
-
-            .navbar-toggle {
-                display: none !important;
-            }
-        }
-    }
-
     .video-container {
         video {
             display: block !important;
@@ -507,5 +448,54 @@ body, html {
 
     .ts {
         padding: 80px 0 !important;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        z-index: 999;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        &.navbar {
+            margin-bottom: 0 !important;
+        }
+
+        &.affix {
+            animation: flipInX 1.25s  ease-in;
+            -webkit-animation: flipInX 1.25s;
+        }
+
+        &.affix-top {
+            background-color: rgba(236,235,236, 1);
+            border-color: rgba(236,235,236, 1);
+            animation: slideInDown 0.95s  ease-in;
+            -webkit-animation: slideInDown 0.95s;
+            a {
+                color: #000;
+
+                &:hover, &.hover_effect {
+                    color: #808080;
+                }
+            }
+
+            .navbar-brand {
+                font-size: 30px;
+                color: #000;
+
+                &:hover, &.hover_effect {
+                    color: #808080;
+                }
+            }
+
+            #navbar {
+                display: none !important;
+            }
+
+            .navbar-toggle {
+                display: none !important;
+            }
+        }
     }
 }
