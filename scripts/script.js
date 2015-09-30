@@ -127,7 +127,7 @@ Jmac.home.init_methods = function () {
                 }
                 $(this).width(videoWidth).height(videoHeight);
             } else if (windowWidth > 1000) {
-                if(windowRatio < 0.7 && windowRatio > 0.58) {
+                if(windowRatio < 0.8 && windowRatio > 0.58) {
                 videoHeight = windowHeight;
                 videoWidth = videoHeight / videoAspectRatio;
                 videoWidth = (videoHeight / videoAspectRatio) + 200;
