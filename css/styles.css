@@ -203,18 +203,6 @@ html {
   max-width: 100%;
   width: 100%;
 }
-.home-page #navbar a.linkedin:hover {
-  color: #517fa4;
-}
-.home-page #navbar a.facebook:hover {
-  color: #3b5998;
-}
-.home-page #navbar a.twitter:hover {
-  color: #00aced;
-}
-.home-page #navbar a.google:hover {
-  color: #dd4b39;
-}
 .home-page #intro_video {
   position: relative;
   width: 100% !important;
@@ -282,7 +270,7 @@ html {
 }
 .home-page .portfolio .portfolio_work .pi {
   height: auto;
-  width: 200px;
+  width: 350px;
   margin: 5px;
   text-align: center;
   vertical-align: middle;
@@ -424,12 +412,38 @@ html {
 .home-page .portfolio .portfolio_work .pi:focus img.dark_image {
   opacity: 1;
 }
+.home-page .footer {
+  background: repeating-linear-gradient(45deg, #111111, #111111 50px, #222222 50px, #222222 100px);
+}
+.home-page .footer ul {
+  list-style: none;
+}
+.home-page .footer ul li {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 50px;
+}
 .home-page .footer a {
   color: #000;
-  text-decoration: none;
 }
-.home-page .footer a:hover {
-  text-decoration: underline;
+.home-page .footer a span {
+  display: none;
+}
+.home-page .footer a.linkedin:hover {
+  color: #517fa4;
+}
+.home-page .footer a.linkedin:hover span {
+  display: inline-block;
+  animation: slideInDown ease-in;
+}
+.home-page .footer a.facebook:hover {
+  color: #3b5998;
+}
+.home-page .footer a.twitter:hover {
+  color: #00aced;
+}
+.home-page .footer a.google:hover {
+  color: #dd4b39;
 }
 .parallax-item {
   position: absolute;
@@ -505,7 +519,7 @@ html {
 }
 @media (min-width: 992px) {
   .mobile_hide {
-    display: block !important;
+    display: block;
   }
   .bs {
     margin-bottom: 80px;
@@ -524,8 +538,8 @@ html {
     -webkit-animation: flipInX 1.25s;
   }
   nav.affix-top {
-    background-color: #ecebec !important;
-    border-color: #ecebec !important;
+    background-color: #ecebec;
+    border-color: #ecebec;
     animation: slideInDown 0.95s ease-in;
     -webkit-animation: slideInDown 0.95s;
   }
@@ -555,10 +569,10 @@ html {
     display: none;
     visibility: hidden;
   }
-  h5.hello {
+  #intro_video .text-content h5.hello {
     font-size: 3em !important;
   }
-  h5.jordan {
+  #intro_video .text-content h5.jordan {
     font-size: 2.5em !important;
   }
   .ts {

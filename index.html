@@ -57,54 +57,6 @@
                           Contact
                         </a>
                     </li>
-                    <li>
-                        <a class="github" href="https://github.com/jmahc" target="_blank">
-                            <i class="move-me fa fa-github-square"></i>
-                            <span>
-                                GitHub
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="linkedin" href="https://www.linkedin.com/in/jtmcardle" target="_blank">
-                            <i class="move-me fa fa-linkedin-square"></i>
-                            <span>
-                                LinkedIn
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="facebook" href="https://www.facebook.com/jmaccc" target="_blank">
-                            <i class="move-me fa fa-facebook-official"></i>
-                            <span>
-                                Facebook
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="twitter" href="http://twitter.com/fjord_an" target="_blank">
-                            <i class="move-me fa fa-twitter-square"></i>
-                            <span>
-                                Twitter
-                            </span>
-                        </a>
-                    </li>
-                    <li class="mobile_hide">
-                        <a class="google" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
-                            <i class="move-me fa fa-google-plus-square"></i>
-                            <span>
-                                Google+
-                            </span>
-                        </a>
-                    </li>
-                    <li class="mobile_hide">
-                        <a class="steam" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
-                            <i class="move-me fa fa-steam-square"></i>
-                            <span>
-                                Steam
-                            </span>
-                        </a>
-                    </li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -170,6 +122,18 @@
     <div id="projects" class="ts portfolio">
         <div class="container centered">
             <h2>Here's some work that I have done.</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="lead">
+                        What
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <p class="lead">
+                        What
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="row">
             <ul class="portfolio_work">
@@ -289,19 +253,63 @@
         </div>
     </div>
     <footer class="footer">
-        <div class="container">
-            <p class="text-muted">
-                <a href="mailto:jordanmcardle@gmail.com">
-                    jordanmcardle@gmail.com
-                </a>
-            </p>
+        <div class="container centered">
+            <ul>
+                <li>
+                    <a class="github" href="https://github.com/jmahc" target="_blank">
+                        <i class="move-me fa fa-github-square"></i>
+                        <span>
+                            GitHub
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="linkedin" href="https://www.linkedin.com/in/jtmcardle" target="_blank">
+                        <i class="move-me fa fa-linkedin-square"></i>
+                        <span>
+                            LinkedIn
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="facebook" href="https://www.facebook.com/jmaccc" target="_blank">
+                        <i class="move-me fa fa-facebook-official"></i>
+                        <span>
+                            Facebook
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="twitter" href="http://twitter.com/fjord_an" target="_blank">
+                        <i class="move-me fa fa-twitter-square"></i>
+                        <span>
+                            Twitter
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="google" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
+                        <i class="move-me fa fa-google-plus-square"></i>
+                        <span>
+                            Google+
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="steam" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
+                        <i class="move-me fa fa-steam-square"></i>
+                        <span>
+                            Steam
+                        </span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </footer>
     <script src="scripts/jquery-1.11.3.min.js"></script>
     <script src="scripts/jquery-ui.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/jquery.scrolly.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/isotope.min.js"></script>
     <script src="scripts/script.js"></script>
     <script>
         //enables navbar affix-top
@@ -315,11 +323,22 @@
             $('.arrow.bounce').fadeIn(200);
         });
 
-        $(function() {
-          if ($('nav').hasClass('affix'))
-          {
-              $('.arrow.bounce').fadeOut(200);
-          }
+        //Remove arrow bounce
+        $(function () {
+
+            //$('.portfolio_work').isotope({
+            //    layoutMode: 'fitRows',
+            //    itemSelector: '.pi',
+            //    percentPosition: true,
+            //    //fitRows: {
+            //    //    gutter: '.gutter-sizer'
+            //    //}
+            //});
+
+            if ($('nav').hasClass('affix'))
+            {
+                $('.arrow.bounce').fadeOut(200);
+            }
         });
         //enables scrollspy for navbar
         $('body').scrollspy({ target: '#navbar' });

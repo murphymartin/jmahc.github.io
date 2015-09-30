@@ -61,23 +61,6 @@ body, html {
     max-width: 100%;
     width: 100%;
 
-    #navbar {
-        a {
-            &.linkedin:hover {
-                color: rgba(81, 127, 164, 1);
-            }
-            &.facebook:hover {
-                color: rgba(59, 89, 152, 1);
-            }
-            &.twitter:hover {
-                color: rgba(0, 172, 237, 1);
-            }
-            &.google:hover {
-                color: rgba(221, 75, 57, 1);
-            }
-        }
-    }
-
     #intro_video {
         position: relative;
         width: 100% !important;
@@ -159,7 +142,7 @@ body, html {
 
             .pi {
                 height: auto;
-                width: 200px;
+                width: 350px;
                 margin: 5px;
                 text-align: center;
                 vertical-align: middle;
@@ -312,12 +295,38 @@ body, html {
     }
 
     .footer {
+        background: repeating-linear-gradient(45deg, #111, #111 50px, #222 50px, #222 100px);
+        ul {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                margin: 0 20px;
+                font-size: 50px;
+            }
+        }
         a {
-          color: #000;
-          text-decoration: none;
-          &:hover {
-            text-decoration: underline;
-          }
+            color: #000;
+            span {
+                display: none;
+            }
+            &.linkedin:hover {
+                color: rgba(81, 127, 164, 1);
+
+                span {
+                    display: inline-block;
+                    animation: slideInDown ease-in;
+                }
+            }
+            &.facebook:hover {
+                color: rgba(59, 89, 152, 1);
+            }
+            &.twitter:hover {
+                color: rgba(0, 172, 237, 1);
+            }
+            &.google:hover {
+                color: rgba(221, 75, 57, 1);
+            }
         }
     }
 }
@@ -419,7 +428,7 @@ body, html {
 
 @media @xl {
     .mobile_hide {
-        display: block !important;
+        display: block;
     }
 
     .bs {
@@ -442,8 +451,8 @@ body, html {
         }
 
         &.affix-top {
-            background-color: rgba(236,235,236, 1) !important;
-            border-color: rgba(236,235,236, 1) !important;
+            background-color: rgba(236,235,236, 1);
+            border-color: rgba(236,235,236, 1);
             animation: slideInDown 0.95s  ease-in;
             -webkit-animation: slideInDown 0.95s;
             a {
@@ -483,13 +492,16 @@ body, html {
             visibility: hidden;
         }
     }
-
-    h5 {
-        &.hello {
-            font-size: 3em !important;
-        }
-        &.jordan {
-            font-size: 2.5em !important;
+    #intro_video {
+        .text-content {
+            h5 {
+                &.hello {
+                    font-size: 3em !important;
+                }
+                &.jordan {
+                    font-size: 2.5em !important;
+                }
+            }
         }
     }
 
