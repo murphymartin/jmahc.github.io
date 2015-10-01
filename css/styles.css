@@ -217,7 +217,7 @@ html {
 .home-page #intro_video .video-container video {
   display: none;
 }
-.home-page #intro_video .text-content {
+.home-page #home .text-content {
   color: #FFF;
   position: absolute;
   top: 30%;
@@ -226,20 +226,20 @@ html {
   text-align: center;
   z-index: 102;
 }
-.home-page #intro_video .text-content h5 {
+.home-page #home .text-content h5 {
   color: #FFF;
 }
-.home-page #intro_video .text-content h5.hello {
+.home-page #home .text-content h5.hello {
   font-size: 2em;
   animation: bounceIn 1s;
 }
-.home-page #intro_video .text-content h5.jordan {
+.home-page #home .text-content h5.jordan {
   margin-top: 15px;
   font-size: 1.5em;
   opacity: 0;
   animation: bounceIn 1s ease-in-out 1.45s forwards;
 }
-.home-page #intro_video .text-content h5.jordan .fa-heart {
+.home-page #home .text-content h5.jordan .fa-heart {
   color: hotpink;
   animation: heartBeat 1s ease-in-out 2.5s infinite;
 }
@@ -277,12 +277,11 @@ html {
   background-size: cover;
   color: #FFF;
 }
-.home-page #contact .overlay_filter {
-  background: rgba(0, 0, 0, 0.7);
+.home-page #contact .container {
   width: 100%;
   height: auto;
 }
-.home-page #contact .overlay_filter .container a {
+.home-page #contact .container a {
   text-decoration: none;
   color: #fff;
 }
@@ -372,10 +371,10 @@ html {
     display: none;
     visibility: hidden;
   }
-  #intro_video .text-content h5.hello {
+  #home .text-content h5.hello {
     font-size: 3em !important;
   }
-  #intro_video .text-content h5.jordan {
+  #home .text-content h5.jordan {
     font-size: 2.5em !important;
   }
   .ts {
@@ -513,6 +512,52 @@ html {
   nav.affix-top .navbar-toggle {
     display: none !important;
   }
+  #intro_video {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+  #home {
+    height: 100%;
+    width: 100%;
+  }
+  #home .text-content {
+    color: #FFF;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 102;
+  }
+  #home .text-content h5 {
+    color: #FFF;
+  }
+  #home .text-content h5.hello {
+    font-size: 2em;
+    animation: bounceIn 1s;
+  }
+  #home .text-content h5.jordan {
+    margin-top: 15px;
+    font-size: 1.5em;
+    opacity: 0;
+    animation: bounceIn 1s ease-in-out 1.45s forwards;
+  }
+  #home .text-content h5.jordan .fa-heart {
+    color: hotpink;
+    animation: heartBeat 1s ease-in-out 2.5s infinite;
+  }
+  #about p,
+  #about h1,
+  #about h2 {
+    color: #FFF !important;
+  }
   .pi {
     height: auto;
     width: 350px;
@@ -644,36 +689,40 @@ html {
   .pi:focus .pi_logo_image .logo_image.dark_image {
     opacity: 1;
   }
+  #contact {
+    background: none !important;
+  }
   .footer {
     background: repeating-linear-gradient(45deg, #111111, #111111 50px, #222222 50px, #222222 100px);
   }
   .footer ul {
     list-style: none;
+    padding-top: 10px;
   }
   .footer ul li {
     display: inline-block;
     margin: 0 20px;
-    font-size: 50px;
+    font-size: 20px;
   }
   .footer a {
     color: #FFF;
   }
-  .footer a span {
-    display: none;
+  .footer a.github:hover .fa-square-o {
+    color: #d4d4d4;
   }
-  .footer a.linkedin:hover {
+  .footer a.linkedin:hover .fa-square-o {
     color: #517fa4;
   }
-  .footer a.facebook:hover {
+  .footer a.facebook:hover .fa-square-o {
     color: #3b5998;
   }
-  .footer a.twitter:hover {
+  .footer a.twitter:hover .fa-square-o {
     color: #00aced;
   }
-  .footer a.google:hover {
+  .footer a.google:hover .fa-square-o {
     color: #dd4b39;
   }
-  .footer a.steam:hover {
-    color: #D6D6D6;
+  .footer a.steam:hover .fa-square-o {
+    color: #d2d2d2;
   }
 }
