@@ -97,7 +97,8 @@ Jmac.home.init_methods = function () {
         var t = $elements.find('h4').text();
         var l = $elements.find('.icon-link').attr('href');
         var x = t.split(' ');
-        var i = 'images/web/' + x[0] + '.png';
+        var what = x[0];
+        var i = 'images/web/' + what.toLowerCase() + '.png';
 
         info.title = t;
         info.link = l;
