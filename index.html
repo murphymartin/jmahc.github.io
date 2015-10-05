@@ -50,207 +50,303 @@
                             Projects
                         </a>
                     </li>
-                    <li>
-                        <a href="#contact">
-                          Contact
-                        </a>
-                    </li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-    <div id="intro_video">
+    <div id="home">
         <div class="homepage-hero-module">
             <div class="video-container">
-                <div class="filter no_stretch"></div>
+                <div class="filter no-stretch"></div>
                 <video autoplay loop class="video-js">
                     <source src="videos/nashville480.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
                     <source src="videos/nashville480.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
                 </video>
                 <div class="poster">
-                    <img class="no_stretch" src="images/location.jpg" alt="">
+                    <img class="no-stretch" src="images/location.jpg" alt="">
                 </div>
             </div>
         </div>
-    </div>
-    <div id="home">
-      <div class="container">
-        <div class="text-content">
-            <h5 class="hello">Hello, world!</h5>
-            <h5 class="jordan">
+        <div class="welcome">
+            <h5 class="welcome-hello">Hello, world!</h5>
+            <h5 class="welcome-from">
                 Made with
                 <i class="fa fa-heart"></i>
                 by Jordan McArdle
             </h5>
         </div>
         <div class="arrow bounce"></div>
-      </div>
     </div>
     <div id="about" class="ts">
-        <div class="container">
-            <div class="intro_title centered">
+        <div class="container intro">
+            <div class="intro-title centered">
                 <h2 class="bs">
                     I have a passion for web development <br />
                     with a focus on the user experience.
                 </h2>
             </div>
-            <div class="intro_blurb">
+            <div class="intro-blurb">
                 <div class="row">
                     <div class="col-md-6">
                         <p class="lead">
                             An unusual origin story for my interest in web development was created while playing a video game, <strong>Neopets</strong>.
                             The site allowed users to customize a page for their pet and I wanted to have the best webpage for my Neopet.
                         </p>
-                    </div>
-                    <div class="col-md-6">
                         <p class="lead">
-                            I graduated from the University of Alabama in December, 2014 with a degree in Management Information Systems degree. In January, 2015, I began working at a marketing firm, 2-COM.
-                            Currently, I serve as lead software developer on client sites.
+                            I graduated from the University of Alabama in December 2014 with a degree in Management Information Systems. The following month in January 2015, I began working at a marketing firm, 2-COM,
+                            where I serve as lead software developer on client sites.
                         </p>
                     </div>
-                </div>
-            </div>
-            <div class="intro_pictures">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="bg_img">
-                            <img src="images/stock.jpg" />
-                        </div>
+                    <div class="col-md-6 profile-pic-container">
+                        <img class="profile-pic" src="images/current.png" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="projects" class="ts portfolio">
+    <div id="projects" class="ts">
         <div class="container centered">
             <h2>Take a look at some of my work.</h2>
         </div>
         <div class="row">
-            <ul class="portfolio_work">
-                <li class="pi circle">
-                    <div class="pi_logo_image">
-                        <img class="logo_image" src="images/clients/bulwark.png" />
+            <ul class="portfolio">
+                <li class="portfolio-item circle bw">
+                    <div class="item-image">
+                        <img class="logo" src="images/clients/bulwark.png" />
                     </div>
-                    <div class="feature-overlay">
-                        <div class="feature_background bw">
-                        </div>
-                        <div class="feature-info bw">
-                            <h4>Bulwark FR</h4>
-                            <div>
-                                <a href="http://bulwark.com" target="_blank">Site redesign</a> and an in-site
-                                <a href="http://bulwark.com/Calculator" target="_blank">Calculator application</a>
-                                for Fire-Resistant clothes
+                    <div class="item-information">
+                        <div class="item-background"></div>
+                        <div class="item-description">
+                            <div class="item-details">
+                                <h4>Bulwark FR</h4>
+                                <p>
+                                    Site redesign and an in-site Calculator application for Fire-Resistant clothes
+                                </p>
+                            </div>
+                            <div class="item-icons">
+                                <a class="icon-link" href="http://bulwark.com/Calculator" target="_blank">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-link fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                                <div class="icon-modal" data-toggle="modal" data-target="#myModal">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-search fa-stack-1x"></i>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="pi circle">
-                    <div class="pi_logo_image">
-                        <img class="logo_image" src="images/clients/hs.png" />
+                <li class="portfolio-item circle hs">
+                    <div class="item-image">
+                        <img class="logo" src="images/clients/hs.png" />
                     </div>
-                    <div class="feature-overlay">
-                        <div class="feature_background hs">
+                    <div class="item-information">
+                        <div class="item-background">
                         </div>
-                        <div class="feature-info hs">
-                            <h4>Horace Small</h4>
-                            <div>
-                                <a href="http://horace-small.com" target="_blank">Site updates</a>
+                        <div class="item-description">
+                            <div class="item-details">
+                                <h4>Horace Small</h4>
+                                <p>
+                                    Site updates
+                                </p>
+                            </div>
+                            <div class="item-icons">
+                                <a class="icon-link" href="http://redkapautomotive.com" target="_blank">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-link fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                                <div class="icon-modal" data-toggle="modal" data-target="#myModal">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-search fa-stack-1x"></i>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="pi circle">
-                    <div class="pi_logo_image">
-                        <img class="logo_image" src="images/clients/rka.png" />
+                <li class="portfolio-item circle rka">
+                    <div class="item-image">
+                        <img class="logo" src="images/clients/rka.png" />
                     </div>
-                    <div class="feature-overlay">
-                        <div class="feature_background rka">
-                        </div>
-                        <div class="feature-info rka">
-                            <h4>RedKap Automotive</h4>
-                            <div>
-                                <a href="http://redkapautomotive.com" target="_blank">Site redesign</a>
-                                and
-                                <a href="http://www.redkapautomotive.com/ballistic" target="_blank">various promotional</a>
-                                pages
+                    <div class="item-information">
+                        <div class="item-background"></div>
+                        <div class="item-description">
+                            <div class="item-details">
+                                <h4>Red Kap Automotive</h4>
+                                <p>
+                                  Site redesign and various promotional pages
+                                </p>
+                            </div>
+                            <div class="item-icons">
+                                <a class="icon-link" href="http://redkapautomotive.com" target="_blank">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-link fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                                <div class="icon-modal" data-toggle="modal" data-target="#myModal">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-search fa-stack-1x"></i>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="pi circle">
-                    <div class="pi_logo_image">
-                        <img class="logo_image" src="images/clients/vf.png" />
+                <li class="portfolio-item circle vf">
+                    <div class="item-image">
+                        <img class="logo" src="images/clients/vf.png" />
                     </div>
-                    <div class="feature-overlay">
-                        <div class="feature_background vf">
-                        </div>
-                        <div class="feature-info vf">
-                            <h4>VF Imagewear</h4>
-                            <div>
-                                <a href="http://wpg.vfimagewear.com" target="_blank">Site development</a>
-                                and implementation for v2.0
+                    <div class="item-information">
+                        <div class="item-background"></div>
+                        <div class="item-description">
+                            <div class="item-details">
+                              <h4>VF Imagewear</h4>
+                              <p>
+                                  Site development and implementation for v2.0
+                              </p>
+                            </div>
+                            <div class="item-icons">
+                                <a class="icon-link" href="http://wpg.vfimagewear.com" target="_blank">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-link fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                                <div class="icon-modal" data-toggle="modal" data-target="#myModal">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-search fa-stack-1x"></i>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="pi">
-                    <div class="pi_logo_image">
-                      <img class="logo_image" src="images/clients/yt.png" />
+                <li class="portfolio-item yt">
+                    <div class="item-image">
+                      <img class="logo" src="images/clients/yt.png" />
                     </div>
-                    <div class="feature-overlay">
-                        <div class="feature_background yt">
-                        </div>
-                        <div class="feature-info yt">
-                            <h4>Yanmar Tractors</h4>
-                            <div>
-                                <a href="http://wpg.vfimagewear.com" target="_blank">Site updates</a>
+                    <div class="item-information">
+                        <div class="item-background"></div>
+                        <div class="item-description">
+                            <div class="item-details">
+                                <h4>Yanmar Tractors</h4>
+                                <p>
+                                    Site updates
+                                </p>
+                            </div>
+                            <div class="item-icons">
+                                <a class="icon-link" href="http://yanmartractor.com" target="_blank">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-link fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                                <div class="icon-modal" data-toggle="modal" data-target="#myModal">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-search fa-stack-1x"></i>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="pi">
-                    <div class="pi_logo_image">
-                        <img class="logo_image dark_image" src="images/clients/col.png" />
+                <li class="portfolio-item col">
+                    <div class="item-image">
+                        <img class="logo dark-image" src="images/clients/col.png" />
                     </div>
-                    <div class="feature-overlay">
-                        <div class="feature_background col">
-                        </div>
-                        <div class="feature-info col">
-                            <h4>Columbia</h4>
-                            <div>
-                                <a href="http://columbia-equip.com" target="_blank">Site updates</a>
-                                and
-                                <a href="http://columbia-equip.com/distributors">distributor locator tool</a>
+                    <div class="item-information">
+                        <div class="item-background"></div>
+                        <div class="item-description">
+                            <div class="item-details">
+                                <h4>Columbia</h4>
+                                <p>
+                                    Site updates and distributor locator tool.
+                                </p>
+                            </div>
+                            <div class="item-icons">
+                                <a class="icon-link" href="http://columbia-equip.com" target="_blank">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-link fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                                <div class="icon-modal" data-toggle="modal" data-target="#myModal">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-search fa-stack-1x"></i>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="pi cub">
-                    <div class="pi_logo_image">
-                        <img class="logo_image dark_image" src="images/clients/cub.png" />
+                <li class="portfolio-item cub">
+                    <div class="item-image">
+                        <img class="logo dark-image" src="images/clients/cub.png" />
                     </div>
-                    <div class="feature-overlay">
-                        <div class="feature_background cub">
-                        </div>
-                        <div class="feature-info cub">
-                            <h4>Cub Cadet</h4>
-                            <div>
-                                <a href="http://cubcadetondemandmarketing.com" target="_blank">Proprietary e-commerce implementation</a>
+                    <div class="item-information">
+                        <div class="item-background"></div>
+                        <div class="item-description">
+                            <div class="item-details">
+                                <h4>Cub Cadet</h4>
+                                <p>
+                                    Proprietary e-commerce implementation
+                                </p>
+                            </div>
+                            <div class="item-icons">
+                                <a class="icon-link" href="http://cubcadetondemandmarketing.com" target="_blank">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-link fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                                <div class="icon-modal" data-toggle="modal" data-target="#myModal">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-search fa-stack-1x"></i>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="pi ecom">
-                    <div class="pi_logo_image">
-                        <img class="logo_image" src="images/clients/2com.png" />
+                <li class="portfolio-item com">
+                    <div class="item-image">
+                        <img class="logo" src="images/clients/2com.png" />
                     </div>
-                    <div class="feature-overlay">
-                        <div class="feature_background ecom">
-                        </div>
-                        <div class="feature-info ecom">
-                            <h4>2-COM</h4>
-                            <div>
-                                <a href="http://2-com.net" target="_blank">Proprietary e-commerce service</a>
+                    <div class="item-information">
+                        <div class="item-background"></div>
+                        <div class="item-description">
+                            <div class="item-details">
+                                <h4>2-COM</h4>
+                                <p>
+                                    Proprietary e-commerce service
+                                </p>
+                            </div>
+                            <div class="item-icons">
+                                <a class="icon-link" href="http://2-com.net" target="_blank">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-link fa-stack-1x"></i>
+                                    </span>
+                                </a>
+                                <div class="icon-modal" data-toggle="modal" data-target="#myModal">
+                                    <span class="fa-stack fa-lg faa-parent animated-hover">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-search fa-stack-1x"></i>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -258,26 +354,19 @@
             </ul>
         </div>
     </div>
-    <div id="contact">
-        <div class="container centered ts">
-            <h2>Contact Information</h2>
-            <div class="col-md-12">
-              <p class="lead">
-                  I am a software developer in the greater Nashville area.  I moved to Brentwood, TN, in January, 2015.  My contact information is below if you have any questions for me or just want to say 'Hi'!
-              </p>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    Email:
-                    <span>
-                        <a href="mailto:jordanmcardle@gmail.com">jordanmcardle@gmail.com</a>
-                    </span>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                 </div>
-                <div class="col-md-6">
-                    Links:
-                    <span>
-
-                    </span>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -286,51 +375,59 @@
         <div class="container centered">
             <ul>
                 <li>
-                    <a class="github" href="https://github.com/jmahc" target="_blank">
-                      <span class="fa-stack fa-lg faa-parent animated-hover">
-                        <i class="fa fa-square-o fa-stack-2x"></i>
-                        <i class="move-me fa fa-github fa-stack-1x faa-burst"></i>
-                      </span>
+                    <a class="email" href="mailto:jordanmcardle@gmail.com" target="-blank">
+                        <span class="fa-stack fa-lg faa-parent animated-hover">
+                          <i class="fa fa-square-o fa-stack-2x"></i>
+                          <i class="move-me fa fa-envelope fa-stack-1x faa-ring"></i>
+                        </span>
                     </a>
                 </li>
                 <li>
-                    <a class="linkedin" href="https://www.linkedin.com/in/jtmcardle" target="_blank">
-                      <span class="fa-stack fa-lg faa-parent animated-hover">
-                        <i class="fa fa-square-o fa-stack-2x"></i>
-                        <i class="move-me fa fa-linkedin fa-stack-1x faa-flash"></i>
-                      </span>
+                    <a class="github" href="https://github.com/jmahc" target="-blank">
+                        <span class="fa-stack fa-lg faa-parent animated-hover">
+                          <i class="fa fa-square-o fa-stack-2x"></i>
+                          <i class="move-me fa fa-github fa-stack-1x faa-burst"></i>
+                        </span>
                     </a>
                 </li>
                 <li>
-                    <a class="facebook" href="https://www.facebook.com/jmaccc" target="_blank">
-                      <span class="fa-stack fa-lg faa-parent animated-hover">
-                        <i class="fa fa-square-o fa-stack-2x"></i>
-                        <i class="move-me fa fa-facebook fa-stack-1x faa-tada"></i>
-                      </span>
+                    <a class="linkedin" href="https://www.linkedin.com/in/jtmcardle" target="-blank">
+                        <span class="fa-stack fa-lg faa-parent animated-hover">
+                          <i class="fa fa-square-o fa-stack-2x"></i>
+                          <i class="move-me fa fa-linkedin fa-stack-1x faa-flash"></i>
+                        </span>
                     </a>
                 </li>
                 <li>
-                    <a class="twitter" href="http://twitter.com/fjord_an" target="_blank">
-                      <span class="fa-stack fa-lg faa-parent animated-hover">
-                        <i class="fa fa-square-o fa-stack-2x"></i>
-                        <i class="move-me fa fa-twitter fa-stack-1x faa-passing"></i>
-                      </span>
+                    <a class="facebook" href="https://www.facebook.com/jmaccc" target="-blank">
+                        <span class="fa-stack fa-lg faa-parent animated-hover">
+                          <i class="fa fa-square-o fa-stack-2x"></i>
+                          <i class="move-me fa fa-facebook fa-stack-1x faa-tada"></i>
+                        </span>
                     </a>
                 </li>
                 <li>
-                    <a class="google" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
-                      <span class="fa-stack fa-lg faa-parent animated-hover">
-                        <i class="fa fa-square-o fa-stack-2x"></i>
-                        <i class="move-me fa fa-google-plus fa-stack-1x faa-float"></i>
-                      </span>
+                    <a class="twitter" href="http://twitter.com/fjord-an" target="-blank">
+                        <span class="fa-stack fa-lg faa-parent animated-hover">
+                          <i class="fa fa-square-o fa-stack-2x"></i>
+                          <i class="move-me fa fa-twitter fa-stack-1x faa-passing"></i>
+                        </span>
                     </a>
                 </li>
                 <li>
-                    <a class="steam" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="_blank">
-                      <span class="fa-stack fa-lg faa-parent animated-hover">
-                        <i class="fa fa-square-o fa-stack-2x"></i>
-                        <i class="move-me fa fa-steam fa-stack-1x faa-wrench"></i>
-                      </span>
+                    <a class="google" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="-blank">
+                        <span class="fa-stack fa-lg faa-parent animated-hover">
+                          <i class="fa fa-square-o fa-stack-2x"></i>
+                          <i class="move-me fa fa-google-plus fa-stack-1x faa-float"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="steam" href="https://plus.google.com/u/0/104716789379686556900/about/p/pub" target="-blank">
+                        <span class="fa-stack fa-lg faa-parent animated-hover">
+                          <i class="fa fa-square-o fa-stack-2x"></i>
+                          <i class="move-me fa fa-steam fa-stack-1x faa-wrench"></i>
+                        </span>
                     </a>
                 </li>
             </ul>

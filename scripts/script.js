@@ -115,7 +115,7 @@ Jmac.home.init_methods = function () {
                 videoHeight = windowHeight;
                 videoWidth = videoHeight / videoAspectRatio;
 
-                if($(this).hasClass('no_stretch')) {
+                if($(this).hasClass('no-stretch')) {
                   var increase = 300;
                   var newW = videoWidth + increase;
                   var newH = (newW * videoHeight) / videoWidth;
