@@ -18,6 +18,11 @@ Jmac.home.init_variables = function () {
     t.$page = $('body');
     t.$hero = $('.homepage-hero-module');
     t.$navBar = $('#navbar');
+    t.$modal = $('#myModal');
+    t.$modalTrigger = $('.icon-modal');
+    t.$modalTitle = $('.modal-title');
+    t.$modalImage = $('.modal-image');
+    t.$modalLink = $('.modal-link');
 };
 
 Jmac.home.init_methods = function () {
@@ -76,7 +81,30 @@ Jmac.home.init_methods = function () {
           scaleBannerVideoSize('.video-container .filter');
           scaleBannerVideoSize('.video-container video');
       });
+
+      t.$modalTrigger.on('click', function () {
+          var $item = $(this).closest('.item-information');
+          var company = getCompanyInfo($item);
+
+          t.$modalTitle.text(company.title);
+          t.$modalLink.attr('href', company.link).text(company.link);
+          t.$modalImage.attr('src', company.image);
+      });
     });
+
+    var getCompanyInfo = function ($elements) {
+        var info = {};
+        var t = $elements.find('h4').text();
+        var l = $elements.find('.icon-link').attr('href');
+        var x = t.split(' ');
+        var i = './images/web/' + x[0] + '.png';
+
+        info.title = t;
+        info.link = l;
+        info.image = i;
+
+        return info;
+    };
 
     function scaleVideoContainer() {
 
@@ -84,7 +112,7 @@ Jmac.home.init_methods = function () {
         var unitHeight = parseInt(height) + 'px';
         t.$hero.css('height',unitHeight);
 
-    }
+    };
 
     function initBannerVideoSize(element) {
 
@@ -95,7 +123,7 @@ Jmac.home.init_methods = function () {
 
         scaleBannerVideoSize(element);
 
-    }
+    };
 
     function scaleBannerVideoSize(element) {
 
@@ -139,5 +167,5 @@ Jmac.home.init_methods = function () {
 
             $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
         });
-    }
+    };
 };
