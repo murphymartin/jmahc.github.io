@@ -244,7 +244,8 @@ html {
   filter: grayscale(50%);
 }
 .home-page #projects {
-  background-color: #ecebec;
+  background-color: #FFF;
+  background-image: linear-gradient(#ffffff, #ecebec);
   width: 100%;
   height: auto;
 }
@@ -467,8 +468,15 @@ html {
     animation: flipInX 1.25s ease-in;
     -webkit-animation: flipInX 1.25s;
   }
+  nav.affix .navbar-brand {
+    cursor: default;
+  }
+  nav.affix .navbar-brand:hover {
+    cursor: default;
+  }
   nav.affix-top {
-    background-color: #ecebec;
+    background-color: #FFF;
+    background-image: linear-gradient(#ffffff, #ecebec);
     border-color: #ecebec;
     animation: slideInDown 0.95s ease-in;
     -webkit-animation: slideInDown 0.95s;
@@ -485,9 +493,11 @@ html {
   nav.affix-top .navbar-brand {
     font-size: 30px;
     color: #000;
+    cursor: default;
   }
   nav.affix-top .navbar-brand:hover {
     color: #808080;
+    cursor: default;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-user-select: none;
     -webkit-touch-callout: none;
