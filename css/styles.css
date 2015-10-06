@@ -167,11 +167,47 @@ html {
   min-height: 100%;
   font-family: 'Lato', 'PT Sans', Arial, Helvetica, Verdana, sans-serif;
 }
+svg {
+  display: block;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+svg#bigHalfCircle {
+  background-color: rgba(0, 0, 0, 0);
+}
+svg#bigHalfCircle path {
+  background-color: rgba(0, 0, 0, 0);
+  fill: #FFF;
+  stroke: rgba(0, 0, 0, 0);
+}
+svg#bigTriangleColor {
+  background: #cccccc;
+}
+svg#bigTriangleColor path {
+  fill: #FFF;
+  stroke: #FFF;
+}
+svg#slit {
+  background: #cccccc;
+}
+svg#slit path {
+  background: #cccccc;
+}
+svg#slit #slitPath1 {
+  fill: #FFF;
+  stroke: red;
+  stroke-width: 0;
+}
+svg#slit #slitPath2,
+svg#slit #slitPath3 {
+  fill: #999999;
+}
 .centered {
   text-align: center;
 }
 .bs {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 .ts {
   padding: 20px 0;
@@ -201,15 +237,31 @@ html {
   max-width: 100%;
   width: 100%;
 }
+.home-page #video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(images/location.jpg) no-repeat;
+  background-size: cover;
+  bottom: 0;
+}
+.home-page #video .video-container video {
+  display: none;
+}
 .home-page #home {
   position: relative;
+  height: 100%;
   width: 100%;
   min-width: 100%;
   margin: 0;
   padding: 0;
-}
-.home-page #home .video-container video {
-  display: none;
 }
 .home-page #home .welcome {
   color: #FFF;
@@ -234,6 +286,9 @@ html {
   color: hotpink;
   animation: heartBeat 1s ease-in-out 2.5s infinite;
 }
+.home-page #about {
+  background-color: #FFF;
+}
 .home-page #about .profile-pic-container {
   text-align: center;
 }
@@ -244,8 +299,7 @@ html {
   filter: grayscale(50%);
 }
 .home-page #projects {
-  background-color: #FFF;
-  background-image: linear-gradient(#ffffff, #ecebec);
+  background-color: #cccccc;
   width: 100%;
   height: auto;
 }
@@ -330,7 +384,7 @@ html {
     display: block;
   }
   .bs {
-    margin-bottom: 40px;
+    padding-bottom: 60px;
   }
   .video-container video {
     display: block !important;
@@ -351,7 +405,7 @@ html {
 }
 @media screen and (max-width:991px) {
   .bs {
-    margin-bottom: 65px;
+    padding-bottom: 80px;
   }
   .ts {
     padding: 60px 0;
@@ -359,7 +413,7 @@ html {
 }
 @media screen and (max-width:767px) {
   .bs {
-    margin-bottom: 50px;
+    padding-bottom: 65px;
   }
   .ts {
     padding: 45px 0;
@@ -367,7 +421,7 @@ html {
 }
 @media screen and (max-width:639px) {
   .bs {
-    margin-bottom: 35px;
+    padding-bottom: 50px;
   }
   .ts {
     padding: 35px 0;
@@ -476,7 +530,7 @@ html {
   }
   nav.affix-top {
     background-color: #FFF;
-    background-image: linear-gradient(#ffffff, #ecebec);
+    background-image: linear-gradient(#ffffff, #ececec);
     border-color: #ecebec;
     animation: slideInDown 0.95s ease-in;
     -webkit-animation: slideInDown 0.95s;
@@ -509,9 +563,9 @@ html {
     display: none !important;
   }
   #home {
+    position: relative;
     height: 100%;
     width: 100%;
-    background-color: #FFF;
   }
   #home .welcome {
     color: #FFF;
@@ -596,6 +650,9 @@ html {
   .portfolio-item .item-information .item-description .item-icons,
   .portfolio-item .item-information .item-background .item-icons {
     display: block;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
   }
   .portfolio-item .item-information .item-description .item-icons span,
   .portfolio-item .item-information .item-background .item-icons span {
@@ -615,6 +672,10 @@ html {
   .portfolio-item .item-information .item-background .item-icons .icon-modal {
     cursor: pointer;
   }
+  .portfolio-item .item-information .item-description .item-details,
+  .portfolio-item .item-information .item-background .item-details {
+    padding-top: 10px;
+  }
   .portfolio-item .item-information .item-description .item-details h4,
   .portfolio-item .item-information .item-background .item-details h4 {
     color: #000;
@@ -624,6 +685,7 @@ html {
   }
   .portfolio-item .item-information .item-description .item-details p,
   .portfolio-item .item-information .item-background .item-details p {
+    padding-top: 5px;
     font-size: 13px;
     color: #000;
     line-height: 15px;
@@ -709,12 +771,13 @@ html {
   }
   .portfolio-item:hover .item-image .logo,
   .portfolio-item:focus .item-image .logo {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.2;
   }
   .portfolio-item:hover .item-image .logo.dark-image,
   .portfolio-item:focus .item-image .logo.dark-image {
-    opacity: 1;
+    opacity: 0.2;
   }
   .footer ul {
     padding-top: 10px;

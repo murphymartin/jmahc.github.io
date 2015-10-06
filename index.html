@@ -16,7 +16,12 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome-animation.min.css" />
   <!--Custom Styles-->
+  <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/icons.css" />
+  <link rel="stylesheet" type="text/css" href="css/component.css" /> -->
   <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <script src="scripts/modernizr.custom.js"></script>
 </head>
 
 <body class="home-page" data-spy="scroll" data-target="#navbar">
@@ -52,7 +57,7 @@
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-    <div id="home">
+    <section id="video">
         <div class="homepage-hero-module">
             <div class="video-container">
                 <div class="filter no-stretch"></div>
@@ -65,6 +70,8 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section id="home">
         <div class="welcome">
             <h5 class="welcome-hello">Hello, world!</h5>
             <h5 class="welcome-from">
@@ -74,8 +81,11 @@
             </h5>
         </div>
         <div class="arrow bounce"></div>
-    </div>
-    <div id="about" class="ts">
+    </section>
+    <svg id="bigHalfCircle" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path d="M0 100 C40 0 60 0 100 100 Z"/>
+    </svg>
+    <section id="about">
         <div class="container intro">
             <div class="intro-title centered">
                 <h2 class="bs">
@@ -101,8 +111,16 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div id="projects" class="ts">
+    </section>
+    <!-- <svg id="slit" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path id="slitPath2" d="M50 100 C49 80 47 0 40 0 L47 0 Z" />
+      <path id="slitPath3" d="M50 100 C51 80 53 0 60 0 L53 0 Z" />
+      <path id="slitPath1" d="M47 0 L50 100 L53 0 Z" />
+    </svg> -->
+    <svg id="bigTriangleColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+				<path d="M0 0 L50 100 L100 0 Z"></path>
+		</svg>
+    <section id="projects" class="ts">
         <div class="container centered">
             <h2>Take a look at some of my work.</h2>
         </div>
@@ -359,7 +377,7 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </section>
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

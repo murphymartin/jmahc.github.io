@@ -13,13 +13,54 @@ body, html {
     font-family: 'Lato', 'PT Sans', Arial, Helvetica, Verdana, sans-serif;
 }
 
+svg {
+  display: block;
+
+  &:not(:root) {
+    overflow: hidden;
+  }
+}
+
+svg#bigHalfCircle {
+  background-color: rgba(0,0,0,0);
+  path {
+    background-color: rgba(0,0,0,0);
+    fill: #FFF;
+    stroke: rgba(0,0,0,0);
+  }
+}
+
+svg#bigTriangleColor {
+  background: #cccccc;
+  path {
+    fill: #FFF;
+    stroke: #FFF;
+  }
+}
+
+svg#slit {
+  background: #cccccc;
+  path {
+    background: #cccccc;
+
+  }
+  #slitPath1 {
+    fill: #FFF;
+    stroke: red;
+    stroke-width: 0;
+  }
+  #slitPath2, #slitPath3 {
+    fill: #999999;
+  }
+}
+
 .centered {
     text-align: center;
 }
 
 //Bottom spacing
 .bs {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 //Top spacing
@@ -58,18 +99,34 @@ body, html {
     max-width: 100%;
     width: 100%;
 
+    #video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      background: url(images/location.jpg) no-repeat;
+      background-size: cover;
+      bottom: 0;
+        .video-container {
+            video {
+                display: none;
+            }
+        }
+    }
+
     #home {
       position: relative;
+      height: 100%;
       width: 100%;
       min-width: 100%;
       margin: 0;
       padding: 0;
-
-      .video-container {
-          video {
-              display: none;
-          }
-      }
 
       .welcome {
           color: #FFF;
@@ -101,6 +158,8 @@ body, html {
     }
 
     #about {
+      background-color: #FFF;
+
         .profile-pic-container {
           text-align: center;
 
@@ -114,8 +173,8 @@ body, html {
     }
 
     #projects {
-        background-color: #FFF;
-      background-image: linear-gradient(#fff, #ECEBEC);
+        background-color: #cccccc;
+        //background-image: linear-gradient(#fff, #ececec);
         width: 100%;
         height: auto;
 
