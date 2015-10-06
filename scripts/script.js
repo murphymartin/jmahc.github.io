@@ -95,10 +95,10 @@ Jmac.home.init_methods = function () {
     var getCompanyInfo = function ($elements) {
         var info = {};
         var t = $elements.find('h4').text();
-        var l = $elements.find('.icon-link').attr('href');
+        var l = $elements.find('h4').data("link");
         var x = t.split(' ');
-        var what = x[0];
-        var i = 'images/web/' + what.toLowerCase() + '.png';
+        var site = x[0];
+        var i = 'images/web/' + site.toLowerCase() + '.png';
 
         info.title = t;
         info.link = l;
@@ -133,7 +133,6 @@ Jmac.home.init_methods = function () {
         videoWidth,
         videoHeight;
         var windowRatio = windowHeight / windowWidth;
-        console.log(windowHeight);
 
         $(element).each(function(){
             var videoAspectRatio = $(this).data('height')/$(this).data('width');
