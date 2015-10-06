@@ -180,6 +180,14 @@ svg#bigHalfCircle path {
   fill: #cccccc;
   stroke: rgba(0, 0, 0, 0);
 }
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.25s linear;
+  -moz-transition: opacity 0.25s linear;
+  -ms-transition: opacity 0.25s linear;
+  -o-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear;
+}
 .centered {
   text-align: center;
 }
@@ -577,8 +585,8 @@ svg#bigHalfCircle path {
     height: 300px;
   }
   .portfolio-item {
-    width: 350px;
-    height: 200px;
+    width: 400px;
+    height: 225px;
     margin: 5px;
     -moz-transition: all ease-in-out 250ms;
     -o-transition: all ease-in-out 250ms;
@@ -586,7 +594,7 @@ svg#bigHalfCircle path {
     transition: all ease-in-out 250ms;
   }
   .portfolio-item .item-image {
-    line-height: 200px;
+    line-height: 225px;
   }
   .portfolio-item .item-image .logo {
     -webkit-filter: grayscale(100%);
@@ -611,7 +619,7 @@ svg#bigHalfCircle path {
   .portfolio-item .item-information .item-description,
   .portfolio-item .item-information .item-background {
     position: relative;
-    bottom: -200px;
+    bottom: -225px;
     width: 100%;
     height: 100%;
     -moz-box-sizing: border-box;
@@ -653,20 +661,21 @@ svg#bigHalfCircle path {
   .portfolio-item .item-information .item-background .item-details {
     position: relative;
     top: 10%;
+    padding: 0 10px;
   }
   .portfolio-item .item-information .item-description .item-details h4,
   .portfolio-item .item-information .item-background .item-details h4 {
     color: #000;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 30px;
     margin: 0 0 5px;
   }
   .portfolio-item .item-information .item-description .item-details p,
   .portfolio-item .item-information .item-background .item-details p {
     padding-top: 5px;
-    font-size: 13px;
+    font-size: 16px;
     color: #000;
-    line-height: 15px;
+    line-height: 18px;
   }
   .portfolio-item.circle .logo {
     max-width: 150px;
@@ -745,7 +754,7 @@ svg#bigHalfCircle path {
   }
   .portfolio-item:hover .item-description,
   .portfolio-item:focus .item-description {
-    bottom: 200px;
+    bottom: 225px;
   }
   .portfolio-item:hover .item-image .logo,
   .portfolio-item:focus .item-image .logo {
